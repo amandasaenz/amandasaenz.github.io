@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from './Resume/ReusableComponents';
 import Carousel from './Carousel';
 
-{
-  /* <Folder data={data.projects.UX} />
-      <Folder data={data.projects.ReactP} />
-      <Folder data={data.projects.IllustP} />
-      <Folder data={data.projects.PlushP} /> */
-}
-
 const Projects = ({ data }) => {
   return (
     <Binder>
-      <Folder data={data.projects.threeD} />
+      <Folder data={data} />
     </Binder>
   );
 };
 
 const Folder = ({ data }) => {
-  const Project = data.map((p, i) => (
-    <ProjectContainer key={i} id={p.id}>
-      <SubHeading>{p.title}</SubHeading>
+ return(
+    <ProjectContainer>
+      <SubHeading>{data.title}</SubHeading>
 
       <Indent>
         <div
@@ -35,9 +28,11 @@ const Folder = ({ data }) => {
           }}
         ></div>
         <div>
-          <Carousel data={p.images} />
+        {data.images.map((s, i) => (
+              <Image src={s} key={i}/>
+            ))}
           <Software>
-            {p.software.map((s, i) => (
+            {data.software.map((s, i) => (
               <List key={i}>{s}</List>
             ))}
           </Software>
@@ -45,21 +40,19 @@ const Folder = ({ data }) => {
       </Indent>
 
       <AlignRight>
-        <div>{p.description}</div>
-        <div>{p.partners}</div>
-        <div>{p.role}</div>
-        <Link href={p.demo}>Demo Link</Link>
+        <div>{data.description}</div>
+        <div>{data.partners}</div>
+        <div>{data.role}</div>
+        <Link href={data.demo}>Demo Link</Link>
       </AlignRight>
     </ProjectContainer>
-  ));
-
-  return <div>{Project}</div>;
+ );
 };
+
 
 export default Projects;
 
 const Software = styled.div`
-  padding-top: 8px;
   padding-right: 32px;
   padding-left: 32px;
 `;
@@ -76,13 +69,16 @@ const List = styled.li`
 
 const Binder = styled.div`
   padding-left: 32px;
+  padding-right: 32px;
   color: #7fd8d9;
-
   font-family: 'Varela Round', sans-serif;
 `;
 
 const ProjectContainer = styled.div`
+  margin: auto;
+  max-width: 600px;
   padding-top: 56px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -90,7 +86,7 @@ const ProjectContainer = styled.div`
 
 const SubHeading = styled.div`
   font-family: 'Varela Round', sans-serif;
-  padding-top: 8px;
+  
   color: #e74946;
   font-size: 24px;
 `;
@@ -99,5 +95,13 @@ const AlignRight = styled.div`
   flex: 1 1 0%;
   justify-content: flex-start;
   padding-top: 8px;
-  padding-right: 32px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 `;

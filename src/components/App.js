@@ -7,6 +7,7 @@ import ResumeData from './ResumeData';
 import ProjectData from './ProjectData';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './Navbar/NavBar';
+import lodash from 'lodash'
 
 document.body.style = 'margin: 0';
 document.body.style.backgroundColor = '#191324';
@@ -14,14 +15,24 @@ document.body.style.backgroundColor = '#191324';
 // document.body.style.overflowX = 'hidden';
 // document.body.style.position = 'relative';
 
+const initState = (data) => {
+  const projects = data.projects;
+  return lodash.reduce(projects, (result, current, key) => {
+        const ids = current.map((proj) => {
+          return proj
+        })
+        return [...result, ...ids]
+    }, [])
+}
+
 const App = () => {
   const [width, setWidth] = useState(0);
+  const [projArray, setProjArray] = useState(initState(ProjectData));
   const ref = useRef(0);
 
   // initialize screen-width
   useEffect(() => {
     setWidth(ref.current.getBoundingClientRect().width);
-    // console.log('width = ', width);
   });
 
   // update screen-width
@@ -32,7 +43,7 @@ const App = () => {
 
     window.addEventListener('resize', resizeListener);
   }, [ref.current]);
-
+  
   return (
     <div ref={ref}>
       <NavBar data={ResumeData} width={width} />
@@ -43,11 +54,11 @@ const App = () => {
           path='/resume'
           render={() => <Resume data={ResumeData} />}
         />
-        <Route
-          exact
-          path='/projects'
-          render={() => <Projects data={ProjectData} />}
-        />
+  
+        {projArray.map((s, i) => (
+            <Route key={i} exact path={`/${s.id}`} render={() => <Projects data={s} />}/>
+        ))}
+        
       </Switch>
     </div>
   );
