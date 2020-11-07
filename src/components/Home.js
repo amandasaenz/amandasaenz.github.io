@@ -18,7 +18,7 @@ const Home = ({ data }) => {
 
 const Project = ({ images, name }) => {
   const List = images.map((image, index) => (
-    <Link href={`/#/${image.id}`} key={index}>
+    <Link href={`#/${image.id}`} key={index}>
       <Image src={image.thumbnail} />
     </Link>
   ));
