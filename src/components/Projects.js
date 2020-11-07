@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import { Link } from './Resume/ReusableComponents';
 
 const Projects = ({ data }) => {
+  const loc = window.location.href;
+  console.log('location', loc);
   return (
     <Binder>
       <Folder data={data} />
