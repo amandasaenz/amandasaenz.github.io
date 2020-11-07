@@ -49,7 +49,6 @@ const App = () => {
       
       <NavBar data={ResumeData} width={width} />
       
-      <Switch>
         <Route exact path='/' render={() => <Home data={ProjectData} />} />
         <Route
           exact path='/resume'
@@ -59,8 +58,7 @@ const App = () => {
         {projArray.map((s, i) => (
             <Route key={i} exact path={`/${s.id}`} render={() => <Projects data={s} />}/>
         ))}
-        
-      </Switch>
+       
       
     </div>
   );
