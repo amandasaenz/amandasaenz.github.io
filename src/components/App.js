@@ -52,12 +52,12 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => <Home data={ProjectData} />} />
         <Route
-          exact path='/resume'
+          exact ='/resume'
           render={() => <Resume data={ResumeData} />}
         />
   
         {projArray.map((s, i) => (
-            <Route key={i} exact path={`/#/${s.id}`} render={() => <Projects data={s} />}/>
+            <Route key={i}  path={`/${s.id}`} render={() => <Projects data={s} />}/>
         ))}
         
       </Switch>
