@@ -75,11 +75,15 @@ const Mobile = ({ data, loc }) => {
           marginTop: '56px',
         }}
       >
-        <Page style={ease} to='/'>
+        <Page style={ease} to='/' onClick={() => {
+              setOpened(!isOpened);
+            }}>
           {data.navbarLinks.link1}
         </Page>
         <Line style={grow} />
-        <Page style={ease} to='/resume'>
+        <Page style={ease} to='/resume' onClick={() => {
+              setOpened(!isOpened);
+            }}>
           {data.navbarLinks.link2}
         </Page>
       </RightContainer>
