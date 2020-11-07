@@ -52,8 +52,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => <Home data={ProjectData} />} />
         <Route
-          exact
-          path='/resume'
+          exact path='/resume'
           render={() => <Resume data={ResumeData} />}
         />
   
