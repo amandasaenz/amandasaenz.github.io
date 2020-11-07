@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from './Resume/ReusableComponents';
-import Carousel from './Carousel';
 
 const Projects = ({ data }) => {
   return (

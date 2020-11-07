@@ -5,7 +5,7 @@ import Home from './Home';
 import Projects from './Projects';
 import ResumeData from './ResumeData';
 import ProjectData from './ProjectData';
-import { Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './Navbar/NavBar';
 import lodash from 'lodash'
 
@@ -46,7 +46,9 @@ const App = () => {
   
   return (
     <div ref={ref}>
+      
       <NavBar data={ResumeData} width={width} />
+      
       <Switch>
         <Route exact path='/' render={() => <Home data={ProjectData} />} />
         <Route
@@ -60,6 +62,7 @@ const App = () => {
         ))}
         
       </Switch>
+      
     </div>
   );
 };
