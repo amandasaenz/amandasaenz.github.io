@@ -50,14 +50,14 @@ const App = () => {
       <NavBar data={ResumeData} width={width} />
       
       <Switch>
-        <Route exact path='/' render={() => <Home data={ProjectData} />} />
+        <Route exact path='/#/' render={() => <Home data={ProjectData} />} />
         <Route
-          exact ='/resume'
+          exact path='/resume'
           render={() => <Resume data={ResumeData} />}
         />
   
         {projArray.map((s, i) => (
-            <Route key={i}  path={`/${s.id}`} render={() => <Projects data={s} />}/>
+            <Route key={i} exact path={`/${s.id}`} render={() => <Projects data={s} />}/>
         ))}
         
       </Switch>
