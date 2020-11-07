@@ -57,7 +57,7 @@ const App = () => {
         />
   
         {projArray.map((s, i) => (
-            <Route key={i} exact path={`/#/${s.id}`} render={() => <Projects data={s} />}/>
+            <Route key={i} exact path={`/${s.id}`} render={() => <Projects data={s} />}/>
         ))}
         
       </Switch>
