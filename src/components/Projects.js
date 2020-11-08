@@ -7,6 +7,7 @@ const Projects = ({ data }) => {
   console.log('location', loc);
   return (
     <Binder>
+      <ScrollToTop />
       <Folder data={data} />
     </Binder>
   );
