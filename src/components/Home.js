@@ -10,8 +10,9 @@ const Home = ({ data }) => {
       <Project images={data.projects.threeD} name={'3D Projects'} />
       <Project images={data.projects.UX} name={'UI / UX Projects'} />
       <Project images={data.projects.ReactP} name={'React Projects'} />
-      <Project images={data.projects.IllustP} name={'Illustration Projects'} />
       <Project images={data.projects.PlushP} name={'Plush Projects'} />
+      <Project images={data.projects.IllustP} name={'Illustration Projects'} />
+      
     </Container>
   );
 };
@@ -79,7 +80,13 @@ const Content = styled.div`
 
 const Image = styled.div`
   background-image: url('${(props) => props.src}');
-  height: 192px;
+  height: 300px;
+
+  @media (max-width: 800px) {
+    height: 192px;
+  }
+
+  
   background-position: center;
   background-size: cover;
 `;

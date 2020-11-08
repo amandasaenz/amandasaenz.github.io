@@ -1,14 +1,47 @@
 import overdrive from './ProjectImages/3DProjects/overdrive.jpg';
-import kaiju from './ProjectImages/3DProjects/kaiju.jpg';
+
+import greenKaiju from './ProjectImages/3DProjects/HKKaiju_green.jpg';
+import midnightKaiju from './ProjectImages/3DProjects/HKKaiju_midnight.jpg';
+import unicornKaiju from './ProjectImages/3DProjects/HKKaiju_unicorn.jpg';
+import pinkKaiju from './ProjectImages/3DProjects/HKKaiju_pink.jpg';
+import rainbowKaiju from './ProjectImages/3DProjects/HKKaiju_rainbow.jpg';
+
 import croatian from './ProjectImages/3DProjects/croatian.jpg';
+
 import deercat from './ProjectImages/3DProjects/DeerCat.jpg';
+
 import wonderwoman from './ProjectImages/3DProjects/wonderwoman.jpg';
-import andybust from './ProjectImages/3DProjects/AndyWarhol.jpg';
+
+import greenWarhol from './ProjectImages/3DProjects/WarholBust_greencamo.jpg';
+import yellowWarhol from './ProjectImages/3DProjects/WarholBust_yellowcamo.jpg';
+
 import bowlhead from './ProjectImages/3DProjects/bowlheadbanks.jpg';
-import mario from './ProjectImages/3DProjects/CrashMario.jpg';
-import mint from './ProjectImages/UXUIProjects/mint.png';
+
+import superCrashBro from './ProjectImages/3DProjects/superCrashBro.jpg';
+import superCrashBro2 from './ProjectImages/3DProjects/superCrashBro2.jpg';
+
+import mint from './ProjectImages/UXUIProjects/mint.gif';
+import minterik from './ProjectImages/UXUIProjects/minterik.gif';
+import mintamanda from './ProjectImages/UXUIProjects/mintamanda.gif';
+
 import wintersoldier from './ProjectImages/UXUIProjects/wintersoldier.jpg';
-import endless from './ProjectImages/UXUIProjects/endless.jpg';
+import WS from './ProjectImages/UXUIProjects/WinterSoldier.gif';
+
+
+import endless from './ProjectImages/UXUIProjects/Endless.jpg';
+import endless2 from './ProjectImages/UXUIProjects/Endless2.jpg';
+import endless3 from './ProjectImages/UXUIProjects/Endless3.jpg';
+import endless4 from './ProjectImages/UXUIProjects/Endless4.jpg';
+import endless5 from './ProjectImages/UXUIProjects/Endless5.jpg';
+import endless6 from './ProjectImages/UXUIProjects/Endless6.jpg';
+import endless7 from './ProjectImages/UXUIProjects/Endless7.jpg';
+import endless8 from './ProjectImages/UXUIProjects/Endless8.jpg';
+import endless9 from './ProjectImages/UXUIProjects/Endless9.jpg';
+import endless10 from './ProjectImages/UXUIProjects/Endless10.jpg';
+import endless11 from './ProjectImages/UXUIProjects/Endless11.jpg';
+
+
+
 import website from './ProjectImages/UXUIProjects/website.png';
 import openminded from './ProjectImages/IllustrationProjects/openminded.jpg';
 import hamster from './ProjectImages/IllustrationProjects/hamster.jpg';
@@ -16,9 +49,29 @@ import travis from './ProjectImages/IllustrationProjects/travis.jpg';
 import mischief from './ProjectImages/IllustrationProjects/mischief.jpg';
 import it from './ProjectImages/IllustrationProjects/it.jpg';
 import wolf from './ProjectImages/IllustrationProjects/whitewolf.jpg';
-import milk from './ProjectImages/PlushProjects/milk.png';
-import icecream from './ProjectImages/PlushProjects/icecream.png';
-import guac from './ProjectImages/PlushProjects/guac.png';
+
+import YW_milk from './ProjectImages/PlushProjects/YW_MC_1.jpg';
+import YW_milk2 from './ProjectImages/PlushProjects/YW_MC_2.jpg';
+import YW_milk3 from './ProjectImages/PlushProjects/YW_MC_3.jpg';
+import YW_milk4 from './ProjectImages/PlushProjects/YW_MC_4.jpg';
+import YW_milk5 from './ProjectImages/PlushProjects/YW_MC_5.jpg';
+import YW_milk6 from './ProjectImages/PlushProjects/YW_MC_6.jpg';
+import YW_milk7 from './ProjectImages/PlushProjects/YW_MC_7.jpg';
+import YW_milk8 from './ProjectImages/PlushProjects/YW_MC_8.jpg';
+import YW_milk9 from './ProjectImages/PlushProjects/YW_MC_9.jpg';
+import YW_milk10 from './ProjectImages/PlushProjects/YW_MC_10.jpg';
+
+import YW_cone from './ProjectImages/PlushProjects/YW_WC_1.jpg';
+import YW_cone2 from './ProjectImages/PlushProjects/YW_WC_2.jpg';
+import YW_cone3 from './ProjectImages/PlushProjects/YW_WC_3.jpg';
+import YW_cone4 from './ProjectImages/PlushProjects/YW_WC_4.jpg';
+
+import YW_chips from './ProjectImages/PlushProjects/YW_CS_1.jpg';
+import YW_chips2 from './ProjectImages/PlushProjects/YW_CS_2.jpg';
+import YW_chips3 from './ProjectImages/PlushProjects/YW_CS_3.jpg';
+import YW_chips4 from './ProjectImages/PlushProjects/YW_CS_4.jpg';
+import YW_chips5 from './ProjectImages/PlushProjects/YW_CS_5.jpg';
+import YW_chips6 from './ProjectImages/PlushProjects/YW_CS_6.jpg';
 
 const data = {
   projects: {
@@ -29,7 +82,7 @@ const data = {
         title: 'Overdrive Madness',
         id: 'OverdriveMadness',
         thumbnail: overdrive,
-        images: [overdrive, website, overdrive],
+        images: [overdrive],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -40,8 +93,8 @@ const data = {
       {
         title: 'Kidrobot Hello Kitty Kaiju',
         id: 'HelloKittyKaiju',
-        thumbnail: kaiju,
-        images: [kaiju, kaiju, kaiju],
+        thumbnail: greenKaiju,
+        images: [greenKaiju, midnightKaiju, unicornKaiju, pinkKaiju, rainbowKaiju],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -53,7 +106,7 @@ const data = {
         title: 'Kidrobot Croatian Vacation',
         id: 'CroatianVacation',
         thumbnail: croatian,
-        images: [croatian, croatian, croatian, croatian, croatian],
+        images: [croatian],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -65,7 +118,7 @@ const data = {
         title: 'Kidrobot WonderWoman',
         id: 'WonderWoman',
         thumbnail: wonderwoman,
-        images: [wonderwoman, wonderwoman],
+        images: [wonderwoman],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -77,7 +130,7 @@ const data = {
         title: 'Strangecat DeerCat',
         id: 'DeerCat',
         thumbnail: deercat,
-        images: [deercat, deercat, deercat],
+        images: [deercat],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -88,8 +141,8 @@ const data = {
       {
         title: 'Kidrobot Andy Warhol Bust',
         id: 'AndyWarhol',
-        thumbnail: andybust,
-        images: [andybust],
+        thumbnail: yellowWarhol,
+        images: [greenWarhol, yellowWarhol],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -101,7 +154,7 @@ const data = {
         title: 'Bowlhead Banks',
         id: 'BowlheadBanks',
         thumbnail: bowlhead,
-        images: [bowlhead, bowlhead],
+        images: [bowlhead],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -112,8 +165,8 @@ const data = {
       {
         title: 'Josh Divine Crash Mario',
         id: 'mario',
-        thumbnail: mario,
-        images: [mario, mario],
+        thumbnail: superCrashBro,
+        images: [superCrashBro, superCrashBro2],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
         partners: 'Partners: personal project',
@@ -129,7 +182,7 @@ const data = {
         title: 'Mintcushions Web App',
         id: 'Mintcushions',
         thumbnail: mint,
-        images: [mint, mint, mint],
+        images: [mint, minterik, mintamanda],
         software: ['Adobe Illustrator'],
         description: 'Description: React/Redux single page application',
         partners: 'Partners: Full Stack Web Developer',
@@ -140,8 +193,8 @@ const data = {
       {
         title: 'Winter Soldier UI',
         id: 'WinterSoldier',
-        thumbnail: wintersoldier,
-        images: [wintersoldier],
+        thumbnail: WS,
+        images: [WS, wintersoldier],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: Starcraft II’s marine user interface',
         partners: 'Partners: UI programmer',
@@ -153,7 +206,7 @@ const data = {
         title: 'Endless',
         id: 'Endless',
         thumbnail: endless,
-        images: [endless, endless, endless, endless, endless],
+        images: [endless, endless2, endless3, endless4, endless5, endless6, endless7, endless8, endless9, endless10, endless11],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -165,7 +218,7 @@ const data = {
         title: 'Website',
         id: 'Website',
         thumbnail: website,
-        images: [website, website, website, website, website],
+        images: [website],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -182,7 +235,7 @@ const data = {
         title: 'Openminded',
         id: 'OpenMinded',
         thumbnail: openminded,
-        images: [openminded, openminded],
+        images: [openminded],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -219,7 +272,7 @@ const data = {
         title: 'White Wolf',
         id: 'WhiteWolf',
         thumbnail: wolf,
-        images: [wolf, wolf],
+        images: [wolf],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -260,8 +313,8 @@ const data = {
       {
         title: 'Milk and Cookies',
         id: 'MilkAndCookies',
-        thumbnail: milk,
-        images: [milk, milk, milk],
+        thumbnail: YW_milk2,
+        images: [YW_milk, YW_milk2, YW_milk3, YW_milk4, YW_milk5, YW_milk6, YW_milk7, YW_milk8, YW_milk9, YW_milk10],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -272,8 +325,8 @@ const data = {
       {
         title: 'Chips and Guac',
         id: 'ChipsAndGuac',
-        thumbnail: guac,
-        images: [guac, guac],
+        thumbnail: YW_chips,
+        images: [YW_chips, YW_chips2, YW_chips3, YW_chips4, YW_chips5, YW_chips6],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -284,8 +337,8 @@ const data = {
       {
         title: 'Icecream Upsidedown',
         id: 'Icecream',
-        thumbnail: icecream,
-        images: [icecream, icecream],
+        thumbnail: YW_cone2,
+        images: [YW_cone, YW_cone2, YW_cone3, YW_cone4],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
@@ -302,7 +355,7 @@ const data = {
         title: 'Website',
         id: 'Website',
         thumbnail: website,
-        images: [website, website],
+        images: [website],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: 'Description: 2D online multiplayer game made in Unity',
         partners: 'Partners: 3D UI programmer/UX designer',
