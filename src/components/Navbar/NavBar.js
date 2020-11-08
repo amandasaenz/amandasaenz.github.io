@@ -139,7 +139,7 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 `;
 
 const Glass = styled(animated.div)`

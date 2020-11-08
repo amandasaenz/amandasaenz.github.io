@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import ScrollToTop from './ScrollToTop';
-import { Link } from './Resume/ReusableComponents';
+import { Link, VertLine } from './Resume/ReusableComponents';
+import zoom from '../images/SVG/zoom.SVG';
 
 const Projects = ({ data }) => {
   return (
@@ -16,26 +17,24 @@ const Folder = ({ data }) => {
  return(
     <ProjectContainer>
       <SubHeading>{data.title}</SubHeading>
-
+      
       <Indent>
-        <div
+        <VertLine
           style={{
             position: 'absolute',
             zIndex: 1,
-            backgroundColor: '#191324',
-            width: '16px',
-            height: '100%',
-            opacity: 0.5,
-            borderRight: '1px solid #e74946',
+          
           }}
-        ></div>
+        ></VertLine>
         <div style={{marginLeft: '32px'}}>
         {data.images.map((s, i) => (
-          <ImageContainer key={i}>
-            
-              <Image src={s} key={s.id} onClick={() => {
-                window.open(`${s}`);
-              }}/>
+          <ImageContainer key={i} onClick={() => {
+            window.open(`${s}`);
+          }}>
+        
+              <ZoomImage src={zoom}/>
+              <Image src={s} key={s.id} />
+           
     
               </ImageContainer>
             ))}
@@ -46,7 +45,6 @@ const Folder = ({ data }) => {
           </Software>
         </div>
       </Indent>
-
       <AlignRight>
         <div>{data.description}</div>
         <div>{data.partners}</div>
@@ -60,14 +58,12 @@ const Folder = ({ data }) => {
 export default Projects;
 
 const Software = styled.div`
-  padding-right: 32px;
-  padding-left: 32px;
+  margin-top: 16px;
 `;
 
 const Indent = styled.div`
-  display: inline;
-  height: auto;
   position: relative;
+  height: 100%;
 `;
 
 const List = styled.li`
@@ -101,7 +97,7 @@ const SubHeading = styled.div`
 const AlignRight = styled.div`
   flex: 1 1 0%;
   justify-content: flex-start;
-  padding-top: 8px;
+  padding-top: 16px;
 `;
 
 const Image = styled.img`
@@ -109,18 +105,31 @@ background-image: url('${(props) => props.src}');
   width: 100%;
   display: block;
   transition: transform .2s;
-  &:hover {
-    transform: scale(1.5);
-    cursor: pointer;
-  }
 `;
 
 const ImageContainer = styled.div`
-
+position: relative;
 width: 100%;
 overflow: hidden;
  box-sizing: border-box; 
- margin-bottom: 16px;
+
+ margin-top: 8px;
+ cursor: pointer;
+
+ & ${ZoomImage}:hover + ${Image} {
+  transform: scale(1.5);
+}
+`;
+
+const ZoomImage = styled.div`
+background-image: url('${(props) => props.src}');
+position: absolute;
+right: 0;
+width: 48px;
+height: 48px;
+margin: 8px;
+// background-color: red;
+z-index: 2;
 `;
 
 

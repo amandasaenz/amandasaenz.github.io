@@ -35,12 +35,24 @@ export const AlignRight = styled.div`
   padding-top: 8px;
 `;
 
+export const VertLine = styled.div`
+background-color: #e74946;
+width: 2px;
+height: 100%;
+border-radius:2px;
+display: flex;
+margin-top: 8px;
+margin-left: 8px;
+`;
+
 export const Indent = styled.div`
+white-space: nowrap;
   height: 100%;
-  border-left: 1px solid #e74946;
-  padding-top: 8px;
+  width: 100%;
+  // border-left: 1px solid #e74946;
+  // padding-top: 8px;
   padding-left: 16px;
-  margin-left: 8px;
+  // margin-left: 8px;
 `;
 
 export const Link = styled.a`

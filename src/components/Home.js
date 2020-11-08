@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Heading } from './Resume/ReusableComponents';
+import { Heading, Indent, VertLine } from './Resume/ReusableComponents';
 
 const Home = ({ data }) => {
   return (
@@ -28,16 +28,9 @@ const Project = ({ images, name }) => {
       </div>
 
       <div style={{ position: 'relative' }}>
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: 1,
-            backgroundColor: '#191324',
-            width: '16px',
-            height: '100%',
-            borderRight: '1px solid #e74946',
-          }}
-        ></div>
+        <VertLine style={{position: 'absolute'}}>
+        <Indent/>
+        </VertLine>
         <Content>{List}</Content>
       </div>
     </AlignLeft>

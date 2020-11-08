@@ -39,8 +39,9 @@ const Container = styled.div`
 `;
 
 const Line = styled.div`
-  height: 1px;
+  height: 2px;
   background-color: #e74946;
   margin-top: 8px;
   margin-bottom: 8px;
+  border-radius: 2px;
 `;

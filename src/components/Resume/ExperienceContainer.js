@@ -6,6 +6,7 @@ import {
   AlignLeft,
   AlignRight,
   Indent,
+  VertLine,
 } from './ReusableComponents';
 
 const ExperienceContainer = ({ data }) => {
@@ -15,7 +16,7 @@ const ExperienceContainer = ({ data }) => {
         <SubHeading>
           {exp.work} {exp.duration}
         </SubHeading>
-        <Indent>{exp.role}</Indent>
+       <VertLine> <Indent>{exp.role}</Indent></VertLine>
       </AlignLeft>
       <AlignRight>{exp.description}</AlignRight>
     </Container>

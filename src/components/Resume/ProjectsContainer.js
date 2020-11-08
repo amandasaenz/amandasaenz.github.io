@@ -8,6 +8,8 @@ import {
   AlignRight,
   Indent,
   Link,
+  vertLine,
+  VertLine,
 } from './ReusableComponents';
 
 const ProjectsContainer = ({ data }) => {
@@ -15,11 +17,13 @@ const ProjectsContainer = ({ data }) => {
     <Container key={index}>
       <AlignLeft>
         <SubHeading>{project.title}</SubHeading>
+       <VertLine>
         <Indent>
           {project.software.map((s, i) => (
             <List key={i}>{s}</List>
           ))}
         </Indent>
+        </VertLine>
       </AlignLeft>
       <AlignRight>
         <div>{project.description}</div>
