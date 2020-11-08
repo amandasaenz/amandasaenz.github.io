@@ -55,34 +55,30 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  height: 100%;
+  
   margin-top: 8px;
   margin-left: 32px;
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
 
   @media (max-width: 625px) {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 1000px) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: 1400px) {
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
   }
 `;
 
 const Image = styled.div`
   background-image: url('${(props) => props.src}');
-  height: 300px;
-
-  @media (max-width: 800px) {
-    height: 192px;
-  }
-
+  padding-top: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
 `;

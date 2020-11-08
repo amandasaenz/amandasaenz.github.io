@@ -11,6 +11,7 @@ import croatian from './ProjectImages/3DProjects/croatian.jpg';
 import deercat from './ProjectImages/3DProjects/DeerCat.jpg';
 
 import wonderwoman from './ProjectImages/3DProjects/wonderwoman.jpg';
+import wonderwomanThumb from './ProjectImages/3DProjects/wonderwoman_thumb.jpg';
 
 import greenWarhol from './ProjectImages/3DProjects/WarholBust_greencamo.jpg';
 import yellowWarhol from './ProjectImages/3DProjects/WarholBust_yellowcamo.jpg';
@@ -117,7 +118,7 @@ const data = {
       {
         title: 'Kidrobot WonderWoman',
         id: 'WonderWoman',
-        thumbnail: wonderwoman,
+        thumbnail: wonderwomanThumb,
         images: [wonderwoman],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description: 'Description: 3D character model / rigged and posed',
