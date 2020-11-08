@@ -4,8 +4,6 @@ import ScrollToTop from './ScrollToTop';
 import { Link } from './Resume/ReusableComponents';
 
 const Projects = ({ data }) => {
-  const loc = window.location.href;
-  console.log('location', loc);
   return (
     <Binder>
       <ScrollToTop />
@@ -27,12 +25,19 @@ const Folder = ({ data }) => {
             backgroundColor: '#191324',
             width: '16px',
             height: '100%',
+            opacity: 0.5,
             borderRight: '1px solid #e74946',
           }}
         ></div>
-        <div>
+        <div style={{marginLeft: '32px'}}>
         {data.images.map((s, i) => (
-              <Image src={s} key={i}/>
+          <ImageContainer key={i}>
+            
+              <Image src={s} key={s.id} onClick={() => {
+                window.open(`${s}`);
+              }}/>
+    
+              </ImageContainer>
             ))}
           <Software>
             {data.software.map((s, i) => (
@@ -51,7 +56,6 @@ const Folder = ({ data }) => {
     </ProjectContainer>
  );
 };
-
 
 export default Projects;
 
@@ -101,10 +105,22 @@ const AlignRight = styled.div`
 `;
 
 const Image = styled.img`
+background-image: url('${(props) => props.src}');
   width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  padding-left: 32px;
-  padding-bottom: 8px;
-  padding-top: 8px;
+
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
 `;
+
+const ImageContainer = styled.div`
+width: 100%;
+overflow: hidden;
+ box-sizing: border-box; 
+ margin-bottom: 16px;
+`;
+
+
+
+
