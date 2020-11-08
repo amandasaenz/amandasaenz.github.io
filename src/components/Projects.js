@@ -107,7 +107,8 @@ const AlignRight = styled.div`
 const Image = styled.img`
 background-image: url('${(props) => props.src}');
   width: 100%;
-
+  display: block;
+  transition: transform .2s;
   &:hover {
     transform: scale(1.5);
     cursor: pointer;
@@ -115,6 +116,7 @@ background-image: url('${(props) => props.src}');
 `;
 
 const ImageContainer = styled.div`
+
 width: 100%;
 overflow: hidden;
  box-sizing: border-box; 

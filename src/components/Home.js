@@ -81,9 +81,15 @@ const Image = styled.div`
   width: 100%;
   background-position: center;
   background-size: cover;
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
 `;
 
 const Link = styled.a`
+overflow: hidden;
   flex-basis: 30%;
   flex-grow: 1;
   border-radius: 4px;
