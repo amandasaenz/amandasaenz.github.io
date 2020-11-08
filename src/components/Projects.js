@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import ScrollToTop from './ScrollToTop';
 import { Link } from './Resume/ReusableComponents';
 
 const Projects = ({ data }) => {

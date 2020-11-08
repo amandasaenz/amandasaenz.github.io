@@ -5,7 +5,7 @@ import Home from './Home';
 import Projects from './Projects';
 import ResumeData from './ResumeData';
 import ProjectData from './ProjectData';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import NavBar from './Navbar/NavBar';
 import lodash from 'lodash'
 
