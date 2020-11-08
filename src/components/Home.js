@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Heading } from './Resume/ReusableComponents';
-import ScrollToTop from './ScrollToTop';
 
 const Home = ({ data }) => {
   return (
     <Container>
-      <ScrollToTop />
       <Project images={data.projects.threeD} name={'3D Projects'} />
       <Project images={data.projects.UX} name={'UI / UX Projects'} />
       <Project images={data.projects.ReactP} name={'React Projects'} />
       <Project images={data.projects.PlushP} name={'Plush Projects'} />
       <Project images={data.projects.IllustP} name={'Illustration Projects'} />
-      
     </Container>
   );
 };
@@ -86,17 +83,13 @@ const Image = styled.div`
     height: 192px;
   }
 
-  
   background-position: center;
   background-size: cover;
 `;
 
 const Link = styled.a`
-  // margin-left: 16px;
-  // margin-top: 16px;
   flex-basis: 30%;
   flex-grow: 1;
-
   border-radius: 4px;
   box-sizing: border-box;
 `;
