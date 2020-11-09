@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
 };
 
 const Folder = ({ data }) => {
-  // console.log(data.demo);
+  console.log(data.demo);
   return (
     <ProjectContainer>
       <SubHeading>{data.title}</SubHeading>
@@ -47,22 +47,36 @@ const Folder = ({ data }) => {
         </div>
       </div>
       <AlignRight>
-        <div>
+        <div
+          style={{
+            display: `${data.description}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Description: </span>
           <span>{data.description}</span>
         </div>
-        <div>
+        <div
+          style={{
+            display: `${data.partners}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Partners: </span>
           <span>{data.partners}</span>
         </div>
-        <div>
+        <div
+          style={{
+            display: `${data.role}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Role: </span>
           <span>{data.role}</span>
         </div>
 
         <Link
           href={data.demo}
-          style={{ visibility: `${data.demo}` ? 'visible' : 'hidden' }}
+          style={{
+            display: `${data.demo}` === 'undefined' ? 'none' : 'block',
+          }}
         >
           Demo Link
         </Link>

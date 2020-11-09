@@ -22,6 +22,7 @@ import bowlhead from './ProjectImages/3DProjects/bowlheadbanks.jpg';
 
 import superCrashBro from './ProjectImages/3DProjects/superCrashBro.jpg';
 import superCrashBro2 from './ProjectImages/3DProjects/superCrashBro2.jpg';
+import superCrashBro3 from './ProjectImages/3DProjects/superCrashBro3.jpg';
 
 import mint from './ProjectImages/UXUIProjects/mint.gif';
 import mintThumb from './ProjectImages/UXUIProjects/mint_thumb.gif';
@@ -89,8 +90,7 @@ const data = {
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description:
           'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
-        partners: 'This was a personal project.',
-        role: 'Design a 3D model that is rigged and posed.',
+
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -110,7 +110,6 @@ const data = {
         partners: 'Designer',
         role:
           'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
@@ -123,7 +122,6 @@ const data = {
         partners: 'Designer',
         role:
           'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
@@ -133,9 +131,7 @@ const data = {
         images: [wonderwoman],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description: 'This was a 3D test given to me by Kidrobot.',
-        partners: 'This was a test, no partners.',
         role: 'Turn a 2D concept into a 3D sculpt.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
@@ -147,7 +143,6 @@ const data = {
         description: 'Deercat and Snoo, an illustration by Amber Aki Huang.',
         partners: 'Illustrator',
         role: 'Turn a 2D concept into a 3D sculpt.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
@@ -159,7 +154,6 @@ const data = {
         description: 'Andy Warhol bust in different "Hydro Dip" camo colors.',
         partners: 'Concept Artist',
         role: 'Turn a 2D concept into a 3D sculpt.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
@@ -170,22 +164,20 @@ const data = {
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan', 'XGen'],
         description:
           'I created Bowlhead Banks to study XGen, a hair simulator.',
-        partners: 'personal project',
-        role: 'Design a character head and simulate his hair.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
         title: 'Josh Divine X Super Crash Bro',
         id: 'mario',
         thumbnail: superCrashBro,
-        images: [superCrashBro, superCrashBro2],
+        images: [superCrashBro, superCrashBro2, superCrashBro3],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
           'Super Crash Bro is the 2nd "crash" series toy by Josh Divine.',
         partners: 'Josh Divine',
         role: 'Turn a 2D concept into a 3D sculpt.',
-        demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
+        demo:
+          'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
       },
     ],
 
@@ -215,7 +207,7 @@ const data = {
         partners: 'UI programmer',
         role:
           'Design all UI art, main skull logo, weapons,and space environment.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+        demo: 'https://youtu.be/-Tf08yUNjIc',
       },
       {
         title: 'Endless',
@@ -247,10 +239,8 @@ const data = {
         images: [website],
         software: ['React/Javascript', 'CSS', 'Illustrator'],
         description:
-          'I created a website to show my all of my projects and resume.',
-        partners: 'personal project',
-        role: 'Create all UI assets and programmed whole website.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+          'My website is a single page application created in React to show all of my work.',
+        demo: 'https://amandasaenz.github.io/',
       },
     ],
 
@@ -258,16 +248,14 @@ const data = {
 
     ReactP: [
       {
-        title: 'Website',
+        title: 'amandasaenz.github.io - My Portfolio',
         id: 'Website',
         thumbnail: website,
         images: [website],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+        software: ['React/Javascript', 'CSS', 'Illustrator'],
+        description:
+          'My website is a single page application created in React to show all of my work.',
+        demo: 'https://amandasaenz.github.io/',
       },
     ],
 
@@ -293,9 +281,9 @@ const data = {
         software: ['Adobe Illustrator'],
         description:
           'This Yummy World plush packs three removable fresh-baked chocolate chip cookie plushies inside a large plush YUM-MOO Milk carton.',
-        partners: 'individual partners',
-        role: 'Design a large Milk and Cookies plush for Yummy World.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+
+        demo:
+          'https://www.kidrobot.com/products/yummy-world-milk-and-cookies-plush',
       },
       {
         title: 'Yummy World Chips and Guac',
@@ -312,9 +300,9 @@ const data = {
         software: ['Adobe Illustrator'],
         description:
           'Yummy World welcomes everyone’s favorite dip and chips with the large plush Chips & Guac!',
-        partners: 'individual partners',
-        role: 'Design a large Yummy World Chips and Guac plush.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+
+        demo:
+          'https://www.kidrobot.com/products/yummy-world-chips-guacamole-plush-toy',
       },
       {
         title: 'Icecream Upsidedown',
@@ -324,9 +312,9 @@ const data = {
         software: ['Adobe Illustrator'],
         description:
           'Introducing your snuggly, cool but a little clumsy new plushie ice cream friend with the Yummy World Walter Waffle Cone Ice Cream Scoop Plush.',
-        partners: 'individual project',
-        role: 'Design a small upside down ice cream cone for Yummy World.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+
+        demo:
+          'https://www.kidrobot.com/products/yummy-world-walter-waffle-cone-ice-cream-plush?variant=31789308379233&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiA7qP9BRCLARIsABDaZzic2fr2jtAl64-lr2sSQc4disti8vfrh9YEPvwCYcos5ubwPJNgPFUaAmtVEALw_wcB',
       },
     ],
 
@@ -341,9 +329,6 @@ const data = {
         software: ['Adobe Illustrator'],
         description:
           'This illustration tells a story of a brain that opened their third eye.',
-        partners: 'personal project',
-        role: 'Illustrate a story of a brain who opens his mind to the world.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
         title: 'Chunky the Hamster',
@@ -352,9 +337,6 @@ const data = {
         images: [hamster],
         software: ['Adobe Illustrator'],
         description: 'Chunky the Hamster loves to eat wontons.',
-        partners: 'personal project',
-        role: 'Create an illustration of a hamster.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
         title: 'Travis Barker Portrait',
@@ -363,9 +345,6 @@ const data = {
         images: [travis],
         software: ['graphite pencil'],
         description: 'A portrait of Travis Barker.',
-        partners: 'personal project',
-        role: 'Create a hand drawn portrait.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
 
       {
@@ -376,9 +355,6 @@ const data = {
         software: ['Adobe Illustrator'],
         description:
           'This was a direwolf illustration I made for a phone background.',
-        partners: 'personal project',
-        role: 'Design a phone background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
         title: 'IT sketch',
@@ -387,9 +363,6 @@ const data = {
         images: [it],
         software: ['Adobe Photoshop'],
         description: 'A sketch made in procreate.',
-        partners: 'personal project',
-        role: 'Create a sketch in procreate.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
 
       {
@@ -399,8 +372,6 @@ const data = {
         images: [mischief],
         software: ['Adobe Illustrator'],
         description: 'This was a dream that I recreated in Illustrator.',
-        partners: 'personal project',
-        role: 'Recreate dream using Adobe Illustrator.',
       },
     ],
   },

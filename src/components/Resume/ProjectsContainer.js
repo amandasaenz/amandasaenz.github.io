@@ -26,17 +26,30 @@ const ProjectsContainer = ({ data }) => {
         </VertLine>
       </AlignLeft>
       <AlignRight>
-        <div>
+        <div
+          style={{
+            display:
+              `${project.description}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Description: </span>
           <span>{project.description}</span>
         </div>
 
-        <div>
+        <div
+          style={{
+            display: `${project.partners}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Partners: </span>
           <span>{project.partners}</span>
         </div>
 
-        <div>
+        <div
+          style={{
+            display: `${project.role}` === 'undefined' ? 'none' : 'block',
+          }}
+        >
           <span style={{ color: '#d11f6c' }}>Role: </span>
           <span>{project.role}</span>
         </div>

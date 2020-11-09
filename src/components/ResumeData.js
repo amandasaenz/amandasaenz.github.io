@@ -59,34 +59,28 @@ const data = {
 
   projects: [
     {
+      title: 'amandasaenz.github.io',
+      software: ['React/Javascript', 'CSS', 'Illustrator'],
+      description:
+        'My website is a single page application created in React to show all of my work.',
+      demo: 'https://amandasaenz.github.io/',
+    },
+    {
+      title: 'Josh Divine X Super Crash Bro',
+      software: ['Pixologic Zbrush', 'Keyshot'],
+      description:
+        'Super Crash Bro is the 2nd "crash" series toy by Josh Divine.',
+      partners: 'Josh Divine',
+      role: 'Turn a 2D concept into a 3D sculpt.',
+      demo:
+        'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
+    },
+    {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
       description:
         'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
-      partners: 'This was a personal project.',
-      role: 'Design a 3D model that is rigged and posed.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
-    },
-
-    {
-      title: 'Mintcushions Web App',
-      software: ['Adobe Illustrator'],
-      description: 'React/Redux single page application',
-      partners: 'Full Stack Web Developer',
-      role:
-        'Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
-      demo: 'http://www.mintcushions.com/',
-    },
-
-    {
-      title: 'Winter Soldier UI',
-      software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description:
-        'Inspired by Starcraft, Winter Soldier user interface shows a unique approach to a game HUD',
-      partners: 'UI programmer',
-      role:
-        'Design all UI art, main skull logo, weapons,and space environment.',
-      demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
     {
       title: 'Endless',
