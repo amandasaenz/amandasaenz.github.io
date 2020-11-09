@@ -3,9 +3,9 @@ import { useSpring, animated } from 'react-spring';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import styled from '@emotion/styled';
 import burgerImage from './images/Burger.svg';
-import { set } from 'lodash';
 
 const NavBar = ({ data, width }) => {
+  const location = useLocation();
   return width < 480 ? (
     <Mobile data={data} loc={location.pathname} />
   ) : (
@@ -18,10 +18,9 @@ export default NavBar;
 // render if screen-width is for Mobile
 const Mobile = ({ data, loc }) => {
   const [isOpened, setOpened] = useState(false);
-  const [hist, setHist] = useState(0);
   const wrapperRef = useRef(null);
 
-  //if user clicks outside of Navbar, it will close
+  // if user clicks outside of Navbar, it will close
   useEffect(() => {
     console.log('opened = ', isOpened);
     function handleClickOutside(event) {
