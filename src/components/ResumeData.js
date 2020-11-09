@@ -1,18 +1,27 @@
 import icon from '../images/icon1.SVG';
+import nicon from '../images/icon22.SVG';
 import artstation from '../images/artstation.svg';
 import linkedin from '../images/linkedin.svg';
+import linkedin2 from '../images/linkedin2.svg';
+import github from '../images/github.svg';
+import github2 from '../images/github2.svg';
 
 const data = {
   info: {
     icon: icon,
+    navicon: nicon,
     name: 'Amanda Saenz',
     email: 'amanda.blakely7@gmail.com',
     location: 'Westminster, CO',
     phone: '(361) 232-9436',
     website1: 'https://amandasaenz.artstation.com',
     website2: 'https://www.linkedin.com/in/amandasnoww/',
+    website3: 'https://github.com/amandasaenz',
     websiteLogo1: artstation,
     websiteLogo2: linkedin,
+    websiteLogo3: linkedin2,
+    websiteLogo4: github,
+    websiteLogo5: github2,
   },
 
   navbarLinks: {
@@ -54,37 +63,36 @@ const data = {
     {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-      description: 'Description: 3D character model / rigged and posed',
-      partners: 'Partners: personal project',
-      role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+      description: '3D character model / rigged and posed',
+      partners: 'personal project',
+      role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
 
     {
       title: 'Mintcushions Web App',
       software: ['Adobe Illustrator'],
-      description: 'Description: React/Redux single page application',
-      partners: 'Partners: Full Stack Web Developer',
+      description: 'React/Redux single page application',
+      partners: 'Full Stack Web Developer',
       role:
-        'Role: Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
+        'Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
       demo: 'http://www.mintcushions.com/',
     },
 
     {
       title: 'Winter Soldier UI',
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description: 'Description: Starcraft II’s marine user interface',
-      partners: 'Partners: UI programmer',
-      role: 'Role: Created all UI art, main skull logo, and space environment.',
+      description: 'Starcraft II’s marine user interface',
+      partners: 'UI programmer',
+      role: 'Created all UI art, main skull logo, and space environment.',
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
     {
       title: 'Endless',
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description: 'Description: 2D online multiplayer game made in Unity',
-      partners: 'Partners: 3D UI programmer/UX designer',
-      role:
-        'Role: Created futuristic UI buttons, panels, etc. and space background.',
+      description: '2D online multiplayer game made in Unity',
+      partners: '3D UI programmer/UX designer',
+      role: 'Created futuristic UI buttons, panels, etc. and space background.',
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
   ],

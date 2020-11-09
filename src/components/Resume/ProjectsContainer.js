@@ -17,18 +17,30 @@ const ProjectsContainer = ({ data }) => {
     <Container key={index}>
       <AlignLeft>
         <SubHeading>{project.title}</SubHeading>
-       <VertLine>
-        <Indent>
-          {project.software.map((s, i) => (
-            <List key={i}>{s}</List>
-          ))}
-        </Indent>
+        <VertLine>
+          <Indent>
+            {project.software.map((s, i) => (
+              <List key={i}>{s}</List>
+            ))}
+          </Indent>
         </VertLine>
       </AlignLeft>
-      <AlignRight>
-        <div>{project.description}</div>
-        <div>{project.partners}</div>
-        <div>{project.role}</div>
+      <AlignRight style={{ padding: 0 }}>
+        <div>
+          <span style={{ color: '#d11f6c' }}>Description: </span>
+          <span>{project.description}</span>
+        </div>
+
+        <div>
+          <span style={{ color: '#d11f6c' }}>Partners: </span>
+          <span>{project.partners}</span>
+        </div>
+
+        <div>
+          <span style={{ color: '#d11f6c' }}>Role: </span>
+          <span>{project.role}</span>
+        </div>
+
         <Link href={project.demo}>Demo Link</Link>
       </AlignRight>
     </Container>
@@ -46,4 +58,16 @@ export default ProjectsContainer;
 
 const List = styled.li`
   list-style: none;
+`;
+
+const SubHeader = styled.p`
+  font-family: 'Varela Round', sans-serif;
+  color: #e74946;
+  font-size: 20px;
+`;
+
+const Text = styled.p`
+  font-family: 'Varela Round', sans-serif;
+  color: #7fd8d9;
+  font-size: 20px;
 `;

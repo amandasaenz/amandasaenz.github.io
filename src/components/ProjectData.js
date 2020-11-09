@@ -22,12 +22,14 @@ import superCrashBro from './ProjectImages/3DProjects/superCrashBro.jpg';
 import superCrashBro2 from './ProjectImages/3DProjects/superCrashBro2.jpg';
 
 import mint from './ProjectImages/UXUIProjects/mint.gif';
+import mintThumb from './ProjectImages/UXUIProjects/mint_thumb.gif';
+
 import minterik from './ProjectImages/UXUIProjects/minterik.gif';
 import mintamanda from './ProjectImages/UXUIProjects/mintamanda.gif';
 
 import wintersoldier from './ProjectImages/UXUIProjects/wintersoldier.jpg';
 import WS from './ProjectImages/UXUIProjects/WinterSoldier.gif';
-
+import WS_thumb from './ProjectImages/UXUIProjects/WinterSoldier_thumb.gif';
 
 import endless from './ProjectImages/UXUIProjects/Endless.jpg';
 import endless2 from './ProjectImages/UXUIProjects/Endless2.jpg';
@@ -40,8 +42,6 @@ import endless8 from './ProjectImages/UXUIProjects/Endless8.jpg';
 import endless9 from './ProjectImages/UXUIProjects/Endless9.jpg';
 import endless10 from './ProjectImages/UXUIProjects/Endless10.jpg';
 import endless11 from './ProjectImages/UXUIProjects/Endless11.jpg';
-
-
 
 import website from './ProjectImages/UXUIProjects/website.png';
 import openminded from './ProjectImages/IllustrationProjects/openminded.jpg';
@@ -95,11 +95,17 @@ const data = {
         title: 'Kidrobot Hello Kitty Kaiju',
         id: 'HelloKittyKaiju',
         thumbnail: greenKaiju,
-        images: [greenKaiju, midnightKaiju, unicornKaiju, pinkKaiju, rainbowKaiju],
+        images: [
+          greenKaiju,
+          midnightKaiju,
+          unicornKaiju,
+          pinkKaiju,
+          rainbowKaiju,
+        ],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -109,9 +115,9 @@ const data = {
         thumbnail: croatian,
         images: [croatian],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -121,9 +127,9 @@ const data = {
         thumbnail: wonderwomanThumb,
         images: [wonderwoman],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -133,9 +139,9 @@ const data = {
         thumbnail: deercat,
         images: [deercat],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -145,9 +151,9 @@ const data = {
         thumbnail: yellowWarhol,
         images: [greenWarhol, yellowWarhol],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -157,9 +163,9 @@ const data = {
         thumbnail: bowlhead,
         images: [bowlhead],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -169,9 +175,9 @@ const data = {
         thumbnail: superCrashBro,
         images: [superCrashBro, superCrashBro2],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description: '3D character model / rigged and posed',
+        partners: 'personal project',
+        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
     ],
@@ -182,37 +188,48 @@ const data = {
       {
         title: 'Mintcushions Web App',
         id: 'Mintcushions',
-        thumbnail: mint,
+        thumbnail: mintThumb,
         images: [mint, minterik, mintamanda],
         software: ['Adobe Illustrator'],
-        description: 'Description: React/Redux single page application',
-        partners: 'Partners: Full Stack Web Developer',
+        description: 'React/Redux single page application',
+        partners: 'Full Stack Web Developer',
         role:
-          'Role: Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
+          'Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
         demo: 'http://www.mintcushions.com/',
       },
       {
         title: 'Winter Soldier UI',
         id: 'WinterSoldier',
-        thumbnail: WS,
+        thumbnail: WS_thumb,
         images: [WS, wintersoldier],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: Starcraft II’s marine user interface',
-        partners: 'Partners: UI programmer',
-        role:
-          'Role: Created all UI art, main skull logo, and space environment.',
+        description: 'Starcraft II’s marine user interface',
+        partners: 'UI programmer',
+        role: 'Created all UI art, main skull logo, and space environment.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
         title: 'Endless',
         id: 'Endless',
         thumbnail: endless,
-        images: [endless, endless2, endless3, endless4, endless5, endless6, endless7, endless8, endless9, endless10, endless11],
+        images: [
+          endless,
+          endless2,
+          endless3,
+          endless4,
+          endless5,
+          endless6,
+          endless7,
+          endless8,
+          endless9,
+          endless10,
+          endless11,
+        ],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -221,10 +238,10 @@ const data = {
         thumbnail: website,
         images: [website],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
     ],
@@ -238,10 +255,10 @@ const data = {
         thumbnail: openminded,
         images: [openminded],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -250,10 +267,10 @@ const data = {
         thumbnail: hamster,
         images: [hamster],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -262,10 +279,10 @@ const data = {
         thumbnail: travis,
         images: [travis],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
 
@@ -275,10 +292,10 @@ const data = {
         thumbnail: wolf,
         images: [wolf],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -287,10 +304,10 @@ const data = {
         thumbnail: it,
         images: [it],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
 
@@ -300,10 +317,10 @@ const data = {
         thumbnail: mischief,
         images: [mischief],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
     ],
@@ -315,24 +332,42 @@ const data = {
         title: 'Milk and Cookies',
         id: 'MilkAndCookies',
         thumbnail: YW_milk2,
-        images: [YW_milk, YW_milk2, YW_milk3, YW_milk4, YW_milk5, YW_milk6, YW_milk7, YW_milk8, YW_milk9, YW_milk10],
+        images: [
+          YW_milk,
+          YW_milk2,
+          YW_milk3,
+          YW_milk4,
+          YW_milk5,
+          YW_milk6,
+          YW_milk7,
+          YW_milk8,
+          YW_milk9,
+          YW_milk10,
+        ],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
         title: 'Chips and Guac',
         id: 'ChipsAndGuac',
         thumbnail: YW_chips,
-        images: [YW_chips, YW_chips2, YW_chips3, YW_chips4, YW_chips5, YW_chips6],
+        images: [
+          YW_chips,
+          YW_chips2,
+          YW_chips3,
+          YW_chips4,
+          YW_chips5,
+          YW_chips6,
+        ],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -341,10 +376,10 @@ const data = {
         thumbnail: YW_cone2,
         images: [YW_cone, YW_cone2, YW_cone3, YW_cone4],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
     ],
@@ -358,10 +393,10 @@ const data = {
         thumbnail: website,
         images: [website],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Description: 2D online multiplayer game made in Unity',
-        partners: 'Partners: 3D UI programmer/UX designer',
+        description: '2D online multiplayer game made in Unity',
+        partners: '3D UI programmer/UX designer',
         role:
-          'Role: Created futuristic UI buttons, panels, etc. and space background.',
+          'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
     ],

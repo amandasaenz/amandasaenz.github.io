@@ -27,9 +27,9 @@ const Project = ({ images, name }) => {
         <Heading>{name}</Heading>
       </div>
 
-      <div style={{ position: 'relative' }}>
-        <VertLine style={{position: 'absolute'}}>
-        <Indent/>
+      <div style={{ position: 'relative', marginTop: '8px' }}>
+        <VertLine style={{ position: 'absolute' }}>
+          <Indent />
         </VertLine>
         <Content>{List}</Content>
       </div>
@@ -48,9 +48,8 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  
-  margin-top: 8px;
-  margin-left: 32px;
+  // margin-top: 8px;
+  margin-left: 36px;
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(3, 1fr);
@@ -74,7 +73,7 @@ const Image = styled.div`
   width: 100%;
   background-position: center;
   background-size: cover;
-  transition: transform .2s;
+  transition: transform 0.2s;
   &:hover {
     transform: scale(1.5);
     cursor: pointer;
@@ -82,7 +81,7 @@ const Image = styled.div`
 `;
 
 const Link = styled.a`
-overflow: hidden;
+  overflow: hidden;
   flex-basis: 30%;
   flex-grow: 1;
   border-radius: 4px;

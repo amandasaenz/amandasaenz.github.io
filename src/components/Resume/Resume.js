@@ -30,12 +30,12 @@ const Container = styled.div`
   padding-right: 32px;
   padding-left: 32px;
   color: #7fd8d9;
-  padding-top: 56px;
+  padding-top: 60px;
   padding-bottom: 32px;
-  // @media (max-width: 574px) {
-  //   padding-left: 24px;
-  //   padding-right: 24px;
-  // }
+  margin: 0 auto;
+  @media (min-width: 1016px) {
+    width: 952px;
+  }
 `;
 
 const Line = styled.div`

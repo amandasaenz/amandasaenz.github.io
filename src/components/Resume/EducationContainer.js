@@ -21,6 +21,6 @@ export default EducationContainer;
 
 export const AlignRight = styled.div`
   padding-top: 8px;
-  flex: 1 1 0%;
+  flex: 1 1 30%;
   justify-content: flex-start;
 `;

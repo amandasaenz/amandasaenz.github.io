@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Container, Heading, Indent, AlignLeft, VertLine } from './ReusableComponents';
+import {
+  Container,
+  Heading,
+  Indent,
+  AlignLeft,
+  VertLine,
+} from './ReusableComponents';
 
 const SkillsContainer = ({ data }) => {
   const SkillsList = data.technical.skillList.map((list, index) => (
@@ -14,11 +20,11 @@ const SkillsContainer = ({ data }) => {
       <AlignLeft>
         <Heading>Technical Skills</Heading>
         <VertLine>
-        <Indent>
-          <Level src='#cbe763'>novice</Level>
-          <Level src='#a172c6'>intermediate</Level>
-          <Level src='#d11f6c'>advanced</Level>
-        </Indent>
+          <Indent>
+            <Level src='#cbe763'>novice</Level>
+            <Level src='#a172c6'>intermediate</Level>
+            <Level src='#d11f6c'>advanced</Level>
+          </Indent>
         </VertLine>
       </AlignLeft>
       <AlignRight>
@@ -31,7 +37,7 @@ const SkillsContainer = ({ data }) => {
 export default SkillsContainer;
 
 export const AlignRight = styled.div`
-  flex: 1 1 0%;
+  flex: 1 1 30%;
   justify-content: flex-start;
   padding-top: 8px;
 `;
@@ -39,9 +45,10 @@ export const AlignRight = styled.div`
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
   height: 100%;
   justify-content: center;
+  align-items: center;
+  align-content: space-around;
 `;
 
 const List = styled.li`

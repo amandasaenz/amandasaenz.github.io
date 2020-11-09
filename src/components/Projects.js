@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import ScrollToTop from './ScrollToTop';
-import { Link, VertLine, Indent } from './Resume/ReusableComponents';
+import { Link, Indent } from './Resume/ReusableComponents';
 import zoom from '../images/SVG/zoom.SVG';
 
 const Projects = ({ data }) => {
@@ -17,14 +17,21 @@ const Folder = ({ data }) => {
   return (
     <ProjectContainer>
       <SubHeading>{data.title}</SubHeading>
-      <Indent style={{ position: 'relative' }}>
-        <VertLine style={{ position: 'absolute', margin: 0 }} />
-        <div style={{ marginLeft: '16px' }}>
+      <div style={{ display: 'flex', position: 'relative', marginTop: '8px' }}>
+        <VertLine />
+
+        <div
+          style={{
+            marginLeft: '36px',
+            display: 'grid',
+            gridRowGap: '16px',
+          }}
+        >
           {data.images.map((s, i) => (
             <ImageContainer
               key={i}
               onClick={() => {
-                window.open(`${s}`);
+                window.open(`${s}`, '_self');
               }}
             >
               <ZoomImage src={zoom} />
@@ -37,55 +44,40 @@ const Folder = ({ data }) => {
             ))}
           </Software>
         </div>
-      </Indent>
+      </div>
       <AlignRight>
-        <div>{data.description}</div>
-        <div>{data.partners}</div>
-        <div>{data.role}</div>
+        <div>
+          <span style={{ color: '#d11f6c' }}>Description: </span>
+          <span>{data.description}</span>
+        </div>
+        <div>
+          <span style={{ color: '#d11f6c' }}>Partners: </span>
+          <span>{data.partners}</span>
+        </div>
+        <div>
+          <span style={{ color: '#d11f6c' }}>Role: </span>
+          <span>{data.role}</span>
+        </div>
+
         <Link href={data.demo}>Demo Link</Link>
       </AlignRight>
     </ProjectContainer>
   );
 };
-// const Folder = ({ data }) => {
-//   return(
-//      <ProjectContainer>
-//        <SubHeading>{data.title}</SubHeading>
-
-//            <VertLine>
-//          <Indent style={{display: 'flex'}} >
-//            <div >
-//          {data.images.map((s, i) => (
-//            <ImageContainer key={i} onClick={() => {
-//              window.open(`${s}`);
-//            }}>
-//                <ZoomImage src={zoom}/>
-//                <Image src={s} key={s.id} />
-//                </ImageContainer>
-//              ))}
-//            <Software>
-//              {data.software.map((s, i) => (
-//                <List key={i}>{s}</List>
-//              ))}
-//            </Software>
-//            </div>
-//          </Indent>
-//          </VertLine>
-
-//        <AlignRight>
-//          <div>{data.description}</div>
-//          <div>{data.partners}</div>
-//          <div>{data.role}</div>
-//          <Link href={data.demo}>Demo Link</Link>
-//        </AlignRight>
-//      </ProjectContainer>
-//   );
-//  };
 
 export default Projects;
 
+const VertLine = styled.div`
+  background-color: #e74946;
+  width: 2px;
+  height: 100%;
+  border-radius: 2px;
+  position: absolute;
+  margin-left: 20px;
+`;
+
 const Software = styled.div`
-  margin-top: 16px;
+  // margin-top: 16px;
   width: 100%;
 `;
 
@@ -103,6 +95,7 @@ const Binder = styled.div`
   padding-right: 32px;
   color: #7fd8d9;
   font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
 `;
 
 const ProjectContainer = styled.div`
@@ -116,10 +109,10 @@ const ProjectContainer = styled.div`
 `;
 
 const SubHeading = styled.div`
-  font-family: 'Varela Round', sans-serif;
-
+  // font-family: 'Varela Round', sans-serif;
+  font-family: 'Mitr', sans-serif;
   color: #e74946;
-  font-size: 24px;
+  font-size: 28px;
 `;
 
 const AlignRight = styled.div`
@@ -136,12 +129,13 @@ const Image = styled.img`
 `;
 
 const ImageContainer = styled.div`
-  position: relative;
+  // position: relative;
+
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
 
-  margin-top: 8px;
+  // margin-top: 8px;
   cursor: pointer;
 
   & ${ZoomImage}:hover + ${Image} {
@@ -158,4 +152,8 @@ const ZoomImage = styled.div`
   margin: 8px;
   // background-color: red;
   z-index: 2;
+  @media (max-width: 479px) {
+    width: 32px;
+    height: 32px;
+  }
 `;

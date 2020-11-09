@@ -41,6 +41,8 @@ const Mobile = ({ data, loc }) => {
     opacity: isOpened ? 1 : 0,
     height: '1px',
     width: isOpened ? '100%' : '0%',
+    height: '2px',
+    borderRadius: '2px',
   });
 
   return (
@@ -53,7 +55,7 @@ const Mobile = ({ data, loc }) => {
           <LogoHeader data={data} />
         )}
         <RightContainer>
-          <Icon
+          <IconBurg
             src={burgerImage}
             onClick={() => {
               setOpened(!isOpened);
@@ -75,15 +77,23 @@ const Mobile = ({ data, loc }) => {
           marginTop: '56px',
         }}
       >
-        <Page style={ease} to='/' onClick={() => {
-              setOpened(!isOpened);
-            }}>
+        <Page
+          style={ease}
+          to='/'
+          onClick={() => {
+            setOpened(!isOpened);
+          }}
+        >
           {data.navbarLinks.link1}
         </Page>
         <Line style={grow} />
-        <Page style={ease} to='/resume' onClick={() => {
-              setOpened(!isOpened);
-            }}>
+        <Page
+          style={ease}
+          to='/resume'
+          onClick={() => {
+            setOpened(!isOpened);
+          }}
+        >
           {data.navbarLinks.link2}
         </Page>
       </RightContainer>
@@ -115,7 +125,7 @@ const LogoHeader = ({ data }) => {
   return (
     <LeftContainer>
       <Link to='/'>
-        <IconMain src={data.info.icon} />
+        <IconMain src={data.info.navicon} />
       </Link>
     </LeftContainer>
   );
@@ -124,16 +134,26 @@ const LogoHeader = ({ data }) => {
 const ResumeHeader = ({ data }) => {
   return (
     <LeftContainer>
-      <a href={data.info.website1}>
-        <Icon src={data.info.websiteLogo1} />
-      </a>
-      <Indent />
       <a href={data.info.website2}>
-        <Icon src={data.info.websiteLogo2} />
+        <Icon src={data.info.websiteLogo2} src2={data.info.websiteLogo3} />
+      </a>
+
+      <Indent />
+      <a href={data.info.website3}>
+        <Icon2 src={data.info.websiteLogo4} src2={data.info.websiteLogo5} />
       </a>
     </LeftContainer>
   );
 };
+
+const Indent = styled.div`
+  height: 32px;
+  width: 2px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 2px;
+  background-color: #e74946;
+`;
 
 const Container = styled.div`
   position: fixed;
@@ -144,12 +164,12 @@ const Container = styled.div`
 
 const Glass = styled(animated.div)`
   position: absolute;
-  height: 56px;
+  height: 60px;
   top: 0;
   right: 0;
   left: 0;
   background-color: rgba(25, 19, 36, 0.7);
-  //   background-color: blue;
+  // background-color: blue;
   backdrop-filter: blur(4px);
 `;
 
@@ -164,7 +184,7 @@ const Info = styled.div`
   margin-right: 32px;
   margin-top: 8px;
   margin-bottom: 8px;
-  height: 40px;
+  height: 44px;
   z-index: 1;
 `;
 
@@ -184,11 +204,32 @@ const Icon = styled(animated.div)`
   background-image: url('${(props) => props.src}');
   background-repeat: no-repeat;
   background-position: center;
+  &:hover {
+    background-image: url('${(props) => props.src2}');
+  }
+`;
+const IconBurg = styled(animated.div)`
+  height: 32px;
+  width: 32px;
+  background-image: url('${(props) => props.src}');
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const Icon2 = styled(animated.div)`
+  height: 32px;
+  width: 32px;
+  background-image: url('${(props) => props.src}');
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover {
+    background-image: url('${(props) => props.src2}');
+  }
 `;
 
 const IconMain = styled(animated.div)`
-  height: 40px;
-  width: 40px;
+  height: 44px;
+  width: 44px;
   background-image: url('${(props) => props.src}');
   background-repeat: no-repeat;
   background-position: center;
@@ -197,17 +238,14 @@ const IconMain = styled(animated.div)`
 const Page = styled(animated(Link))`
   margin-left: 16px;
   color: #cbe763;
+  font-size: 20px;
   font-family: 'Varela Round';
   text-decoration: none;
+  &:hover {
+    color: #a172c6;
+  }
 `;
 
 const Line = styled(animated.div)`
   background-color: #cbe763;
-`;
-
-const Indent = styled.div`
-  height: 32px;
-  border-left: 1px solid #cbe763;
-  margin-left: 16px;
-  margin-right: 16px;
 `;

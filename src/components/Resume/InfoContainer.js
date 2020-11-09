@@ -20,7 +20,7 @@ export default InfoContainer;
 
 const Container = styled.div`
   font-family: 'Varela Round', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 `;
 
 const Icon = styled.div`
@@ -36,8 +36,13 @@ const Name = styled.div`
   color: #e74946;
   font-size: 48px;
 
-  font-family: 'Montserrat';
+  // font-family: 'Montserrat';
+  // font-family: 'Mitr', sans-serif;
+  // font-family: 'Corben', cursive;
+  font-family: 'Comfortaa', cursive;
 
+  margin-top: 16px;
+  margin-bottom: 8px;
   @media (max-width: 411px) {
     font-size: 40px;
   }
@@ -46,24 +51,23 @@ const Name = styled.div`
 const Info = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  @media (max-width: 574px) {
+  @media (max-width: 687px) {
     display: block;
     text-align: center;
   }
 `;
 
 const Stripe = styled.div`
-  ::before {
-    content: '|';
-    color: #e74946;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+  height: 16px;
+  width: 2px;
+  background-color: #e74946;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 2px;
 
-  @media (max-width: 574px) {
-    ::before {
-      content: none;
-    }
+  @media (max-width: 687px) {
+    display: none;
   }
 `;
