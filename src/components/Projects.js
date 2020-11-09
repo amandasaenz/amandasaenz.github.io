@@ -14,7 +14,6 @@ const Projects = ({ data }) => {
 };
 
 const Folder = ({ data }) => {
-  console.log(data.demo);
   return (
     <ProjectContainer>
       <SubHeading>{data.title}</SubHeading>
