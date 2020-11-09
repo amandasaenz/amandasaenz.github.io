@@ -6,7 +6,9 @@ import unicornKaiju from './ProjectImages/3DProjects/HKKaiju_unicorn.jpg';
 import pinkKaiju from './ProjectImages/3DProjects/HKKaiju_pink.jpg';
 import rainbowKaiju from './ProjectImages/3DProjects/HKKaiju_rainbow.jpg';
 
-import croatian from './ProjectImages/3DProjects/croatian.jpg';
+import croatian1 from './ProjectImages/3DProjects/CroatianVacation1.jpg';
+import croatian2 from './ProjectImages/3DProjects/CroatianVacation2.jpg';
+import croatian3 from './ProjectImages/3DProjects/CroatianVacation3.jpg';
 
 import deercat from './ProjectImages/3DProjects/DeerCat.jpg';
 
@@ -85,14 +87,15 @@ const data = {
         thumbnail: overdrive,
         images: [overdrive],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: 'Description: 3D character model / rigged and posed',
-        partners: 'Partners: personal project',
-        role: 'Role: Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        description:
+          'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
+        partners: 'This was a personal project.',
+        role: 'Design a 3D model that is rigged and posed.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Kidrobot Hello Kitty Kaiju',
+        title: 'Kidrobot X Hello Kitty Kaiju',
         id: 'HelloKittyKaiju',
         thumbnail: greenKaiju,
         images: [
@@ -102,58 +105,60 @@ const data = {
           pinkKaiju,
           rainbowKaiju,
         ],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description: 'Hello Kitty Kaiju destroys the city.',
+        partners: 'Designer',
+        role:
+          'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Kidrobot Croatian Vacation',
+        title: 'Kidrobot X Croatian Vacation',
         id: 'CroatianVacation',
-        thumbnail: croatian,
-        images: [croatian],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        thumbnail: croatian3,
+        images: [croatian2, croatian3, croatian1],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description: 'Labbit is on a Croatian Vacation.',
+        partners: 'Designer',
+        role:
+          'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Kidrobot WonderWoman',
+        title: 'Kidrobot X WonderWoman',
         id: 'WonderWoman',
         thumbnail: wonderwomanThumb,
         images: [wonderwoman],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description: 'This was a 3D test given to me by Kidrobot.',
+        partners: 'This was a test, no partners.',
+        role: 'Turn a 2D concept into a 3D sculpt.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Strangecat DeerCat',
+        title: 'Strangecat Toys X DeerCat',
         id: 'DeerCat',
         thumbnail: deercat,
         images: [deercat],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description: 'Deercat and Snoo, an illustration by Amber Aki Huang.',
+        partners: 'Illustrator',
+        role: 'Turn a 2D concept into a 3D sculpt.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Kidrobot Andy Warhol Bust',
+        title: 'Kidrobot X Andy Warhol',
         id: 'AndyWarhol',
         thumbnail: yellowWarhol,
         images: [greenWarhol, yellowWarhol],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description: 'Andy Warhol bust in different "Hydro Dip" camo colors.',
+        partners: 'Concept Artist',
+        role: 'Turn a 2D concept into a 3D sculpt.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -162,22 +167,24 @@ const data = {
         id: 'BowlheadBanks',
         thumbnail: bowlhead,
         images: [bowlhead],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
+        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan', 'XGen'],
+        description:
+          'I created Bowlhead Banks to study XGen, a hair simulator.',
         partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        role: 'Design a character head and simulate his hair.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
       {
-        title: 'Josh Divine Crash Mario',
+        title: 'Josh Divine X Super Crash Bro',
         id: 'mario',
         thumbnail: superCrashBro,
         images: [superCrashBro, superCrashBro2],
-        software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description: '3D character model / rigged and posed',
-        partners: 'personal project',
-        role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'Super Crash Bro is the 2nd "crash" series toy by Josh Divine.',
+        partners: 'Josh Divine',
+        role: 'Turn a 2D concept into a 3D sculpt.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
     ],
@@ -203,9 +210,11 @@ const data = {
         thumbnail: WS_thumb,
         images: [WS, wintersoldier],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: 'Starcraft II’s marine user interface',
+        description:
+          'Inspired by Starcraft, Winter Soldier user interface shows a unique approach to a game HUD',
         partners: 'UI programmer',
-        role: 'Created all UI art, main skull logo, and space environment.',
+        role:
+          'Design all UI art, main skull logo, weapons,and space environment.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -228,158 +237,19 @@ const data = {
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description: '2D online multiplayer game made in Unity',
         partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
+        role: 'Design futuristic UI buttons, panels, and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
-        title: 'Website',
+        title: 'amandasaenz.github.io - My Portfolio',
         id: 'Website',
         thumbnail: website,
         images: [website],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-    ],
-
-    //-------------------------------- I L L U S T R A T I O N  P R O J E C T S --------------------------------
-
-    IllustP: [
-      {
-        title: 'Openminded',
-        id: 'OpenMinded',
-        thumbnail: openminded,
-        images: [openminded],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-      {
-        title: 'Hamster',
-        id: 'Hamster',
-        thumbnail: hamster,
-        images: [hamster],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-      {
-        title: 'Travis Portrait',
-        id: 'TravisBarker',
-        thumbnail: travis,
-        images: [travis],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-
-      {
-        title: 'White Wolf',
-        id: 'WhiteWolf',
-        thumbnail: wolf,
-        images: [wolf],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-      {
-        title: 'IT sketch',
-        id: 'IT',
-        thumbnail: it,
-        images: [it],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-
-      {
-        title: 'Mischief',
-        id: 'Mischief',
-        thumbnail: mischief,
-        images: [mischief],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-    ],
-
-    //-------------------------------- P L U S H  P R O J E C T S --------------------------------
-
-    PlushP: [
-      {
-        title: 'Milk and Cookies',
-        id: 'MilkAndCookies',
-        thumbnail: YW_milk2,
-        images: [
-          YW_milk,
-          YW_milk2,
-          YW_milk3,
-          YW_milk4,
-          YW_milk5,
-          YW_milk6,
-          YW_milk7,
-          YW_milk8,
-          YW_milk9,
-          YW_milk10,
-        ],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-      {
-        title: 'Chips and Guac',
-        id: 'ChipsAndGuac',
-        thumbnail: YW_chips,
-        images: [
-          YW_chips,
-          YW_chips2,
-          YW_chips3,
-          YW_chips4,
-          YW_chips5,
-          YW_chips6,
-        ],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
-        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
-      },
-      {
-        title: 'Icecream Upsidedown',
-        id: 'Icecream',
-        thumbnail: YW_cone2,
-        images: [YW_cone, YW_cone2, YW_cone3, YW_cone4],
-        software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role:
-          'Created futuristic UI buttons, panels, etc. and space background.',
+        software: ['React/Javascript', 'CSS', 'Illustrator'],
+        description:
+          'I created a website to show my all of my projects and resume.',
+        partners: 'personal project',
+        role: 'Create all UI assets and programmed whole website.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
     ],
@@ -398,6 +268,139 @@ const data = {
         role:
           'Created futuristic UI buttons, panels, etc. and space background.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+    ],
+
+    //-------------------------------- P L U S H  P R O J E C T S --------------------------------
+
+    PlushP: [
+      {
+        title: 'Yummy World Milk and Cookies',
+        id: 'MilkAndCookies',
+        thumbnail: YW_milk2,
+        images: [
+          YW_milk,
+          YW_milk2,
+          YW_milk3,
+          YW_milk4,
+          YW_milk5,
+          YW_milk6,
+          YW_milk7,
+          YW_milk8,
+          YW_milk9,
+          YW_milk10,
+        ],
+        software: ['Adobe Illustrator'],
+        description:
+          'This Yummy World plush packs three removable fresh-baked chocolate chip cookie plushies inside a large plush YUM-MOO Milk carton.',
+        partners: 'individual partners',
+        role: 'Design a large Milk and Cookies plush for Yummy World.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+      {
+        title: 'Yummy World Chips and Guac',
+        id: 'ChipsAndGuac',
+        thumbnail: YW_chips,
+        images: [
+          YW_chips,
+          YW_chips2,
+          YW_chips3,
+          YW_chips4,
+          YW_chips5,
+          YW_chips6,
+        ],
+        software: ['Adobe Illustrator'],
+        description:
+          'Yummy World welcomes everyone’s favorite dip and chips with the large plush Chips & Guac!',
+        partners: 'individual partners',
+        role: 'Design a large Yummy World Chips and Guac plush.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+      {
+        title: 'Icecream Upsidedown',
+        id: 'Icecream',
+        thumbnail: YW_cone2,
+        images: [YW_cone, YW_cone2, YW_cone3, YW_cone4],
+        software: ['Adobe Illustrator'],
+        description:
+          'Introducing your snuggly, cool but a little clumsy new plushie ice cream friend with the Yummy World Walter Waffle Cone Ice Cream Scoop Plush.',
+        partners: 'individual project',
+        role: 'Design a small upside down ice cream cone for Yummy World.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+    ],
+
+    //-------------------------------- I L L U S T R A T I O N  P R O J E C T S --------------------------------
+
+    IllustP: [
+      {
+        title: 'Openminded',
+        id: 'OpenMinded',
+        thumbnail: openminded,
+        images: [openminded],
+        software: ['Adobe Illustrator'],
+        description:
+          'This illustration tells a story of a brain that opened their third eye.',
+        partners: 'personal project',
+        role: 'Illustrate a story of a brain who opens his mind to the world.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+      {
+        title: 'Chunky the Hamster',
+        id: 'Hamster',
+        thumbnail: hamster,
+        images: [hamster],
+        software: ['Adobe Illustrator'],
+        description: 'Chunky the Hamster loves to eat wontons.',
+        partners: 'personal project',
+        role: 'Create an illustration of a hamster.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+      {
+        title: 'Travis Barker Portrait',
+        id: 'TravisBarker',
+        thumbnail: travis,
+        images: [travis],
+        software: ['graphite pencil'],
+        description: 'A portrait of Travis Barker.',
+        partners: 'personal project',
+        role: 'Create a hand drawn portrait.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+
+      {
+        title: 'Direwolf',
+        id: 'WhiteWolf',
+        thumbnail: wolf,
+        images: [wolf],
+        software: ['Adobe Illustrator'],
+        description:
+          'This was a direwolf illustration I made for a phone background.',
+        partners: 'personal project',
+        role: 'Design a phone background.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+      {
+        title: 'IT sketch',
+        id: 'IT',
+        thumbnail: it,
+        images: [it],
+        software: ['Adobe Photoshop'],
+        description: 'A sketch made in procreate.',
+        partners: 'personal project',
+        role: 'Create a sketch in procreate.',
+        demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
+      },
+
+      {
+        title: 'Dream - Mischief',
+        id: 'Mischief',
+        thumbnail: mischief,
+        images: [mischief],
+        software: ['Adobe Illustrator'],
+        description: 'This was a dream that I recreated in Illustrator.',
+        partners: 'personal project',
+        role: 'Recreate dream using Adobe Illustrator.',
       },
     ],
   },

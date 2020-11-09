@@ -38,10 +38,9 @@ const data = {
   //novice = yellow, intermediate = purple, advanced = pink
   technical: {
     skillList: [
-      'C/C#',
+      'Javascript',
       'Autodesk Maya',
-      'C#',
-      'Java',
+      'CSS',
       'Pixologic Zbrush',
       'Adobe Photoshop',
       'Adobe Illustrator',
@@ -50,12 +49,11 @@ const data = {
     level: [
       'novice',
       'advanced',
+      'intermediate',
+      'advanced',
+      'intermediate',
       'advanced',
       'novice',
-      'intermediate',
-      'intermediate',
-      'intermediate',
-      'advanced',
     ],
   },
 
@@ -63,9 +61,10 @@ const data = {
     {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-      description: '3D character model / rigged and posed',
-      partners: 'personal project',
-      role: 'Organic Modeling in Zbrush, retopo/UV map/Rig in Maya.',
+      description:
+        'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
+      partners: 'This was a personal project.',
+      role: 'Design a 3D model that is rigged and posed.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
 
@@ -82,9 +81,11 @@ const data = {
     {
       title: 'Winter Soldier UI',
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description: 'Starcraft II’s marine user interface',
+      description:
+        'Inspired by Starcraft, Winter Soldier user interface shows a unique approach to a game HUD',
       partners: 'UI programmer',
-      role: 'Created all UI art, main skull logo, and space environment.',
+      role:
+        'Design all UI art, main skull logo, weapons,and space environment.',
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
     {
@@ -92,25 +93,25 @@ const data = {
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
       description: '2D online multiplayer game made in Unity',
       partners: '3D UI programmer/UX designer',
-      role: 'Created futuristic UI buttons, panels, etc. and space background.',
+      role: 'Design futuristic UI buttons, panels, and space background.',
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
   ],
 
   experience: [
     {
+      work: 'Kidrobot',
+      duration: '(June 2019- Current)',
+      role: '3D Artist',
+      description:
+        'Use Pixologic Zbrush to turn 2D concepts and designs into 3D. Creating Concepts/Designs of plush toys.',
+    },
+    {
       work: 'Prime LA',
       duration: '(May 2017 - May 2018)',
       role: 'Freelance Graphic Designer',
       description:
         'Design T-shirt graphics Ensure that graphics are ready for printing on T-shirts Convert low resolution images to high quality graphics Provide quality and consistency for client’s brand.',
-    },
-    {
-      work: 'Kidrobot',
-      duration: '(June 2019- Current)',
-      role: '3D Artist',
-      description:
-        'Use Pixologic Zbrush to turn 2D concepts and designs into 3D. Construct and design plush toys. Creating Concepts/Designs.',
     },
   ],
 };

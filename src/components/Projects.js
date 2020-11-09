@@ -14,6 +14,7 @@ const Projects = ({ data }) => {
 };
 
 const Folder = ({ data }) => {
+  // console.log(data.demo);
   return (
     <ProjectContainer>
       <SubHeading>{data.title}</SubHeading>
@@ -59,7 +60,12 @@ const Folder = ({ data }) => {
           <span>{data.role}</span>
         </div>
 
-        <Link href={data.demo}>Demo Link</Link>
+        <Link
+          href={data.demo}
+          style={{ visibility: `${data.demo}` ? 'visible' : 'hidden' }}
+        >
+          Demo Link
+        </Link>
       </AlignRight>
     </ProjectContainer>
   );

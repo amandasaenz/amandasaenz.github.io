@@ -25,7 +25,7 @@ const ProjectsContainer = ({ data }) => {
           </Indent>
         </VertLine>
       </AlignLeft>
-      <AlignRight style={{ padding: 0 }}>
+      <AlignRight>
         <div>
           <span style={{ color: '#d11f6c' }}>Description: </span>
           <span>{project.description}</span>
