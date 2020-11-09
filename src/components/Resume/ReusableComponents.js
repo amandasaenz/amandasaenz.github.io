@@ -36,17 +36,16 @@ export const AlignRight = styled.div`
 `;
 
 export const VertLine = styled.div`
-background-color: #e74946;
-width: 2px;
-height: 100%;
-border-radius:2px;
-display: flex;
-margin-top: 8px;
-margin-left: 8px;
+  background-color: #e74946;
+  width: 2px;
+  height: 100%;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-left: 8px;
 `;
 
 export const Indent = styled.div`
-white-space: nowrap;
+  white-space: nowrap;
   height: 100%;
   width: 100%;
   // border-left: 1px solid #e74946;
