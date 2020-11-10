@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import ScrollToTop from './ScrollToTop';
-import { Link, Indent } from './Resume/ReusableComponents';
-import zoom from '../images/SVG/zoom.SVG';
+import { Link } from './Resume/ReusableComponents';
+import zoom from '../images/zoom.SVG';
 
 const Projects = ({ data }) => {
   return (
@@ -96,14 +96,8 @@ const VertLine = styled.div`
 `;
 
 const Software = styled.div`
-  // margin-top: 16px;
   width: 100%;
 `;
-
-// const Indent = styled.div`
-//   position: relative;
-//   height: 100%;
-// `;
 
 const List = styled.li`
   list-style: none;
@@ -128,7 +122,6 @@ const ProjectContainer = styled.div`
 `;
 
 const SubHeading = styled.div`
-  // font-family: 'Varela Round', sans-serif;
   font-family: 'Mitr', sans-serif;
   color: #e74946;
   font-size: 28px;
@@ -148,13 +141,9 @@ const Image = styled.img`
 `;
 
 const ImageContainer = styled.div`
-  // position: relative;
-
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-
-  // margin-top: 8px;
   cursor: pointer;
 
   & ${ZoomImage}:hover + ${Image} {
@@ -169,8 +158,8 @@ const ZoomImage = styled.div`
   width: 48px;
   height: 48px;
   margin: 8px;
-  // background-color: red;
   z-index: 2;
+
   @media (max-width: 479px) {
     width: 32px;
     height: 32px;

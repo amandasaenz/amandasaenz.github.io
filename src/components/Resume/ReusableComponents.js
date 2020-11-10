@@ -4,18 +4,15 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   font-family: 'Varela Round', sans-serif;
-  // font-family: 'Khula', sans-serif;
-  // font-family: 'Nunito', sans-serif;
-
   font-size: 20px;
   padding-top: 0;
+
   @media (max-width: 1010px) {
     display: block;
   }
 `;
 
 export const Heading = styled.div`
-  // font-family: 'Montserrat', sans-serif;
   font-family: 'Mitr', sans-serif;
   font-size: 28px;
   color: #e74946;
@@ -45,7 +42,6 @@ export const VertLine = styled.div`
   width: 2px;
   height: 100%;
   border-radius: 2px;
-  // margin-top: 8px;
   margin-left: 20px;
 `;
 
@@ -53,15 +49,13 @@ export const Indent = styled.div`
   white-space: nowrap;
   height: 100%;
   width: 100%;
-  // border-left: 1px solid #e74946;
-  // padding-top: 8px;
   padding-left: 16px;
-  // margin-left: 8px;
 `;
 
 export const Link = styled.a`
   color: #cbe763;
   text-decoration: none;
+
   &:hover {
     color: #a172c6;
   }

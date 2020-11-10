@@ -1,29 +1,29 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Resume from './Resume/Resume';
-
 import Home from './Home';
 import Projects from './Projects';
 import ResumeData from './ResumeData';
 import ProjectData from './ProjectData';
-import { Switch, Route } from 'react-router-dom';
-import NavBar from './Navbar/NavBar';
-import lodash from 'lodash'
+import NavBar from './Navbar';
+import lodash from 'lodash';
 
 document.body.style = 'margin: 0';
 document.body.style.backgroundColor = '#191324';
 
-// document.body.style.overflowX = 'hidden';
-// document.body.style.position = 'relative';
-
 const initState = (data) => {
   const projects = data.projects;
-  return lodash.reduce(projects, (result, current, key) => {
-        const ids = current.map((proj) => {
-          return proj
-        })
-        return [...result, ...ids]
-    }, [])
-}
+  return lodash.reduce(
+    projects,
+    (result, current, key) => {
+      const ids = current.map((proj) => {
+        return proj;
+      });
+      return [...result, ...ids];
+    },
+    []
+  );
+};
 
 const App = () => {
   const [width, setWidth] = useState(0);
@@ -43,25 +43,27 @@ const App = () => {
 
     window.addEventListener('resize', resizeListener);
   }, [ref.current]);
-  
+
   return (
     <div ref={ref}>
-      
       <NavBar data={ResumeData} width={width} />
-      
+
       <Switch>
         <Route exact path='/' render={() => <Home data={ProjectData} />} />
         <Route
-          exact path='/resume'
+          exact
+          path='/resume'
           render={() => <Resume data={ResumeData} />}
         />
-  
+
         {projArray.map((s, i) => (
-            <Route key={i} path={`/${s.id}`} render={() => <Projects data={s} />}/>
+          <Route
+            key={i}
+            path={`/${s.id}`}
+            render={() => <Projects data={s} />}
+          />
         ))}
-        
       </Switch>
-      
     </div>
   );
 };

@@ -48,7 +48,6 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  // margin-top: 8px;
   margin-left: 36px;
   display: grid;
   grid-gap: 16px;
@@ -74,6 +73,7 @@ const Image = styled.div`
   background-position: center;
   background-size: cover;
   transition: transform 0.2s;
+
   &:hover {
     transform: scale(1.5);
     cursor: pointer;

@@ -33,6 +33,7 @@ const Container = styled.div`
   padding-top: 60px;
   padding-bottom: 32px;
   margin: 0 auto;
+
   @media (min-width: 1016px) {
     width: 952px;
   }

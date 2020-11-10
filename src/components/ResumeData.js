@@ -1,6 +1,5 @@
-import icon from '../images/icon1.SVG';
-import nicon from '../images/icon22.SVG';
-import artstation from '../images/artstation.svg';
+import icon from '../images/icon.SVG';
+import avatar from '../images/avatar.SVG';
 import linkedin from '../images/linkedin.svg';
 import linkedin2 from '../images/linkedin2.svg';
 import github from '../images/github.svg';
@@ -9,24 +8,22 @@ import github2 from '../images/github2.svg';
 const data = {
   info: {
     icon: icon,
-    navicon: nicon,
+    avatar: avatar,
     name: 'Amanda Saenz',
     email: 'amanda.blakely7@gmail.com',
     location: 'Westminster, CO',
     phone: '(361) 232-9436',
-    website1: 'https://amandasaenz.artstation.com',
-    website2: 'https://www.linkedin.com/in/amandasnoww/',
-    website3: 'https://github.com/amandasaenz',
-    websiteLogo1: artstation,
-    websiteLogo2: linkedin,
-    websiteLogo3: linkedin2,
-    websiteLogo4: github,
-    websiteLogo5: github2,
+    linkedin: 'https://www.linkedin.com/in/amandasnoww/',
+    github: 'https://github.com/amandasaenz',
+    linkedinLogo: linkedin,
+    linkedinHover: linkedin2,
+    githubLogo: github,
+    githubHover: github2,
   },
 
   navbarLinks: {
-    link1: 'Projects',
-    link2: 'Resume',
+    projects: 'Projects',
+    resume: 'Resume',
   },
 
   education: {

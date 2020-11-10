@@ -35,14 +35,10 @@ const Name = styled.div`
   text-align: center;
   color: #e74946;
   font-size: 48px;
-
-  // font-family: 'Montserrat';
-  // font-family: 'Mitr', sans-serif;
-  // font-family: 'Corben', cursive;
   font-family: 'Comfortaa', cursive;
-
   margin-top: 16px;
   margin-bottom: 8px;
+
   @media (max-width: 411px) {
     font-size: 40px;
   }
@@ -53,6 +49,7 @@ const Info = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 687px) {
     display: block;
     text-align: center;

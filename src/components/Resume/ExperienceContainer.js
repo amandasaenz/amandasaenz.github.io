@@ -17,7 +17,6 @@ const ExperienceContainer = ({ data }) => {
           {exp.work} {exp.duration}
         </SubHeading>
         <VertLine>
-          {' '}
           <Indent>{exp.role}</Indent>
         </VertLine>
       </AlignLeft>

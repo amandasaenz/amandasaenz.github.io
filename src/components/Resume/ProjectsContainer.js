@@ -8,7 +8,6 @@ import {
   AlignRight,
   Indent,
   Link,
-  vertLine,
   VertLine,
 } from './ReusableComponents';
 
@@ -71,16 +70,4 @@ export default ProjectsContainer;
 
 const List = styled.li`
   list-style: none;
-`;
-
-const SubHeader = styled.p`
-  font-family: 'Varela Round', sans-serif;
-  color: #e74946;
-  font-size: 20px;
-`;
-
-const Text = styled.p`
-  font-family: 'Varela Round', sans-serif;
-  color: #7fd8d9;
-  font-size: 20px;
 `;

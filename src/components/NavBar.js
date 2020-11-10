@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Link, useLocation, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
-import burgerImage from './images/Burger.svg';
+// import burgerImg from './images/Burger.svg';
+import burgerImg from '../images/Burger.svg';
 
+// render Navbar on Mobile or Web, while passing in URL as a prop.
 const NavBar = ({ data, width }) => {
   const location = useLocation();
   return width < 480 ? (
@@ -13,18 +15,15 @@ const NavBar = ({ data, width }) => {
   );
 };
 
-export default NavBar;
-
 // render if screen-width is for Mobile
 const Mobile = ({ data, loc }) => {
   const [isOpened, setOpened] = useState(false);
-  const wrapperRef = useRef(null);
+  const ref = useRef(null);
 
   // if user clicks outside of Navbar, it will close
   useEffect(() => {
-    console.log('opened = ', isOpened);
     function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if (ref.current && !ref.current.contains(event.target)) {
         isOpened === true ? setOpened(!isOpened) : isOpened;
       }
     }
@@ -34,7 +33,7 @@ const Mobile = ({ data, loc }) => {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [wrapperRef, isOpened]);
+  }, [ref, isOpened]);
 
   const rotate = useSpring({
     transform: isOpened ? 'rotateZ(90Deg)' : 'rotateZ(0Deg)',
@@ -63,7 +62,7 @@ const Mobile = ({ data, loc }) => {
   });
 
   return (
-    <Container ref={wrapperRef}>
+    <Container ref={ref}>
       <Glass style={stretch} />
       <Info>
         {loc === '/resume' ? (
@@ -72,8 +71,8 @@ const Mobile = ({ data, loc }) => {
           <LogoHeader data={data} />
         )}
         <RightContainer>
-          <IconBurg
-            src={burgerImage}
+          <Burger
+            src={burgerImg}
             onClick={() => {
               setOpened(!isOpened);
             }}
@@ -81,19 +80,7 @@ const Mobile = ({ data, loc }) => {
           />
         </RightContainer>
       </Info>
-      <RightContainer
-        style={{
-          display: isOpened ? 'flex' : 'none',
-          flexDirection: 'column',
-          position: 'absolute',
-          right: 0,
-          left: 0,
-          alignItems: 'flex-end',
-          marginRight: '32px',
-          marginLeft: '32px',
-          marginTop: '56px',
-        }}
-      >
+      <Dropdown src={isOpened ? 1 : 0}>
         <Page
           style={ease}
           to='/'
@@ -101,7 +88,7 @@ const Mobile = ({ data, loc }) => {
             setOpened(!isOpened);
           }}
         >
-          {data.navbarLinks.link1}
+          {data.navbarLinks.projects}
         </Page>
         <Line style={grow} />
         <Page
@@ -111,9 +98,9 @@ const Mobile = ({ data, loc }) => {
             setOpened(!isOpened);
           }}
         >
-          {data.navbarLinks.link2}
+          {data.navbarLinks.resume}
         </Page>
-      </RightContainer>
+      </Dropdown>
     </Container>
   );
 };
@@ -130,8 +117,8 @@ const Web = ({ data, loc }) => {
           <LogoHeader data={data} />
         )}
         <RightContainer>
-          <Page to='/'>{data.navbarLinks.link1}</Page>
-          <Page to='/resume'>{data.navbarLinks.link2}</Page>
+          <Page to='/'>{data.navbarLinks.projects}</Page>
+          <Page to='/resume'>{data.navbarLinks.resume}</Page>
         </RightContainer>
       </Info>
     </Container>
@@ -142,7 +129,7 @@ const LogoHeader = ({ data }) => {
   return (
     <LeftContainer>
       <Link to='/'>
-        <IconMain src={data.info.navicon} />
+        <Avatar src={data.info.avatar} />
       </Link>
     </LeftContainer>
   );
@@ -151,17 +138,19 @@ const LogoHeader = ({ data }) => {
 const ResumeHeader = ({ data }) => {
   return (
     <LeftContainer>
-      <a href={data.info.website2}>
-        <Icon src={data.info.websiteLogo2} src2={data.info.websiteLogo3} />
+      <a href={data.info.linkedin}>
+        <Icon src={data.info.linkedinLogo} src2={data.info.linkedinHover} />
       </a>
 
       <Indent />
-      <a href={data.info.website3}>
-        <Icon2 src={data.info.websiteLogo4} src2={data.info.websiteLogo5} />
+      <a href={data.info.github}>
+        <Icon src={data.info.githubLogo} src2={data.info.githubHover} />
       </a>
     </LeftContainer>
   );
 };
+
+export default NavBar;
 
 const Indent = styled.div`
   height: 32px;
@@ -186,7 +175,6 @@ const Glass = styled(animated.div)`
   right: 0;
   left: 0;
   background-color: rgba(25, 19, 36, 0.7);
-  // background-color: blue;
   backdrop-filter: blur(4px);
 `;
 
@@ -215,7 +203,19 @@ const LeftContainer = styled.div`
   align-items: center;
 `;
 
-const Icon = styled(animated.div)`
+const Dropdown = styled.div`
+  display: ${(props) => (props.src ? 'flex' : 'none')};
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  align-items: flex-end;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-top: 56px;
+`;
+
+const Icon = styled.div`
   height: 32px;
   width: 32px;
   background-image: url('${(props) => props.src}');
@@ -225,7 +225,7 @@ const Icon = styled(animated.div)`
     background-image: url('${(props) => props.src2}');
   }
 `;
-const IconBurg = styled(animated.div)`
+const Burger = styled(animated.div)`
   height: 32px;
   width: 32px;
   background-image: url('${(props) => props.src}');
@@ -233,18 +233,7 @@ const IconBurg = styled(animated.div)`
   background-position: center;
 `;
 
-const Icon2 = styled(animated.div)`
-  height: 32px;
-  width: 32px;
-  background-image: url('${(props) => props.src}');
-  background-repeat: no-repeat;
-  background-position: center;
-  &:hover {
-    background-image: url('${(props) => props.src2}');
-  }
-`;
-
-const IconMain = styled(animated.div)`
+const Avatar = styled.div`
   height: 44px;
   width: 44px;
   background-image: url('${(props) => props.src}');
