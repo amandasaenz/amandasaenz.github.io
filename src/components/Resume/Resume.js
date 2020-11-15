@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import InfoContainer from './InfoContainer';
 import EducationContainer from './EducationContainer';
@@ -7,19 +7,23 @@ import ProjectsContainer from './ProjectsContainer';
 import ExperienceContainer from './ExperienceContainer';
 import ScrollToTop from '../ScrollToTop';
 import { Line } from '../ReusableComponents';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const Resume = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return (
     <Container>
       <ScrollToTop />
       <InfoContainer data={data} />
-      <Line />
+      <Line theme={currentTheme} />
       <EducationContainer data={data} />
-      <Line />
+      <Line theme={currentTheme} />
       <SkillsContainer data={data} />
-      <Line />
+      <Line theme={currentTheme} />
       <ProjectsContainer data={data} />
-      <Line />
+      <Line theme={currentTheme} />
       <ExperienceContainer data={data} />
     </Container>
   );

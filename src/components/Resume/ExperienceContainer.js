@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Container,
   Heading,
@@ -8,15 +8,19 @@ import {
   Indent,
   VertLine,
 } from '../ReusableComponents';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const ExperienceContainer = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   const experience = data.experience.map((exp, index) => (
-    <Container key={index}>
+    <Container theme={currentTheme} key={index}>
       <AlignLeft>
-        <SubHeading>
+        <SubHeading theme={currentTheme}>
           {exp.work} {exp.duration}
         </SubHeading>
-        <VertLine>
+        <VertLine theme={currentTheme}>
           <Indent>{exp.role}</Indent>
         </VertLine>
       </AlignLeft>
@@ -25,7 +29,7 @@ const ExperienceContainer = ({ data }) => {
   ));
   return (
     <div>
-      <Heading>Work Experience</Heading>
+      <Heading theme={currentTheme}>Work Experience</Heading>
       {experience}
     </div>
   );

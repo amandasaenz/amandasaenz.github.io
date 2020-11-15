@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   Container,
@@ -10,13 +10,18 @@ import {
   Link,
   VertLine,
 } from '../ReusableComponents';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const ProjectsContainer = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
+  // console.log('current theme project = ', currentTheme);
   const projects = data.projects.map((project, index) => (
-    <Container key={index}>
+    <Container theme={currentTheme} key={index}>
       <AlignLeft>
-        <SubHeading>{project.title}</SubHeading>
-        <VertLine>
+        <SubHeading theme={currentTheme}>{project.title}</SubHeading>
+        <VertLine theme={currentTheme}>
           <Indent>
             {project.software.map((s, i) => (
               <List key={i}>{s}</List>
@@ -34,14 +39,16 @@ const ProjectsContainer = ({ data }) => {
           <span>{project.description}</span>
         </div>
 
-        <Link href={project.demo}>Demo Link</Link>
+        <Link theme={currentTheme} href={project.demo}>
+          Demo Link
+        </Link>
       </AlignRight>
     </Container>
   ));
 
   return (
     <div>
-      <Heading>Projects</Heading>
+      <Heading theme={currentTheme}>Projects</Heading>
       {projects}
     </div>
   );

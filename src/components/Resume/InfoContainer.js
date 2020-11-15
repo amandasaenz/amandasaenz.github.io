@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Name } from '../ReusableComponents';
-import email from '../images/Email.svg';
-import phone from '../images/Phone.svg';
-import location from '../images/Location.svg';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const InfoContainer = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return (
-    <Container>
-      <Name>{data.info.name}</Name>
+    <Container theme={currentTheme}>
+      <Name theme={currentTheme}>{data.info.name}</Name>
 
       <Info>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Logo src={email} />
+          <EmailLogo theme={currentTheme} />
           {data.info.email}
         </div>
-        <Stripe />
+        <Stripe theme={currentTheme} />
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Logo src={phone} />
+          <PhoneLogo theme={currentTheme} />
           {data.info.phone}
         </div>
-        <Stripe />
+        <Stripe theme={currentTheme} />
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Logo src={location} />
+          <LocationLogo theme={currentTheme} />
           {data.info.location}
         </div>
       </Info>
@@ -32,27 +33,35 @@ const InfoContainer = ({ data }) => {
 
 export default InfoContainer;
 
-const Logo = styled.div`
+const EmailLogo = styled.div`
   height: 48px;
   width: 48px;
-  background-image: url('${(props) => props.src}');
+  background-image: url('${(props) => props.theme.email}');
   background-repeat: no-repeat;
   background-position: center;
-  // background-color: green;
+`;
+
+const PhoneLogo = styled.div`
+  height: 48px;
+  width: 48px;
+  background-image: url('${(props) => props.theme.phone}');
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const LocationLogo = styled.div`
+  height: 48px;
+  width: 48px;
+  background-image: url('${(props) => props.theme.location}');
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const Container = styled.div`
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
-`;
-
-const Icon = styled.div`
-  height: 80px;
-  width: 80px;
-  margin: auto;
-  background-image: url('${(props) => props.src}');
-  background-repeat: no-repeat;
+  color: ${(props) => props.theme.bodyText};
 `;
 
 const Info = styled.div`
@@ -60,7 +69,7 @@ const Info = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  // background-color: pink;
+
   @media (max-width: 850px) {
     display: block;
     text-align: center;
@@ -70,9 +79,8 @@ const Info = styled.div`
 const Stripe = styled.div`
   height: 16px;
   width: 2px;
-  background-color: #ff8277;
+  background-color: ${(props) => props.theme.headingColor};
   margin-left: 16px;
-  // margin-right: 8px;
   border-radius: 2px;
 
   @media (max-width: 850px) {

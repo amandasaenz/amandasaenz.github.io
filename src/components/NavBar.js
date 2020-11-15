@@ -1,21 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Link, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
-import burgerImg from './images/Burger.svg';
+import ThemeToggler from './ThemeToggler';
+import ThemeContext from './ThemeContext';
+import Themes from './Themes';
+
+import { ThemeProvider } from '@emotion/react';
+//NEED TO CHANGE ICON
 
 // render Navbar on Mobile or Web, while passing in URL as a prop.
 const NavBar = ({ data, width }) => {
   const location = useLocation();
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return width < 480 ? (
-    <Mobile data={data} loc={location.pathname} />
+    <Mobile data={data} loc={location.pathname} theme={currentTheme} />
   ) : (
-    <Web data={data} loc={location.pathname} />
+    <Web data={data} loc={location.pathname} theme={currentTheme} />
   );
 };
 
 // render if screen-width is for Mobile
-const Mobile = ({ data, loc }) => {
+const Mobile = ({ data, loc, theme }) => {
   const [isOpened, setOpened] = useState(false);
   const ref = useRef(null);
 
@@ -62,16 +69,17 @@ const Mobile = ({ data, loc }) => {
 
   return (
     <Container ref={ref}>
-      <Glass style={stretch} />
+      <Glass theme={theme} style={stretch} />
       <Info>
         {loc === '/resume' ? (
-          <ResumeHeader data={data} />
+          <ResumeHeader data={data} theme={theme} />
         ) : (
-          <LogoHeader data={data} />
+          <LogoHeader data={data} theme={theme} />
         )}
         <RightContainer>
+          <ThemeToggler />
           <Burger
-            src={burgerImg}
+            theme={theme}
             onClick={() => {
               setOpened(!isOpened);
             }}
@@ -79,8 +87,10 @@ const Mobile = ({ data, loc }) => {
           />
         </RightContainer>
       </Info>
+
       <Dropdown src={isOpened ? 1 : 0}>
         <Page
+          theme={theme}
           style={ease}
           to='/'
           onClick={() => {
@@ -89,8 +99,9 @@ const Mobile = ({ data, loc }) => {
         >
           {data.navbarLinks.projects}
         </Page>
-        <Line style={grow} />
+        <Line theme={theme} style={grow} />
         <Page
+          theme={theme}
           style={ease}
           to='/resume'
           onClick={() => {
@@ -105,45 +116,51 @@ const Mobile = ({ data, loc }) => {
 };
 
 // render if screen-width is for Web
-const Web = ({ data, loc }) => {
+const Web = ({ data, loc, theme }) => {
   return (
     <Container>
-      <Glass />
+      <Glass theme={theme} />
       <Info>
         {loc === '/resume' ? (
-          <ResumeHeader data={data} />
+          <ResumeHeader data={data} theme={theme} />
         ) : (
-          <LogoHeader data={data} />
+          <LogoHeader data={data} theme={theme} />
         )}
+
         <RightContainer>
-          <Page to='/'>{data.navbarLinks.projects}</Page>
-          <Page to='/resume'>{data.navbarLinks.resume}</Page>
+          <ThemeToggler />
+          <Page theme={theme} to='/'>
+            {data.navbarLinks.projects}
+          </Page>
+          <Page theme={theme} to='/resume'>
+            {data.navbarLinks.resume}
+          </Page>
         </RightContainer>
       </Info>
     </Container>
   );
 };
 
-const LogoHeader = ({ data }) => {
+const LogoHeader = ({ data, theme }) => {
   return (
     <LeftContainer>
       <Link to='/'>
-        <Avatar src={data.info.avatar} />
+        <Avatar theme={theme} src={data.info.avatar} />
       </Link>
     </LeftContainer>
   );
 };
 
-const ResumeHeader = ({ data }) => {
+const ResumeHeader = ({ data, theme }) => {
   return (
     <LeftContainer>
       <a href={data.info.linkedin}>
-        <Icon src={data.info.linkedinLogo} src2={data.info.linkedinHover} />
+        <LinkedinIcon theme={theme} />
       </a>
 
-      <Indent />
+      <Indent theme={theme} />
       <a href={data.info.github}>
-        <Icon src={data.info.githubLogo} src2={data.info.githubHover} />
+        <GithubIcon theme={theme} />
       </a>
     </LeftContainer>
   );
@@ -157,7 +174,7 @@ const Indent = styled.div`
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 2px;
-  background-color: #e74946;
+  background-color: ${(props) => props.theme.headingColor};
 `;
 
 const Container = styled.div`
@@ -173,8 +190,7 @@ const Glass = styled(animated.div)`
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(22, 20, 39, 0.7);
-  // background-color: red;
+  background-color: ${(props) => props.theme.glassColor};
   backdrop-filter: blur(4px);
 `;
 
@@ -185,8 +201,6 @@ const Info = styled.div`
   top: 0;
   right: 0;
   left: 0;
-  // margin-left: 16px;
-  // margin-right: 16px;
   margin-top: 8px;
   margin-bottom: 8px;
   height: 48px;
@@ -214,24 +228,30 @@ const Dropdown = styled.div`
   margin-right: 16px;
   margin-left: 16px;
   margin-top: 64px;
-  // background-color: blue;
 `;
 
-const Icon = styled.div`
+const LinkedinIcon = styled.div`
   height: 32px;
   width: 32px;
   margin: 8px;
-  background-image: url('${(props) => props.src}');
+  background-image: url('${(props) => props.theme.linkedin}');
   background-repeat: no-repeat;
   background-position: center;
-  &:hover {
-    background-image: url('${(props) => props.src2}');
-  }
 `;
+
+const GithubIcon = styled.div`
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  background-image: url('${(props) => props.theme.github}');
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
 const Burger = styled(animated.div)`
   height: 48px;
   width: 48px;
-  background-image: url('${(props) => props.src}');
+  background-image: url('${(props) => props.theme.burger}');
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -241,21 +261,18 @@ const Avatar = styled.div`
   height: 48px;
   width: 48px;
   margin-left: 8px;
-  background-image: url('${(props) => props.src}');
+  background-image: url('${(props) => props.theme.avatar}');
   background-repeat: no-repeat;
   background-position: center;
 `;
 
 const Page = styled(animated(Link))`
   margin-right: 16px;
-  color: #cde57a;
+  color: ${(props) => props.theme.linkColor};
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  &:hover {
-    color: #ff6561;
-  }
 
   @media (max-width: 479px) {
     margin-right: 0px;
@@ -263,5 +280,5 @@ const Page = styled(animated(Link))`
 `;
 
 const Line = styled(animated.div)`
-  background-color: #cde57a;
+  background-color: ${(props) => props.theme.linkColor};
 `;

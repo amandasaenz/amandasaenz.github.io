@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Resume from './Resume/Resume';
 import Home from './Home';
@@ -6,11 +6,10 @@ import Projects from './Projects';
 import ResumeData from './ResumeData';
 import ProjectData from './ProjectData';
 import NavBar from './Navbar';
+import ThemeContext from './ThemeContext';
 import lodash from 'lodash';
 
 document.body.style = 'margin: 0';
-document.body.style.backgroundColor = '#161427';
-// document.body.style.backgroundColor = '#2B243E';
 
 const initState = (data) => {
   const projects = data.projects;
@@ -27,9 +26,17 @@ const initState = (data) => {
 };
 
 const App = () => {
+  const theme = useState('dark');
+
   const [width, setWidth] = useState(0);
   const [projArray, setProjArray] = useState(initState(ProjectData));
   const ref = useRef(0);
+
+  useEffect(() => {
+    theme[0] === 'light'
+      ? (document.body.style.backgroundColor = '#FCFFFF')
+      : (document.body.style.backgroundColor = '#161427');
+  }, [theme]);
 
   // initialize screen-width
   useEffect(() => {
@@ -46,26 +53,28 @@ const App = () => {
   }, [ref.current]);
 
   return (
-    <div ref={ref}>
-      <NavBar data={ResumeData} width={width} />
+    <ThemeContext.Provider value={theme}>
+      <div ref={ref}>
+        <NavBar data={ResumeData} width={width} />
 
-      <Switch>
-        <Route exact path='/' render={() => <Home data={ProjectData} />} />
-        <Route
-          exact
-          path='/resume'
-          render={() => <Resume data={ResumeData} />}
-        />
-
-        {projArray.map((s, i) => (
+        <Switch>
+          <Route exact path='/' render={() => <Home data={ProjectData} />} />
           <Route
-            key={i}
-            path={`/${s.id}`}
-            render={() => <Projects data={s} />}
+            exact
+            path='/resume'
+            render={() => <Resume data={ResumeData} />}
           />
-        ))}
-      </Switch>
-    </div>
+
+          {projArray.map((s, i) => (
+            <Route
+              key={i}
+              path={`/${s.id}`}
+              render={() => <Projects data={s} />}
+            />
+          ))}
+        </Switch>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

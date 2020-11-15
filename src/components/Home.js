@@ -1,20 +1,46 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Heading, Indent, VertLine } from './ReusableComponents';
+import ThemeContext from './ThemeContext';
+import Themes from './Themes';
 
 const Home = ({ data }) => {
+  //MAYBE ADD SCROLL TO TOP IF BACK BUTTON ISNT CLICKED
+
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return (
     <Container>
-      <Project images={data.projects.threeD} name={'3D Projects'} />
-      <Project images={data.projects.UX} name={'UI / UX Projects'} />
-      <Project images={data.projects.ReactP} name={'React Projects'} />
-      <Project images={data.projects.PlushP} name={'Plush Projects'} />
-      <Project images={data.projects.IllustP} name={'Illustration Projects'} />
+      <Project
+        theme={currentTheme}
+        images={data.projects.threeD}
+        name={'3D Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.UX}
+        name={'UI / UX Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.ReactP}
+        name={'React Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.PlushP}
+        name={'Plush Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.IllustP}
+        name={'Illustration Projects'}
+      />
     </Container>
   );
 };
 
-const Project = ({ images, name }) => {
+const Project = ({ images, name, theme }) => {
   const List = images.map((image, index) => (
     <Link href={`#${image.id}`} key={index}>
       <Image src={image.thumbnail} />
@@ -24,11 +50,11 @@ const Project = ({ images, name }) => {
   return (
     <AlignLeft>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Heading>{name}</Heading>
+        <Heading theme={theme}>{name}</Heading>
       </div>
 
       <div style={{ position: 'relative', marginTop: '8px' }}>
-        <VertLine style={{ position: 'absolute' }}>
+        <VertLine theme={theme} style={{ position: 'absolute' }}>
           <Indent />
         </VertLine>
         <Content>{List}</Content>

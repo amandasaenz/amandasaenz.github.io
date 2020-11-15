@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   Container,
@@ -8,8 +8,13 @@ import {
   VertLine,
   AlignRight,
 } from '../ReusableComponents';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const SkillsContainer = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
+
   const SkillsList = data.technical.skillList.map((list, index) => (
     <List src={data.technical.level[index]} key={list.toString()}>
       {list}
@@ -17,10 +22,10 @@ const SkillsContainer = ({ data }) => {
   ));
 
   return (
-    <Container>
+    <Container theme={currentTheme}>
       <AlignLeft>
-        <Heading>Technical Skills</Heading>
-        <VertLine>
+        <Heading theme={currentTheme}>Technical Skills</Heading>
+        <VertLine theme={currentTheme}>
           <Indent>
             <Level src='#cbe763'>novice</Level>
             <Level src='#a172c6'>intermediate</Level>

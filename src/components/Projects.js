@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import ScrollToTop from './ScrollToTop';
 import { Link, SubHeading, AlignRight } from './ReusableComponents';
-import zoom from './images/zoom.svg';
+
+import ThemeContext from './ThemeContext';
+import Themes from './Themes';
 
 const Projects = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return (
-    <Binder>
+    <Binder theme={currentTheme}>
       <ScrollToTop />
-      <Folder data={data} />
+      <Folder data={data} theme={currentTheme} />
     </Binder>
   );
 };
 
-const Folder = ({ data }) => {
+const Folder = ({ data, theme }) => {
   return (
     <ProjectContainer>
-      <SubHeading>{data.title}</SubHeading>
+      <SubHeading theme={theme}>{data.title}</SubHeading>
       <div style={{ display: 'flex', position: 'relative', marginTop: '8px' }}>
-        <VertLine />
+        <VertLine theme={theme} />
 
         <div
           style={{
@@ -34,7 +38,7 @@ const Folder = ({ data }) => {
                 window.open(`${s}`, '_self');
               }}
             >
-              <ZoomImage src={zoom} />
+              <ZoomImage theme={theme} />
               <Image src={s} key={s.id} />
             </ImageContainer>
           ))}
@@ -55,6 +59,7 @@ const Folder = ({ data }) => {
         </div>
 
         <Link
+          theme={theme}
           href={data.demo}
           style={{
             display: `${data.demo}` === 'undefined' ? 'none' : 'inline',
@@ -70,12 +75,12 @@ const Folder = ({ data }) => {
 export default Projects;
 
 const VertLine = styled.div`
-  background-color: #ff6561;
   width: 2px;
   height: 100%;
   border-radius: 2px;
   position: absolute;
   margin-left: 24px;
+  background-color: ${(props) => props.theme.headingColor};
 `;
 
 const Software = styled.div`
@@ -89,7 +94,7 @@ const List = styled.li`
 const Binder = styled.div`
   padding-left: 16px;
   padding-right: 16px;
-  color: #7fd8d9;
+  color: ${(props) => props.theme.bodyText};
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -104,18 +109,6 @@ const ProjectContainer = styled.div`
   flex-direction: column;
   overflow: hidden;
 `;
-
-// const SubHeading = styled.div`
-//   font-family: 'Mitr', sans-serif;
-//   color: #e74946;
-//   font-size: 28px;
-// `;
-
-// const AlignRight = styled.div`
-//   flex: 1 1 0%;
-//   justify-content: flex-start;
-//   padding-top: 16px;
-// `;
 
 const Image = styled.img`
   background-image: url('${(props) => props.src}');
@@ -136,7 +129,7 @@ const ImageContainer = styled.div`
 `;
 
 const ZoomImage = styled.div`
-  background-image: url('${(props) => props.src}');
+  background-image: url('${(props) => props.theme.zoom}');
   position: absolute;
   right: 0;
   width: 48px;

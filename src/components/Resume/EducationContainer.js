@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   Container,
@@ -6,12 +6,16 @@ import {
   AlignLeft,
   AlignRight,
 } from '../ReusableComponents';
+import ThemeContext from '../ThemeContext';
+import Themes from '../Themes';
 
 const EducationContainer = ({ data }) => {
+  const theme = useContext(ThemeContext)[0];
+  const currentTheme = Themes[theme];
   return (
-    <Container>
+    <Container theme={currentTheme}>
       <AlignLeft>
-        <Heading>Education</Heading>
+        <Heading theme={currentTheme}>Education</Heading>
       </AlignLeft>
       <AlignRight>
         <div>{data.education.major}</div>

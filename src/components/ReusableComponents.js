@@ -8,6 +8,8 @@ export const Container = styled.div`
   font-size: 16px;
   padding-top: 0;
 
+  color: ${(props) => props.theme.bodyText};
+
   @media (max-width: 850px) {
     display: block;
   }
@@ -18,7 +20,7 @@ export const Heading = styled.div`
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
-  color: #ff6561;
+  color: ${(props) => props.theme.headingColor};
   // padding-top: 8px;
 `;
 
@@ -26,7 +28,7 @@ export const SubHeading = styled.div`
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #ff6561;
+  color: ${(props) => props.theme.headingColor};
 `;
 
 export const Body = styled.div`
@@ -52,7 +54,7 @@ export const AlignRight = styled.div`
 `;
 
 export const VertLine = styled.div`
-  background-color: #ff6561;
+  background-color: ${(props) => props.theme.headingColor};
   width: 2px;
   height: 100%;
   border-radius: 2px;
@@ -61,7 +63,7 @@ export const VertLine = styled.div`
 
 export const Line = styled.div`
   height: 2px;
-  background-color: #ff6561;
+  background-color: ${(props) => props.theme.headingColor};
   margin-top: 8px;
   margin-bottom: 8px;
   border-radius: 2px;
@@ -75,20 +77,18 @@ export const Indent = styled.div`
 `;
 
 export const Link = styled.a`
-  color: #cde57a;
+  // color: #cde57a;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  &:hover {
-    color: #ff6561;
-  }
+  color: ${(props) => props.theme.linkColor};
 `;
 
 export const Name = styled.div`
   text-align: center;
   text-transform: uppercase;
-  color: #ff6561;
+  color: ${(props) => props.theme.headingColor};
   font-size: 112px;
   font-family: 'Work Sans', sans-serif;
 
