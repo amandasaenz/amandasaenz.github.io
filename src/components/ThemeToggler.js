@@ -14,28 +14,12 @@ const ThemeToggler = () => {
   return (
     <ThemeContainer>
       <div>
-        <SunIcon
+        <Icon
           onClick={() => {
             setThemeMode(themeMode === 'light' ? 'dark' : 'light');
           }}
           theme={currentTheme}
           ifclick={themeMode}
-          style={{
-            cursor: 'pointer',
-            margin: 0,
-            width: '48px',
-            height: '48px',
-          }}
-        />
-      </div>
-
-      <div>
-        <MoonIcon
-          onClick={() => {
-            setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
-          }}
-          ifclick={themeMode}
-          theme={currentTheme}
           style={{
             cursor: 'pointer',
             margin: 0,
@@ -60,20 +44,11 @@ const ThemeContainer = styled.div`
   }
 `;
 
-const SunIcon = styled.div`
+const Icon = styled.div`
   height: 32px;
   width: 32px;
   margin: 8px;
-  background-image: url('${(props) => props.theme.sun}');
-  background-repeat: no-repeat;
-  background-position: center;
-`;
-
-const MoonIcon = styled.div`
-  height: 32px;
-  width: 32px;
-  margin: 8px;
-  background-image: url('${(props) => props.theme.moon}');
+  background-image: url('${(props) => props.theme.themeMode}');
   background-repeat: no-repeat;
   background-position: center;
 `;
