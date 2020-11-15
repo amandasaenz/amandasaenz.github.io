@@ -1,9 +1,9 @@
-import icon from '../images/icon.SVG';
-import avatar from '../images/avatar.SVG';
-import linkedin from '../images/linkedin.svg';
-import linkedin2 from '../images/linkedin2.svg';
-import github from '../images/github.svg';
-import github2 from '../images/github2.svg';
+import icon from './images/icon.SVG';
+import avatar from './images/avatar.SVG';
+import linkedin from './images/linkedin.svg';
+import linkedin2 from './images/linkedin2.svg';
+import github from './images/github.svg';
+import github2 from './images/github2.svg';
 
 const data = {
   info: {
@@ -58,17 +58,14 @@ const data = {
     {
       title: 'amandasaenz.github.io',
       software: ['React/Javascript', 'CSS', 'Illustrator'],
-      description:
-        'My website is a single page application created in React to show all of my work.',
+      description: 'My website is a single page application created in React.',
       demo: 'https://amandasaenz.github.io/',
     },
     {
       title: 'Josh Divine X Super Crash Bro',
       software: ['Pixologic Zbrush', 'Keyshot'],
       description:
-        'Super Crash Bro is the 2nd "crash" series toy by Josh Divine.',
-      partners: 'Josh Divine',
-      role: 'Turn a 2D concept into a 3D sculpt.',
+        'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
       demo:
         'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
     },
@@ -76,15 +73,14 @@ const data = {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
       description:
-        'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
+        'I created myself in the world of one of my favorite games, Sunset Overdrive, where I jump to collect a Fizzie.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
     {
       title: 'Endless',
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description: '2D online multiplayer game made in Unity',
-      partners: '3D UI programmer/UX designer',
-      role: 'Design futuristic UI buttons, panels, and space background.',
+      description:
+        'This project is a 2D online multiplayer game made in Unity. I worked closely with a UI programmer. My role was to design the UI art assets.',
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
   ],
@@ -95,14 +91,14 @@ const data = {
       duration: '(June 2019- Current)',
       role: '3D Artist',
       description:
-        'Use Pixologic Zbrush to turn 2D concepts and designs into 3D. Creating Concepts/Designs of plush toys.',
+        'Here at Kidrobot, I use Pixologic Zbrush to turn 2D concepts into 3D. I also work on designs for plush toys as well as vinyl and create concepts for different licensors.',
     },
     {
       work: 'Prime LA',
       duration: '(May 2017 - May 2018)',
       role: 'Freelance Graphic Designer',
       description:
-        'Design T-shirt graphics Ensure that graphics are ready for printing on T-shirts Convert low resolution images to high quality graphics Provide quality and consistency for client’s brand.',
+        'At Prime LA, I created T-shirt graphics and ensured that graphics were ready for printing.',
     },
   ],
 };

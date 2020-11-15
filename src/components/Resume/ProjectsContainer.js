@@ -9,7 +9,7 @@ import {
   Indent,
   Link,
   VertLine,
-} from './ReusableComponents';
+} from '../ReusableComponents';
 
 const ProjectsContainer = ({ data }) => {
   const projects = data.projects.map((project, index) => (
@@ -31,26 +31,7 @@ const ProjectsContainer = ({ data }) => {
               `${project.description}` === 'undefined' ? 'none' : 'block',
           }}
         >
-          <span style={{ color: '#d11f6c' }}>Description: </span>
           <span>{project.description}</span>
-        </div>
-
-        <div
-          style={{
-            display: `${project.partners}` === 'undefined' ? 'none' : 'block',
-          }}
-        >
-          <span style={{ color: '#d11f6c' }}>Partners: </span>
-          <span>{project.partners}</span>
-        </div>
-
-        <div
-          style={{
-            display: `${project.role}` === 'undefined' ? 'none' : 'block',
-          }}
-        >
-          <span style={{ color: '#d11f6c' }}>Role: </span>
-          <span>{project.role}</span>
         </div>
 
         <Link href={project.demo}>Demo Link</Link>

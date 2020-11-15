@@ -1,16 +1,30 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Name } from '../ReusableComponents';
+import email from '../images/Email.svg';
+import phone from '../images/Phone.svg';
+import location from '../images/Location.svg';
 
 const InfoContainer = ({ data }) => {
   return (
     <Container>
-      <Icon src={data.info.icon} />
       <Name>{data.info.name}</Name>
 
       <Info>
-        <div>{data.info.email}</div> <Stripe />
-        <div>{data.info.location}</div> <Stripe />
-        <div>{data.info.phone}</div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Logo src={email} />
+          {data.info.email}
+        </div>
+        <Stripe />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Logo src={phone} />
+          {data.info.phone}
+        </div>
+        <Stripe />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Logo src={location} />
+          {data.info.location}
+        </div>
       </Info>
     </Container>
   );
@@ -18,9 +32,19 @@ const InfoContainer = ({ data }) => {
 
 export default InfoContainer;
 
+const Logo = styled.div`
+  height: 48px;
+  width: 48px;
+  background-image: url('${(props) => props.src}');
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-color: green;
+`;
+
 const Container = styled.div`
-  font-family: 'Varela Round', sans-serif;
-  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 `;
 
 const Icon = styled.div`
@@ -31,26 +55,13 @@ const Icon = styled.div`
   background-repeat: no-repeat;
 `;
 
-const Name = styled.div`
-  text-align: center;
-  color: #e74946;
-  font-size: 48px;
-  font-family: 'Comfortaa', cursive;
-  margin-top: 16px;
-  margin-bottom: 8px;
-
-  @media (max-width: 411px) {
-    font-size: 40px;
-  }
-`;
-
 const Info = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 687px) {
+  // background-color: pink;
+  @media (max-width: 850px) {
     display: block;
     text-align: center;
   }
@@ -59,12 +70,12 @@ const Info = styled.div`
 const Stripe = styled.div`
   height: 16px;
   width: 2px;
-  background-color: #e74946;
-  margin-left: 8px;
-  margin-right: 8px;
+  background-color: #ff8277;
+  margin-left: 16px;
+  // margin-right: 8px;
   border-radius: 2px;
 
-  @media (max-width: 687px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import ScrollToTop from './ScrollToTop';
-import { Link } from './Resume/ReusableComponents';
-import zoom from '../images/zoom.SVG';
+import { Link, SubHeading, AlignRight } from './ReusableComponents';
+import zoom from './images/zoom.svg';
 
 const Projects = ({ data }) => {
   return (
@@ -22,7 +22,7 @@ const Folder = ({ data }) => {
 
         <div
           style={{
-            marginLeft: '36px',
+            marginLeft: '40px',
             display: 'grid',
             gridRowGap: '16px',
           }}
@@ -51,30 +51,13 @@ const Folder = ({ data }) => {
             display: `${data.description}` === 'undefined' ? 'none' : 'block',
           }}
         >
-          <span style={{ color: '#d11f6c' }}>Description: </span>
-          <span>{data.description}</span>
-        </div>
-        <div
-          style={{
-            display: `${data.partners}` === 'undefined' ? 'none' : 'block',
-          }}
-        >
-          <span style={{ color: '#d11f6c' }}>Partners: </span>
-          <span>{data.partners}</span>
-        </div>
-        <div
-          style={{
-            display: `${data.role}` === 'undefined' ? 'none' : 'block',
-          }}
-        >
-          <span style={{ color: '#d11f6c' }}>Role: </span>
-          <span>{data.role}</span>
+          {data.description}
         </div>
 
         <Link
           href={data.demo}
           style={{
-            display: `${data.demo}` === 'undefined' ? 'none' : 'block',
+            display: `${data.demo}` === 'undefined' ? 'none' : 'inline',
           }}
         >
           Demo Link
@@ -87,12 +70,12 @@ const Folder = ({ data }) => {
 export default Projects;
 
 const VertLine = styled.div`
-  background-color: #e74946;
+  background-color: #ff6561;
   width: 2px;
   height: 100%;
   border-radius: 2px;
   position: absolute;
-  margin-left: 20px;
+  margin-left: 24px;
 `;
 
 const Software = styled.div`
@@ -104,34 +87,35 @@ const List = styled.li`
 `;
 
 const Binder = styled.div`
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   color: #7fd8d9;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 `;
 
 const ProjectContainer = styled.div`
   margin: auto;
   max-width: 600px;
-  padding-top: 56px;
+  padding-top: 64px;
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 `;
 
-const SubHeading = styled.div`
-  font-family: 'Mitr', sans-serif;
-  color: #e74946;
-  font-size: 28px;
-`;
+// const SubHeading = styled.div`
+//   font-family: 'Mitr', sans-serif;
+//   color: #e74946;
+//   font-size: 28px;
+// `;
 
-const AlignRight = styled.div`
-  flex: 1 1 0%;
-  justify-content: flex-start;
-  padding-top: 16px;
-`;
+// const AlignRight = styled.div`
+//   flex: 1 1 0%;
+//   justify-content: flex-start;
+//   padding-top: 16px;
+// `;
 
 const Image = styled.img`
   background-image: url('${(props) => props.src}');
@@ -157,11 +141,5 @@ const ZoomImage = styled.div`
   right: 0;
   width: 48px;
   height: 48px;
-  margin: 8px;
   z-index: 2;
-
-  @media (max-width: 479px) {
-    width: 32px;
-    height: 32px;
-  }
 `;

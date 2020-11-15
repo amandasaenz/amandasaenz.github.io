@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Link, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
-// import burgerImg from './images/Burger.svg';
-import burgerImg from '../images/Burger.svg';
+import burgerImg from './images/Burger.svg';
 
 // render Navbar on Mobile or Web, while passing in URL as a prop.
 const NavBar = ({ data, width }) => {
@@ -40,7 +39,7 @@ const Mobile = ({ data, loc }) => {
   });
 
   const stretch = useSpring({
-    height: isOpened ? '224px' : '56px',
+    height: isOpened ? '244px' : '64px',
     delay: isOpened ? 0 : 100,
   });
 
@@ -155,8 +154,8 @@ export default NavBar;
 const Indent = styled.div`
   height: 32px;
   width: 2px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
   border-radius: 2px;
   background-color: #e74946;
 `;
@@ -170,11 +169,12 @@ const Container = styled.div`
 
 const Glass = styled(animated.div)`
   position: absolute;
-  height: 60px;
+  height: 64px;
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(25, 19, 36, 0.7);
+  background-color: rgba(22, 20, 39, 0.7);
+  // background-color: red;
   backdrop-filter: blur(4px);
 `;
 
@@ -185,11 +185,11 @@ const Info = styled.div`
   top: 0;
   right: 0;
   left: 0;
-  margin-left: 32px;
-  margin-right: 32px;
+  // margin-left: 16px;
+  // margin-right: 16px;
   margin-top: 8px;
   margin-bottom: 8px;
-  height: 44px;
+  height: 48px;
   z-index: 1;
 `;
 
@@ -200,6 +200,7 @@ const RightContainer = styled.div`
 
 const LeftContainer = styled.div`
   display: flex;
+  margin-left: 8px;
   align-items: center;
 `;
 
@@ -210,14 +211,16 @@ const Dropdown = styled.div`
   right: 0;
   left: 0;
   align-items: flex-end;
-  margin-right: 32px;
-  margin-left: 32px;
-  margin-top: 56px;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: 64px;
+  // background-color: blue;
 `;
 
 const Icon = styled.div`
   height: 32px;
   width: 32px;
+  margin: 8px;
   background-image: url('${(props) => props.src}');
   background-repeat: no-repeat;
   background-position: center;
@@ -226,32 +229,39 @@ const Icon = styled.div`
   }
 `;
 const Burger = styled(animated.div)`
-  height: 32px;
-  width: 32px;
+  height: 48px;
+  width: 48px;
   background-image: url('${(props) => props.src}');
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 `;
 
 const Avatar = styled.div`
-  height: 44px;
-  width: 44px;
+  height: 48px;
+  width: 48px;
+  margin-left: 8px;
   background-image: url('${(props) => props.src}');
   background-repeat: no-repeat;
   background-position: center;
 `;
 
 const Page = styled(animated(Link))`
-  margin-left: 16px;
-  color: #cbe763;
-  font-size: 20px;
-  font-family: 'Varela Round';
+  margin-right: 16px;
+  color: #cde57a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
   &:hover {
-    color: #a172c6;
+    color: #ff6561;
+  }
+
+  @media (max-width: 479px) {
+    margin-right: 0px;
   }
 `;
 
 const Line = styled(animated.div)`
-  background-color: #cbe763;
+  background-color: #cde57a;
 `;

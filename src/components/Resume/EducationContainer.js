@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Container, Heading, AlignLeft } from './ReusableComponents';
+import {
+  Container,
+  Heading,
+  AlignLeft,
+  AlignRight,
+} from '../ReusableComponents';
 
 const EducationContainer = ({ data }) => {
   return (
@@ -18,9 +23,3 @@ const EducationContainer = ({ data }) => {
 };
 
 export default EducationContainer;
-
-export const AlignRight = styled.div`
-  padding-top: 8px;
-  flex: 1 1 30%;
-  justify-content: flex-start;
-`;

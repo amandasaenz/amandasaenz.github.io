@@ -6,7 +6,8 @@ import {
   Indent,
   AlignLeft,
   VertLine,
-} from './ReusableComponents';
+  AlignRight,
+} from '../ReusableComponents';
 
 const SkillsContainer = ({ data }) => {
   const SkillsList = data.technical.skillList.map((list, index) => (
@@ -36,12 +37,6 @@ const SkillsContainer = ({ data }) => {
 
 export default SkillsContainer;
 
-export const AlignRight = styled.div`
-  flex: 1 1 30%;
-  justify-content: flex-start;
-  padding-top: 8px;
-`;
-
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +63,6 @@ const List = styled.li`
 
 const Level = styled.li`
   list-style: none;
-
   ::before {
     content: '•  ';
     color: ${(props) => props.src};

@@ -6,6 +6,7 @@ import SkillsContainer from './SkillsContainer';
 import ProjectsContainer from './ProjectsContainer';
 import ExperienceContainer from './ExperienceContainer';
 import ScrollToTop from '../ScrollToTop';
+import { Line } from '../ReusableComponents';
 
 const Resume = ({ data }) => {
   return (
@@ -27,22 +28,14 @@ const Resume = ({ data }) => {
 export default Resume;
 
 const Container = styled.div`
-  padding-right: 32px;
-  padding-left: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
   color: #7fd8d9;
-  padding-top: 60px;
+  padding-top: 64px;
   padding-bottom: 32px;
   margin: 0 auto;
 
-  @media (min-width: 1016px) {
-    width: 952px;
+  @media (min-width: 881px) {
+    width: 848px;
   }
-`;
-
-const Line = styled.div`
-  height: 2px;
-  background-color: #e74946;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border-radius: 2px;
 `;

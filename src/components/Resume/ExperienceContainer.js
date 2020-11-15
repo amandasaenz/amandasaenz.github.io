@@ -7,7 +7,7 @@ import {
   AlignRight,
   Indent,
   VertLine,
-} from './ReusableComponents';
+} from '../ReusableComponents';
 
 const ExperienceContainer = ({ data }) => {
   const experience = data.experience.map((exp, index) => (

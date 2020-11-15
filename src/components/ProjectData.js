@@ -89,8 +89,7 @@ const data = {
         images: [overdrive],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
         description:
-          'I created myself in the world of Sunset Overdrive (game created by Insomniac Games), where I jump to collect a Fizzie.',
-
+          'I created myself in the world of one of my favorite games, Sunset Overdrive, where I jump to collect a Fizzie.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -106,10 +105,8 @@ const data = {
           rainbowKaiju,
         ],
         software: ['Pixologic Zbrush', 'Keyshot'],
-        description: 'Hello Kitty Kaiju destroys the city.',
-        partners: 'Designer',
-        role:
-          'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
+        description:
+          'Hello Kitty Kaiju destroys the city. I worked closely with a Designer. My role was to turn a 2D design into a 3D sculpt. I digitally painted the toy and rendered multiple colorways in Keyshot.',
       },
 
       {
@@ -121,7 +118,7 @@ const data = {
         description: 'Labbit is on a Croatian Vacation.',
         partners: 'Designer',
         role:
-          'Turn a provided toy design into a 3D sculpt. Digitally paint the 3D toy and render it in Keyshot.',
+          'Worked with Designer, Frank Kozik. My role was to turn his design into a 3D sculpt. I digitally painted the toy and rendered multiple colorways in Keyshot.',
       },
 
       {
@@ -130,8 +127,8 @@ const data = {
         thumbnail: wonderwomanThumb,
         images: [wonderwoman],
         software: ['Pixologic Zbrush', 'Keyshot'],
-        description: 'This was a 3D test given to me by Kidrobot.',
-        role: 'Turn a 2D concept into a 3D sculpt.',
+        description:
+          'This was a 3D test given to me by Kidrobot. They provided a design and I turned it into a 3D sculpt.',
       },
 
       {
@@ -140,9 +137,8 @@ const data = {
         thumbnail: deercat,
         images: [deercat],
         software: ['Pixologic Zbrush', 'Keyshot'],
-        description: 'Deercat and Snoo, an illustration by Amber Aki Huang.',
-        partners: 'Illustrator',
-        role: 'Turn a 2D concept into a 3D sculpt.',
+        description:
+          'I worked closely with Illustrator, Amber Aki Huang. I turned her 2D design of Deercat and Snoo into a 3D sculpt.',
       },
 
       {
@@ -151,9 +147,8 @@ const data = {
         thumbnail: yellowWarhol,
         images: [greenWarhol, yellowWarhol],
         software: ['Pixologic Zbrush', 'Keyshot'],
-        description: 'Andy Warhol bust in different "Hydro Dip" camo colors.',
-        partners: 'Concept Artist',
-        role: 'Turn a 2D concept into a 3D sculpt.',
+        description:
+          'I worked closely with a concept artist. My role was to turn the 2D concept provided into a 3D sculpt. I rendered different "Hydro Dip" camo colors in Keyshot.',
       },
 
       {
@@ -173,9 +168,7 @@ const data = {
         images: [superCrashBro, superCrashBro2, superCrashBro3],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
-          'Super Crash Bro is the 2nd "crash" series toy by Josh Divine.',
-        partners: 'Josh Divine',
-        role: 'Turn a 2D concept into a 3D sculpt.',
+          'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
         demo:
           'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
       },
@@ -190,10 +183,10 @@ const data = {
         thumbnail: mintThumb,
         images: [mint, minterik, mintamanda],
         software: ['Adobe Illustrator'],
-        description: 'React/Redux single page application',
+        description:
+          'I worked closely with a Full Stack Web Developer to build a React/Redux single page application. My role was to create the mintcushions logo, character portfolio designs at bottom of web app, and convert all sports logos to SVG format.',
         partners: 'Full Stack Web Developer',
-        role:
-          'Created mintcushions logo, character portfolio designs at bottom of web app, and converted all sports logos to SVG format.',
+        role: '',
         demo: 'http://www.mintcushions.com/',
       },
       {
@@ -203,10 +196,8 @@ const data = {
         images: [WS, wintersoldier],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
         description:
-          'Inspired by Starcraft, Winter Soldier user interface shows a unique approach to a game HUD',
-        partners: 'UI programmer',
-        role:
-          'Design all UI art, main skull logo, weapons,and space environment.',
+          'I worked closely with a UI programmer to create a user interface, inspired by Starcraft, to show a different approach to a game HUD. My role was to design all UI art, main skull logo, weapons,and space environment.',
+
         demo: 'https://youtu.be/-Tf08yUNjIc',
       },
       {
@@ -227,9 +218,8 @@ const data = {
           endless11,
         ],
         software: ['Adobe Illustrator', 'Adobe Photoshop'],
-        description: '2D online multiplayer game made in Unity',
-        partners: '3D UI programmer/UX designer',
-        role: 'Design futuristic UI buttons, panels, and space background.',
+        description:
+          'This project is a 2D online multiplayer game made in Unity. I worked closely with a UI programmer. My role was to design the UI art assets.',
         demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
       },
       {
@@ -239,7 +229,7 @@ const data = {
         images: [website],
         software: ['React/Javascript', 'CSS', 'Illustrator'],
         description:
-          'My website is a single page application created in React to show all of my work.',
+          'My website is a single page application created in React. I programmed the website and created all UI assets.',
         demo: 'https://amandasaenz.github.io/',
       },
     ],
@@ -254,7 +244,7 @@ const data = {
         images: [website],
         software: ['React/Javascript', 'CSS', 'Illustrator'],
         description:
-          'My website is a single page application created in React to show all of my work.',
+          'My website is a single page application created in React. I programmed the website and created all UI assets.',
         demo: 'https://amandasaenz.github.io/',
       },
     ],

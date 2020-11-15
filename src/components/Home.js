@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Heading, Indent, VertLine } from './Resume/ReusableComponents';
+import { Heading, Indent, VertLine } from './ReusableComponents';
 
 const Home = ({ data }) => {
   return (
@@ -42,13 +42,13 @@ export default Home;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 88px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 80px;
 `;
 
 const Content = styled.div`
-  margin-left: 36px;
+  margin-left: 40px;
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(3, 1fr);

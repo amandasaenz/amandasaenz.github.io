@@ -9,7 +9,8 @@ import NavBar from './Navbar';
 import lodash from 'lodash';
 
 document.body.style = 'margin: 0';
-document.body.style.backgroundColor = '#191324';
+document.body.style.backgroundColor = '#161427';
+// document.body.style.backgroundColor = '#2B243E';
 
 const initState = (data) => {
   const projects = data.projects;
