@@ -30,7 +30,7 @@ const themes = {
     email: email_dark,
     location: location_dark,
     phone: phone_dark,
-    avatar: moon_dark,
+    avatar: avatar_default,
     zoom: zoom_dark,
     themeMode: moon_dark,
   },
