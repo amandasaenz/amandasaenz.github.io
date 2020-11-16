@@ -98,6 +98,8 @@ const Binder = styled.div`
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  height: calc(100vh);
+  overflow: auto;
 `;
 
 const ProjectContainer = styled.div`
@@ -107,7 +109,7 @@ const ProjectContainer = styled.div`
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
 `;
 
 const Image = styled.img`

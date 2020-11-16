@@ -37,7 +37,7 @@ const themes = {
     bodyText: '#20A39E',
     linkColor: '#FF6561',
     headingColor: '#FF6561',
-    glassColor: 'rgba(255, 255, 255, 0.7)',
+    glassColor: 'rgba(255, 255, 255, 0.3)',
     linkedin: linkedin_light,
     github: github_light,
     burger: burger_light,

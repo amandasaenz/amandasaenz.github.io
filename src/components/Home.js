@@ -10,33 +10,35 @@ const Home = ({ data }) => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (
-    <Container>
-      <Project
-        theme={currentTheme}
-        images={data.projects.threeD}
-        name={'3D Projects'}
-      />
-      <Project
-        theme={currentTheme}
-        images={data.projects.UX}
-        name={'UI / UX Projects'}
-      />
-      <Project
-        theme={currentTheme}
-        images={data.projects.ReactP}
-        name={'React Projects'}
-      />
-      <Project
-        theme={currentTheme}
-        images={data.projects.PlushP}
-        name={'Plush Projects'}
-      />
-      <Project
-        theme={currentTheme}
-        images={data.projects.IllustP}
-        name={'Illustration Projects'}
-      />
-    </Container>
+    <div style={{ height: 'calc(100vh)', overflow: 'auto' }}>
+      <Container>
+        <Project
+          theme={currentTheme}
+          images={data.projects.threeD}
+          name={'3D Projects'}
+        />
+        <Project
+          theme={currentTheme}
+          images={data.projects.UX}
+          name={'UI / UX Projects'}
+        />
+        <Project
+          theme={currentTheme}
+          images={data.projects.ReactP}
+          name={'React Projects'}
+        />
+        <Project
+          theme={currentTheme}
+          images={data.projects.PlushP}
+          name={'Plush Projects'}
+        />
+        <Project
+          theme={currentTheme}
+          images={data.projects.IllustP}
+          name={'Illustration Projects'}
+        />
+      </Container>
+    </div>
   );
 };
 
@@ -68,9 +70,9 @@ export default Home;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 80px;
 `;
 
 const Content = styled.div`
