@@ -51,4 +51,5 @@ const Icon = styled.div`
   background-image: url('${(props) => props.theme.themeMode}');
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 `;

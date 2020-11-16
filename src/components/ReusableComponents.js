@@ -82,6 +82,7 @@ export const Link = styled.a`
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
+  outline: none;
   color: ${(props) => props.theme.linkColor};
 `;
 

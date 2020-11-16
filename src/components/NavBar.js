@@ -238,6 +238,7 @@ const LinkedinIcon = styled.div`
   background-image: url('${(props) => props.theme.linkedin}');
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 `;
 
 const GithubIcon = styled.div`
@@ -247,6 +248,7 @@ const GithubIcon = styled.div`
   background-image: url('${(props) => props.theme.github}');
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 `;
 
 const Burger = styled(animated.div)`
@@ -256,6 +258,7 @@ const Burger = styled(animated.div)`
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  outline: none;
 `;
 
 const Avatar = styled.div`
@@ -266,6 +269,7 @@ const Avatar = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  outline: none;
 `;
 
 const Page = styled(animated(Link))`
@@ -275,7 +279,7 @@ const Page = styled(animated(Link))`
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-
+  outline: none;
   @media (max-width: 479px) {
     margin-right: 0px;
   }
