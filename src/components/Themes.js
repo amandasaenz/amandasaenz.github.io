@@ -13,7 +13,8 @@ import email_light from './images/email_light.svg';
 import location_light from './images/location_light.svg';
 import phone_light from './images/phone_light.svg';
 import avatar_light from './images/avatar_light.svg';
-import avatar_dark from './images/avatar_dark.svg';
+// import avatar_dark from './images/avatar_dark.svg';
+import avatar_dark from './images/avatar_default.svg';
 import zoom_light from './images/zoom_light.svg';
 import zoom_dark from './images/zoom_dark.svg';
 
