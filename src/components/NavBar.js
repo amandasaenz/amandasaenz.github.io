@@ -90,6 +90,7 @@ const Mobile = ({ data, loc, theme }) => {
 
       <Dropdown src={isOpened ? 1 : 0}>
         <Page
+          replace
           theme={theme}
           style={ease}
           to='/'
@@ -101,6 +102,7 @@ const Mobile = ({ data, loc, theme }) => {
         </Page>
         <Line theme={theme} style={grow} />
         <Page
+          replace
           theme={theme}
           style={ease}
           to='/resume'
@@ -129,10 +131,10 @@ const Web = ({ data, loc, theme }) => {
 
         <RightContainer>
           <ThemeToggler />
-          <Page theme={theme} to='/'>
+          <Page theme={theme} to='/' replace>
             {data.navbarLinks.projects}
           </Page>
-          <Page theme={theme} to='/resume'>
+          <Page theme={theme} to='/resume' replace>
             {data.navbarLinks.resume}
           </Page>
         </RightContainer>
@@ -142,10 +144,9 @@ const Web = ({ data, loc, theme }) => {
 };
 
 const LogoHeader = ({ theme }) => {
-  console.log('in logo header: ', theme.avatar);
   return (
     <LeftContainer>
-      <Link to='/'>
+      <Link to='/' replace>
         <Avatar theme={theme} />
       </Link>
     </LeftContainer>

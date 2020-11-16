@@ -68,6 +68,14 @@ const Folder = ({ data, theme }) => {
           Demo Link
         </Link>
       </AlignRight>
+      <div
+        style={{
+          display: `${data.example}` === 'undefined' ? 'none' : 'block',
+          margin: '0 auto',
+        }}
+      >
+        {data.example}
+      </div>
     </ProjectContainer>
   );
 };

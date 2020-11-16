@@ -1,3 +1,5 @@
+import React from 'react';
+
 import overdrive from './ProjectImages/3DProjects/overdrive.jpg';
 
 import greenKaiju from './ProjectImages/3DProjects/HKKaiju_green.jpg';
@@ -232,6 +234,15 @@ const data = {
         description:
           'My website is a single page application created in React. I programmed the website and created all UI assets.',
         demo: 'https://amandasaenz.github.io/',
+        // example: (
+        //   <iframe
+        //     width='375'
+        //     height='812'
+        //     src='https://xd.adobe.com/embed/0ee6c769-8501-41cf-bcd6-db9b88af9a65-5bb5/'
+        //     frameBorder='0'
+        //     allowFullScreen
+        //   ></iframe>
+        // ),
       },
     ],
 

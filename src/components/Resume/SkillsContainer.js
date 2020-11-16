@@ -16,8 +16,8 @@ const SkillsContainer = ({ data }) => {
   const currentTheme = Themes[theme];
 
   const SkillsList = data.technical.skillList.map((list, index) => (
-    <div style={{ display: 'flex', lineHeight: '16px' }}>
-      <Element src={data.technical.level[index]} key={list.toString()} />
+    <div style={{ display: 'flex', lineHeight: '16px' }} key={list.toString()}>
+      <Element src={data.technical.level[index]} key={index} />
       <List>{list}</List>
     </div>
   ));
