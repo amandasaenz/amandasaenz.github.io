@@ -14,7 +14,7 @@ import location_light from './images/location_light.svg';
 import phone_light from './images/phone_light.svg';
 import avatar_light from './images/avatar_light.svg';
 // import avatar_dark from './images/avatar_dark.svg';
-import avatar_dark from './images/avatar_default.svg';
+import avatar_default from './images/avatar_default.svg';
 import zoom_light from './images/zoom_light.svg';
 import zoom_dark from './images/zoom_dark.svg';
 
@@ -30,7 +30,7 @@ const themes = {
     email: email_dark,
     location: location_dark,
     phone: phone_dark,
-    avatar: avatar_dark,
+    avatar: avatar_default,
     zoom: zoom_dark,
     themeMode: moon_dark,
   },
