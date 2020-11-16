@@ -141,7 +141,7 @@ const Web = ({ data, loc, theme }) => {
   );
 };
 
-const LogoHeader = ({ data, theme }) => {
+const LogoHeader = ({ theme }) => {
   return (
     <LeftContainer>
       <Link to='/'>

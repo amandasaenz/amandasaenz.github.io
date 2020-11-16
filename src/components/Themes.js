@@ -1,7 +1,5 @@
-import sun_dark from './images/sun_dark.svg';
 import moon_dark from './images/moon_dark.svg';
 import sun_light from './images/sun_light.svg';
-import moon_light from './images/moon_light.svg';
 import linkedin_dark from './images/linkedin_dark.svg';
 import github_dark from './images/github_dark.svg';
 import linkedin_light from './images/linkedin_light.svg';
@@ -25,15 +23,13 @@ const themes = {
     linkColor: '#CDE57A',
     headingColor: '#FF6561',
     glassColor: 'rgba(22, 20, 39, 0.7)',
-    // sun: sun_dark,
-    // moon: moon_dark,
     linkedin: linkedin_dark,
     github: github_dark,
     burger: burger_dark,
     email: email_dark,
     location: location_dark,
     phone: phone_dark,
-    avatar: avatar_dark,
+    avatar: avatar_light,
     zoom: zoom_dark,
     themeMode: moon_dark,
   },
@@ -42,8 +38,6 @@ const themes = {
     linkColor: '#FF6663',
     headingColor: '#20A39E',
     glassColor: 'rgba(255, 255, 255, 0.7)',
-    // sun: sun_light,
-    // moon: moon_light,
     linkedin: linkedin_light,
     github: github_light,
     burger: burger_light,

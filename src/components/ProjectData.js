@@ -34,6 +34,7 @@ import wintersoldier from './ProjectImages/UXUIProjects/wintersoldier.jpg';
 import WS from './ProjectImages/UXUIProjects/WinterSoldier.gif';
 import WS_thumb from './ProjectImages/UXUIProjects/WinterSoldier_thumb.gif';
 
+import endless_thumb from './ProjectImages/UXUIProjects/endless_thumb.gif';
 import endless from './ProjectImages/UXUIProjects/Endless.jpg';
 import endless2 from './ProjectImages/UXUIProjects/Endless2.jpg';
 import endless3 from './ProjectImages/UXUIProjects/Endless3.jpg';
@@ -203,7 +204,7 @@ const data = {
       {
         title: 'Endless',
         id: 'Endless',
-        thumbnail: endless,
+        thumbnail: endless_thumb,
         images: [
           endless,
           endless2,
