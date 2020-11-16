@@ -14,6 +14,7 @@ const NavBar = ({ data, width }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
+  console.log(currentTheme.avatar);
   return width < 480 ? (
     <Mobile data={data} loc={location.pathname} theme={currentTheme} />
   ) : (

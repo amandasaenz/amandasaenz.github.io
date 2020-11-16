@@ -33,7 +33,7 @@ const themes = {
     email: email_dark,
     location: location_dark,
     phone: phone_dark,
-    avatar: avatar_dark,
+    avatar: avatar_light,
     zoom: zoom_dark,
     themeMode: moon_dark,
   },
