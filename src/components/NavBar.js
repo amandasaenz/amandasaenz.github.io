@@ -13,7 +13,7 @@ const NavBar = ({ data, width }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
-  console.log(currentTheme.avatar);
+  // console.log(currentTheme.avatar);
   return width < 480 ? (
     <Mobile data={data} loc={location.pathname} theme={currentTheme} />
   ) : (
@@ -142,6 +142,7 @@ const Web = ({ data, loc, theme }) => {
 };
 
 const LogoHeader = ({ theme }) => {
+  console.log('in logo header: ', theme.avatar);
   return (
     <LeftContainer>
       <Link to='/'>
@@ -264,6 +265,7 @@ const Avatar = styled.div`
   background-image: url('${(props) => props.theme.avatar}');
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 `;
 
 const Page = styled(animated(Link))`
