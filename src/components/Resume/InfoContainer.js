@@ -69,7 +69,6 @@ const Info = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   @media (max-width: 850px) {
     display: block;
     text-align: center;

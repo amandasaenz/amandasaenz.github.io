@@ -145,7 +145,7 @@ const LogoHeader = ({ data, theme }) => {
   return (
     <LeftContainer>
       <Link to='/'>
-        <Avatar theme={theme} src={data.info.avatar} />
+        <Avatar theme={theme} />
       </Link>
     </LeftContainer>
   );
