@@ -26,7 +26,7 @@ const initState = (data) => {
 };
 
 const App = () => {
-  const theme = useState('dark');
+  const theme = useState('light');
 
   const [width, setWidth] = useState(0);
   const [projArray, setProjArray] = useState(initState(ProjectData));

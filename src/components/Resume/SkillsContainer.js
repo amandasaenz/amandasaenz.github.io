@@ -16,9 +16,10 @@ const SkillsContainer = ({ data }) => {
   const currentTheme = Themes[theme];
 
   const SkillsList = data.technical.skillList.map((list, index) => (
-    <List src={data.technical.level[index]} key={list.toString()}>
-      {list}
-    </List>
+    <div style={{ display: 'flex', lineHeight: '16px' }}>
+      <Element src={data.technical.level[index]} key={list.toString()} />
+      <List>{list}</List>
+    </div>
   ));
 
   return (
@@ -27,9 +28,18 @@ const SkillsContainer = ({ data }) => {
         <Heading theme={currentTheme}>Technical Skills</Heading>
         <VertLine theme={currentTheme}>
           <Indent>
-            <Level src='#cbe763'>novice</Level>
-            <Level src='#a172c6'>intermediate</Level>
-            <Level src='#d11f6c'>advanced</Level>
+            <div style={{ display: 'flex', lineHeight: '16px' }}>
+              <ElementLevel src='#cbe763' />
+              <Level>novice</Level>
+            </div>
+            <div style={{ display: 'flex', lineHeight: '16px' }}>
+              <ElementLevel src='#a172c6' />
+              <Level>intermediate</Level>
+            </div>
+            <div style={{ display: 'flex', lineHeight: '16px' }}>
+              <ElementLevel src='#d11f6c' />
+              <Level>advanced</Level>
+            </div>
           </Indent>
         </VertLine>
       </AlignLeft>
@@ -43,6 +53,9 @@ const SkillsContainer = ({ data }) => {
 export default SkillsContainer;
 
 const Skills = styled.div`
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -53,10 +66,14 @@ const Skills = styled.div`
 
 const List = styled.li`
   list-style: none;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  align-items: center;
+`;
+const Element = styled.div`
   ::before {
     content: '•  ';
+    font-size: 32px;
     color: ${(props) =>
       props.src === 'novice'
         ? '#cbe763'
@@ -66,10 +83,15 @@ const List = styled.li`
   }
 `;
 
-const Level = styled.li`
-  list-style: none;
+const ElementLevel = styled.div`
   ::before {
     content: '•  ';
+    margin-right: 8px;
+    font-size: 32px;
     color: ${(props) => props.src};
   }
+`;
+
+const Level = styled.li`
+  list-style: none;
 `;

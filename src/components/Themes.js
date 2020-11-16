@@ -13,7 +13,6 @@ import email_light from './images/email_light.svg';
 import location_light from './images/location_light.svg';
 import phone_light from './images/phone_light.svg';
 import avatar_light from './images/avatar_light.svg';
-// import avatar_dark from './images/avatar_dark.svg';
 import avatar_default from './images/avatar_default.svg';
 import zoom_light from './images/zoom_light.svg';
 import zoom_dark from './images/zoom_dark.svg';
@@ -35,9 +34,9 @@ const themes = {
     themeMode: moon_dark,
   },
   light: {
-    bodyText: '#80A09D',
+    bodyText: '#20A39E',
     linkColor: '#FF6561',
-    headingColor: '#20A39E',
+    headingColor: '#FF6561',
     glassColor: 'rgba(255, 255, 255, 0.7)',
     linkedin: linkedin_light,
     github: github_light,
