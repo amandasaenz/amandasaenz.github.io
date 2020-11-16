@@ -6,7 +6,6 @@ import ThemeToggler from './ThemeToggler';
 import ThemeContext from './ThemeContext';
 import Themes from './Themes';
 
-import { ThemeProvider } from '@emotion/react';
 //NEED TO CHANGE ICON
 
 // render Navbar on Mobile or Web, while passing in URL as a prop.
