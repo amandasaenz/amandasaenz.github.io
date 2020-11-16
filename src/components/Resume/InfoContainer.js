@@ -72,6 +72,7 @@ const Info = styled.div`
   @media (max-width: 850px) {
     display: block;
     text-align: center;
+    transform: translateX(-16px);
   }
 `;
 

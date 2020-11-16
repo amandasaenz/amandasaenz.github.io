@@ -116,7 +116,7 @@ const Link = styled.a`
   box-sizing: border-box;
 `;
 
-export const AlignLeft = styled.div`
+const AlignLeft = styled.div`
   display: flex;
   flex: 1 1 0%;
   flex-direction: column;

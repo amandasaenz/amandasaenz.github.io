@@ -76,7 +76,7 @@ const Element = styled.div`
     font-size: 32px;
     color: ${(props) =>
       props.src === 'novice'
-        ? '#cbe763'
+        ? '#CDE57A'
         : props.src === 'advanced'
         ? '#d11f6c'
         : '#a172c6'};

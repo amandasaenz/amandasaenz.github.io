@@ -39,7 +39,7 @@ const Container = styled.div`
   color: #7fd8d9;
   padding-top: 64px;
   padding-bottom: 32px;
-
+  margin: 0 auto;
   @media (min-width: 881px) {
     width: 848px;
   }
