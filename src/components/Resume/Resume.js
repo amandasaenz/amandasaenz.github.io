@@ -14,20 +14,18 @@ const Resume = ({ data }) => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (
-    <div style={{ height: 'calc(100vh)', overflow: 'auto' }}>
-      <Container>
-        <ScrollToTop />
-        <InfoContainer data={data} />
-        <Line theme={currentTheme} />
-        <EducationContainer data={data} />
-        <Line theme={currentTheme} />
-        <SkillsContainer data={data} />
-        <Line theme={currentTheme} />
-        <ProjectsContainer data={data} />
-        <Line theme={currentTheme} />
-        <ExperienceContainer data={data} />
-      </Container>
-    </div>
+    <Container>
+      <ScrollToTop />
+      <InfoContainer data={data} />
+      <Line theme={currentTheme} />
+      <EducationContainer data={data} />
+      <Line theme={currentTheme} />
+      <SkillsContainer data={data} />
+      <Line theme={currentTheme} />
+      <ProjectsContainer data={data} />
+      <Line theme={currentTheme} />
+      <ExperienceContainer data={data} />
+    </Container>
   );
 };
 

@@ -184,6 +184,7 @@ const Container = styled.div`
   top: 0;
   width: 100%;
   z-index: 3;
+  // overflow: hidden;
 `;
 
 const Glass = styled(animated.div)`

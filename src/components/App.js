@@ -10,7 +10,8 @@ import ThemeContext from './ThemeContext';
 import lodash from 'lodash';
 
 document.body.style = 'margin: 0';
-document.body.style.overflow = 'hidden';
+// document.body.style.overflowX = 'hidden';
+// document.body.style.height = '100%';
 
 const initState = (data) => {
   const projects = data.projects;
@@ -58,22 +59,32 @@ const App = () => {
       <div ref={ref}>
         <NavBar data={ResumeData} width={width} />
 
-        <Switch>
-          <Route exact path='/' render={() => <Home data={ProjectData} />} />
-          <Route
-            exact
-            path='/resume'
-            render={() => <Resume data={ResumeData} />}
-          />
-
-          {projArray.map((s, i) => (
+        <div
+          style={{
+            position: 'fixed',
+            overflow: 'auto',
+            bottom: 0,
+            width: '100%',
+            top: 0,
+          }}
+        >
+          <Switch>
+            <Route exact path='/' render={() => <Home data={ProjectData} />} />
             <Route
-              key={i}
-              path={`/${s.id}`}
-              render={() => <Projects data={s} />}
+              exact
+              path='/resume'
+              render={() => <Resume data={ResumeData} />}
             />
-          ))}
-        </Switch>
+
+            {projArray.map((s, i) => (
+              <Route
+                key={i}
+                path={`/${s.id}`}
+                render={() => <Projects data={s} />}
+              />
+            ))}
+          </Switch>
+        </div>
       </div>
     </ThemeContext.Provider>
   );

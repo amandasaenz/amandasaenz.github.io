@@ -10,35 +10,33 @@ const Home = ({ data }) => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (
-    <div style={{ height: 'calc(100vh)', overflow: 'auto' }}>
-      <Container>
-        <Project
-          theme={currentTheme}
-          images={data.projects.threeD}
-          name={'3D Projects'}
-        />
-        <Project
-          theme={currentTheme}
-          images={data.projects.UX}
-          name={'UI / UX Projects'}
-        />
-        <Project
-          theme={currentTheme}
-          images={data.projects.ReactP}
-          name={'React Projects'}
-        />
-        <Project
-          theme={currentTheme}
-          images={data.projects.PlushP}
-          name={'Plush Projects'}
-        />
-        <Project
-          theme={currentTheme}
-          images={data.projects.IllustP}
-          name={'Illustration Projects'}
-        />
-      </Container>
-    </div>
+    <Container>
+      <Project
+        theme={currentTheme}
+        images={data.projects.threeD}
+        name={'3D Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.UX}
+        name={'UI / UX Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.ReactP}
+        name={'React Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.PlushP}
+        name={'Plush Projects'}
+      />
+      <Project
+        theme={currentTheme}
+        images={data.projects.IllustP}
+        name={'Illustration Projects'}
+      />
+    </Container>
   );
 };
 
