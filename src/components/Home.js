@@ -6,7 +6,7 @@ import Themes from './Themes';
 
 const Home = ({ data }) => {
   //MAYBE ADD SCROLL TO TOP IF BACK BUTTON ISNT CLICKED
-
+  console.log(window.location.href);
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (
@@ -42,7 +42,7 @@ const Home = ({ data }) => {
 
 const Project = ({ images, name, theme }) => {
   const List = images.map((image, index) => (
-    <Link href={`#${image.id}`} key={index}>
+    <Link href={`${image.id}`} key={index}>
       <Image src={image.thumbnail} />
     </Link>
   ));

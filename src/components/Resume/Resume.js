@@ -11,6 +11,7 @@ import ThemeContext from '../ThemeContext';
 import Themes from '../Themes';
 
 const Resume = ({ data }) => {
+  console.log(window.location.href);
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (
