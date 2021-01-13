@@ -70,11 +70,7 @@ const App = () => {
         >
           <Switch>
             <Route exact path='/' render={() => <Home data={ProjectData} />} />
-            <Route
-              exact
-              path='/resume'
-              render={() => <Resume data={ResumeData} />}
-            />
+            <Route path='/resume' render={() => <Resume data={ResumeData} />} />
 
             {projArray.map((s, i) => (
               <Route
