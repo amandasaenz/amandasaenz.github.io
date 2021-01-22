@@ -10,8 +10,6 @@ import ThemeContext from './ThemeContext';
 import lodash from 'lodash';
 
 document.body.style = 'margin: 0';
-// document.body.style.overflowX = 'hidden';
-// document.body.style.height = '100%';
 
 const initState = (data) => {
   const projects = data.projects;

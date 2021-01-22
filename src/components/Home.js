@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Heading, Indent, VertLine } from './ReusableComponents';
 import ThemeContext from './ThemeContext';
 import Themes from './Themes';
+import { Link } from 'react-router-dom';
 
 const Home = ({ data }) => {
   //MAYBE ADD SCROLL TO TOP IF BACK BUTTON ISNT CLICKED
@@ -42,9 +43,9 @@ const Home = ({ data }) => {
 
 const Project = ({ images, name, theme }) => {
   const List = images.map((image, index) => (
-    <Link href={`#${image.id}`} key={index}>
+    <ProjLink to={`${image.id}`} key={index}>
       <Image src={image.thumbnail} />
-    </Link>
+    </ProjLink>
   ));
 
   return (
@@ -106,7 +107,7 @@ const Image = styled.div`
   }
 `;
 
-const Link = styled.a`
+const ProjLink = styled(Link)`
   overflow: hidden;
   flex-basis: 30%;
   flex-grow: 1;
