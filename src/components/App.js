@@ -9,7 +9,7 @@ import NavBar from './Navbar';
 import ThemeContext from './ThemeContext';
 import lodash from 'lodash';
 
-document.body.style = 'margin: 0';
+document.body.style.margin = 0;
 
 const initState = (data) => {
   const projects = data.projects;
@@ -48,7 +48,6 @@ const App = () => {
     const resizeListener = () => {
       setWidth(ref.current.getBoundingClientRect().width);
     };
-
     window.addEventListener('resize', resizeListener);
   }, [ref.current]);
 
@@ -57,15 +56,7 @@ const App = () => {
       <div ref={ref}>
         <NavBar data={ResumeData} width={width} />
 
-        <div
-          style={{
-            position: 'fixed',
-            overflow: 'auto',
-            bottom: 0,
-            width: '100%',
-            top: 0,
-          }}
-        >
+        <div>
           <Switch>
             <Route exact path='/' render={() => <Home data={ProjectData} />} />
             <Route
@@ -89,3 +80,11 @@ const App = () => {
 };
 
 export default App;
+
+// style={{
+//   position: 'fixed',
+//   overflow: 'auto',
+//   bottom: 0,
+//   top: 0,
+//   width: '100%',
+// }}

@@ -12,6 +12,8 @@ import Themes from '../Themes';
 
 const Resume = ({ data }) => {
   console.log(window.location.href);
+  console.log(document.body.scrollLeft, document.body.scrollTop);
+
   const theme = useContext(ThemeContext)[0];
   const currentTheme = Themes[theme];
   return (

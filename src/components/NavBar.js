@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import ThemeToggler from './ThemeToggler';
 import ThemeContext from './ThemeContext';
 import Themes from './Themes';
-
 //NEED TO CHANGE ICON
 
 // render Navbar on Mobile or Web, while passing in URL as a prop.
@@ -95,6 +94,7 @@ const Mobile = ({ data, loc, theme }) => {
           to='/'
           onClick={() => {
             setOpened(!isOpened);
+            window.scrollTo(0, 0);
           }}
         >
           {data.navbarLinks.projects}
@@ -129,7 +129,7 @@ const Web = ({ data, loc, theme }) => {
 
         <RightContainer>
           <ThemeToggler />
-          <Page theme={theme} to='/'>
+          <Page theme={theme} to='/' onClick={window.scrollTo(0, 0)}>
             {data.navbarLinks.projects}
           </Page>
           <Page theme={theme} to='/resume'>
@@ -182,7 +182,6 @@ const Container = styled.div`
   top: 0;
   width: 100%;
   z-index: 3;
-  // overflow: hidden;
 `;
 
 const Glass = styled(animated.div)`
