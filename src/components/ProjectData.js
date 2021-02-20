@@ -1,5 +1,8 @@
 import React from 'react';
 
+import kampkoral from './ProjectImages/3DProjects/KampKoral.jpg';
+import kampkoral1 from './ProjectImages/3DProjects/KampKoral1.jpg';
+
 import overdrive from './ProjectImages/3DProjects/overdrive.jpg';
 
 import greenKaiju from './ProjectImages/3DProjects/HKKaiju_green.jpg';
@@ -86,6 +89,18 @@ const data = {
 
     threeD: [
       {
+        title: 'Josh Divine X Super Crash Bro',
+        id: 'mario',
+        thumbnail: superCrashBro,
+        images: [superCrashBro, superCrashBro2, superCrashBro3],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
+        demo:
+          'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
+      },
+
+      {
         title: 'Overdrive Madness',
         id: 'OverdriveMadness',
         thumbnail: overdrive,
@@ -94,6 +109,16 @@ const data = {
         description:
           'I created myself in the world of one of my favorite games, Sunset Overdrive, where I jump to collect a Fizzie.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
+      },
+
+      {
+        title: 'Kidrobot X Kamp Koral',
+        id: 'KampKoral',
+        thumbnail: kampkoral1,
+        images: [kampkoral, kampkoral1],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'Spongebob and the crew take a cruze on the canoe at Kamp Koral. I worked closely with a Concept Artist. My role was to turn a 2D design into a 3D sculpt. I digitally painted the toy and rendered in Keyshot.',
       },
 
       {
@@ -162,18 +187,6 @@ const data = {
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan', 'XGen'],
         description:
           'I created Bowlhead Banks to study XGen, a hair simulator.',
-      },
-
-      {
-        title: 'Josh Divine X Super Crash Bro',
-        id: 'mario',
-        thumbnail: superCrashBro,
-        images: [superCrashBro, superCrashBro2, superCrashBro3],
-        software: ['Pixologic Zbrush', 'Keyshot'],
-        description:
-          'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
-        demo:
-          'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
       },
     ],
 
