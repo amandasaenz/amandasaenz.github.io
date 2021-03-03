@@ -54,6 +54,8 @@ import endless11 from './ProjectImages/UXUIProjects/Endless11.jpg';
 
 import website from './ProjectImages/UXUIProjects/website.png';
 import openminded from './ProjectImages/IllustrationProjects/openminded.jpg';
+import madness from './ProjectImages/IllustrationProjects/OverdriveMadness.jpg';
+import madness_thumb from './ProjectImages/IllustrationProjects/madness_thumb.jpg';
 import hamster from './ProjectImages/IllustrationProjects/hamster.jpg';
 import travis from './ProjectImages/IllustrationProjects/travis.jpg';
 import mischief from './ProjectImages/IllustrationProjects/mischief.jpg';
@@ -187,6 +189,63 @@ const data = {
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan', 'XGen'],
         description:
           'I created Bowlhead Banks to study XGen, a hair simulator.',
+      },
+    ],
+
+    //-------------------------------- I L L U S T R A T I O N  P R O J E C T S --------------------------------
+
+    IllustP: [
+      {
+        title: 'Overdrive Madness',
+        id: 'OverdriveMadness',
+        thumbnail: madness_thumb,
+        images: [madness],
+        software: ['Procreate'],
+        description:
+          'I put myself into one of my favorite Insomniac games, Sunset Overdrive.',
+      },
+      {
+        title: 'Openminded',
+        id: 'OpenMinded',
+        thumbnail: openminded,
+        images: [openminded],
+        software: ['Adobe Illustrator'],
+        description:
+          'This illustration tells a story of a brain that opened their third eye.',
+      },
+      {
+        title: 'Chunky the Hamster',
+        id: 'Hamster',
+        thumbnail: hamster,
+        images: [hamster],
+        software: ['Adobe Illustrator'],
+        description: 'Chunky the Hamster loves to eat wontons.',
+      },
+      {
+        title: 'Travis Barker Portrait',
+        id: 'TravisBarker',
+        thumbnail: travis,
+        images: [travis],
+        software: ['graphite pencil'],
+        description: 'A portrait of Travis Barker.',
+      },
+
+      {
+        title: 'Direwolf',
+        id: 'WhiteWolf',
+        thumbnail: wolf,
+        images: [wolf],
+        software: ['Adobe Illustrator'],
+        description:
+          'This was a direwolf illustration I made for a phone background.',
+      },
+      {
+        title: 'IT sketch',
+        id: 'IT',
+        thumbnail: it,
+        images: [it],
+        software: ['Adobe Photoshop'],
+        description: 'A sketch made in procreate.',
       },
     ],
 
@@ -330,63 +389,6 @@ const data = {
 
         demo:
           'https://www.kidrobot.com/products/yummy-world-walter-waffle-cone-ice-cream-plush?variant=31789308379233&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiA7qP9BRCLARIsABDaZzic2fr2jtAl64-lr2sSQc4disti8vfrh9YEPvwCYcos5ubwPJNgPFUaAmtVEALw_wcB',
-      },
-    ],
-
-    //-------------------------------- I L L U S T R A T I O N  P R O J E C T S --------------------------------
-
-    IllustP: [
-      {
-        title: 'Openminded',
-        id: 'OpenMinded',
-        thumbnail: openminded,
-        images: [openminded],
-        software: ['Adobe Illustrator'],
-        description:
-          'This illustration tells a story of a brain that opened their third eye.',
-      },
-      {
-        title: 'Chunky the Hamster',
-        id: 'Hamster',
-        thumbnail: hamster,
-        images: [hamster],
-        software: ['Adobe Illustrator'],
-        description: 'Chunky the Hamster loves to eat wontons.',
-      },
-      {
-        title: 'Travis Barker Portrait',
-        id: 'TravisBarker',
-        thumbnail: travis,
-        images: [travis],
-        software: ['graphite pencil'],
-        description: 'A portrait of Travis Barker.',
-      },
-
-      {
-        title: 'Direwolf',
-        id: 'WhiteWolf',
-        thumbnail: wolf,
-        images: [wolf],
-        software: ['Adobe Illustrator'],
-        description:
-          'This was a direwolf illustration I made for a phone background.',
-      },
-      {
-        title: 'IT sketch',
-        id: 'IT',
-        thumbnail: it,
-        images: [it],
-        software: ['Adobe Photoshop'],
-        description: 'A sketch made in procreate.',
-      },
-
-      {
-        title: 'Dream - Mischief',
-        id: 'Mischief',
-        thumbnail: mischief,
-        images: [mischief],
-        software: ['Adobe Illustrator'],
-        description: 'This was a dream that I recreated in Illustrator.',
       },
     ],
   },

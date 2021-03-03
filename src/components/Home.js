@@ -19,6 +19,11 @@ const Home = ({ data }) => {
       />
       <Project
         theme={currentTheme}
+        images={data.projects.IllustP}
+        name={'Illustration Projects'}
+      />
+      <Project
+        theme={currentTheme}
         images={data.projects.UX}
         name={'UI / UX Projects'}
       />
@@ -31,11 +36,6 @@ const Home = ({ data }) => {
         theme={currentTheme}
         images={data.projects.PlushP}
         name={'Plush Projects'}
-      />
-      <Project
-        theme={currentTheme}
-        images={data.projects.IllustP}
-        name={'Illustration Projects'}
       />
     </Container>
   );
