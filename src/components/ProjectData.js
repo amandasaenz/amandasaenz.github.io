@@ -104,7 +104,7 @@ const data = {
 
       {
         title: 'Overdrive Madness',
-        id: 'OverdriveMadnesss',
+        id: 'OverdriveMadness',
         thumbnail: overdrive,
         images: [overdrive],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
@@ -197,7 +197,7 @@ const data = {
     IllustP: [
       {
         title: 'Overdrive Madness',
-        id: 'OverdriveMadness',
+        id: 'OverdriveMadnesss',
         thumbnail: madness_thumb,
         images: [madness],
         software: ['Procreate'],
