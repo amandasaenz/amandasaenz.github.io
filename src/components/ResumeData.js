@@ -60,7 +60,7 @@ const data = {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
       description:
-        'I created myself in the world of one of my favorite games, Sunset Overdrive, where I jump to collect a Fizzie.',
+        'I created myself in the world of one of my favorite Insomniac games, Sunset Overdrive. I created the concept and 3D sculpt.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
     {
