@@ -114,16 +114,6 @@ const data = {
       },
 
       {
-        title: 'Kidrobot X Kamp Koral',
-        id: 'KampKoral',
-        thumbnail: kampkoral1,
-        images: [kampkoral, kampkoral1],
-        software: ['Pixologic Zbrush', 'Keyshot'],
-        description:
-          'Spongebob and the crew take a cruze on the canoe at Kamp Koral. I worked closely with a Concept Artist. My role was to turn a 2D design into a 3D sculpt. I digitally painted the toy and rendered in Keyshot.',
-      },
-
-      {
         title: 'Kidrobot X Hello Kitty Kaiju',
         id: 'HelloKittyKaiju',
         thumbnail: greenKaiju,

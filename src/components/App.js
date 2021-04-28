@@ -80,11 +80,3 @@ const App = () => {
 };
 
 export default App;
-
-// style={{
-//   position: 'fixed',
-//   overflow: 'auto',
-//   bottom: 0,
-//   top: 0,
-//   width: '100%',
-// }}
