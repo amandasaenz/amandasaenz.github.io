@@ -43,6 +43,13 @@ const data = {
 
   projects: [
     {
+      title: 'Gargoyles - Disney X Kidrobot',
+      software: ['Pixologic Zbrush', 'Keyshot'],
+      description:
+        'I had the wonderful pleasure of working with Disney on the Gargoyle toy series. I worked with a talented concept artist and sculpted Goliath, Demona, and Bronx.',
+      demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
+    },
+    {
       title: 'amandasaenz.github.io',
       software: ['React/Javascript', 'CSS', 'Illustrator'],
       description: 'My website is a single page application created in React.',
