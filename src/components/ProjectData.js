@@ -1,5 +1,10 @@
 import React from 'react';
 
+import bronx from './ProjectImages/3DProjects/bronx.png';
+import goliath from './ProjectImages/3DProjects/goliath.png';
+import demona from './ProjectImages/3DProjects/demona.png';
+import pooh from './ProjectImages/3DProjects/pooh.png';
+
 import kampkoral from './ProjectImages/3DProjects/KampKoral.jpg';
 import kampkoral1 from './ProjectImages/3DProjects/KampKoral1.jpg';
 
@@ -112,6 +117,48 @@ const data = {
           'I created myself in the world of one of my favorite Insomniac games, Sunset Overdrive. I created the concept and 3D sculpt.',
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
+
+      {
+        title: 'Pooh Bear - Kidrobot X Disney',
+        id: 'pooh',
+        thumbnail: pooh,
+        images: [pooh],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+      },
+
+      {
+        title: 'Demona - Kidrobot X Disney',
+        id: 'demona',
+        thumbnail: demona,
+        images: [demona],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+      },
+
+      {
+        title: 'Goliath - Kidrobot X Disney',
+        id: 'goliath',
+        thumbnail: goliath,
+        images: [goliath],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+      },
+
+      {
+        title: 'Bronx - Kidrobot X Disney',
+        id: 'bronx',
+        thumbnail: bronx,
+        images: [bronx],
+        software: ['Pixologic Zbrush', 'Keyshot'],
+        description:
+          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+      },
+
+      
 
       {
         title: 'Kidrobot X Hello Kitty Kaiju',
