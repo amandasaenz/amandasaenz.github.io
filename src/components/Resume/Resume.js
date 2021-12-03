@@ -23,11 +23,11 @@ const Resume = ({ data }) => {
       <Line theme={currentTheme} />
       <EducationContainer data={data} />
       <Line theme={currentTheme} />
+      <ExperienceContainer data={data} />
+      <Line theme={currentTheme} />
       <SkillsContainer data={data} />
       <Line theme={currentTheme} />
       <ProjectsContainer data={data} />
-      <Line theme={currentTheme} />
-      <ExperienceContainer data={data} />
     </Container>
   );
 };

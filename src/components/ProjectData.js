@@ -102,9 +102,8 @@ const data = {
         images: [superCrashBro, superCrashBro2, superCrashBro3],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
-          'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
-        demo:
-          'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
+          'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. Created a 3D vinyl figure based off concept. Produced by Strangecat Toys',
+        demo: 'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
       },
 
       {
@@ -113,8 +112,7 @@ const data = {
         thumbnail: overdrive,
         images: [overdrive],
         software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-        description:
-          'I created myself in the world of one of my favorite Insomniac games, Sunset Overdrive. I created the concept and 3D sculpt.',
+        description: `3D fan art of Insomniac's game Sunset Overdrive. Utilized Autodesk Maya for Animation and Rigging. Rendered model in Pixologic's Renderman.`,
         demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
       },
 
@@ -135,7 +133,7 @@ const data = {
         images: [demona],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
-          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+          'Worked closely with designer to produce a series of 3D vinyl figures for Disney. Utilized Zbrush to sculpt Goliath, Demona, and Bronx.',
       },
 
       {
@@ -145,7 +143,7 @@ const data = {
         images: [goliath],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
-          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+          'Worked closely with designer to produce a series of 3D vinyl figures for Disney. Utilized Zbrush to sculpt Goliath, Demona, and Bronx.',
       },
 
       {
@@ -155,10 +153,8 @@ const data = {
         images: [bronx],
         software: ['Pixologic Zbrush', 'Keyshot'],
         description:
-          'I had the pleasure of working with Disney, in which I turned a concept into a 3D sculpt.',
+          'Worked closely with designer to produce a series of 3D vinyl figures for Disney. Utilized Zbrush to sculpt Goliath, Demona, and Bronx.',
       },
-
-      
 
       {
         title: 'Kidrobot X Hello Kitty Kaiju',
@@ -184,8 +180,7 @@ const data = {
         software: ['Pixologic Zbrush', 'Keyshot'],
         description: 'Labbit is on a Croatian Vacation.',
         partners: 'Designer',
-        role:
-          'Worked with Designer, Frank Kozik. My role was to turn his design into a 3D sculpt. I digitally painted the toy and rendered multiple colorways in Keyshot.',
+        role: 'Worked with Designer, Frank Kozik. My role was to turn his design into a 3D sculpt. I digitally painted the toy and rendered multiple colorways in Keyshot.',
       },
 
       {
@@ -393,8 +388,7 @@ const data = {
         description:
           'This Yummy World plush packs three removable fresh-baked chocolate chip cookie plushies inside a large plush YUM-MOO Milk carton.',
 
-        demo:
-          'https://www.kidrobot.com/products/yummy-world-milk-and-cookies-plush',
+        demo: 'https://www.kidrobot.com/products/yummy-world-milk-and-cookies-plush',
       },
       {
         title: 'Yummy World Chips and Guac',
@@ -412,8 +406,7 @@ const data = {
         description:
           'Yummy World welcomes everyone’s favorite dip and chips with the large plush Chips & Guac!',
 
-        demo:
-          'https://www.kidrobot.com/products/yummy-world-chips-guacamole-plush-toy',
+        demo: 'https://www.kidrobot.com/products/yummy-world-chips-guacamole-plush-toy',
       },
       {
         title: 'Icecream Upsidedown',
@@ -424,8 +417,7 @@ const data = {
         description:
           'Introducing your snuggly, cool but a little clumsy new plushie ice cream friend with the Yummy World Walter Waffle Cone Ice Cream Scoop Plush.',
 
-        demo:
-          'https://www.kidrobot.com/products/yummy-world-walter-waffle-cone-ice-cream-plush?variant=31789308379233&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiA7qP9BRCLARIsABDaZzic2fr2jtAl64-lr2sSQc4disti8vfrh9YEPvwCYcos5ubwPJNgPFUaAmtVEALw_wcB',
+        demo: 'https://www.kidrobot.com/products/yummy-world-walter-waffle-cone-ice-cream-plush?variant=31789308379233&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiA7qP9BRCLARIsABDaZzic2fr2jtAl64-lr2sSQc4disti8vfrh9YEPvwCYcos5ubwPJNgPFUaAmtVEALw_wcB',
       },
     ],
   },

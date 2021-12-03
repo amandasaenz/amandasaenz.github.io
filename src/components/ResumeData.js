@@ -46,35 +46,33 @@ const data = {
       title: 'Gargoyles - Disney X Kidrobot',
       software: ['Pixologic Zbrush', 'Keyshot'],
       description:
-        'I had the wonderful pleasure of working with Disney on the Gargoyle toy series. I worked with a talented concept artist and sculpted Goliath, Demona, and Bronx.',
+        'Worked closely with designer to produce a series of 3D vinyl figures for Disney. Utilized Zbrush to sculpt Goliath, Demona, and Bronx.',
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
     {
       title: 'amandasaenz.github.io',
       software: ['React/Javascript', 'CSS', 'Illustrator'],
-      description: 'My website is a single page application created in React.',
+      description:
+        'Single page application created in React. Implemented stylization through CSS and Illustrator',
       demo: 'https://amandasaenz.github.io/',
     },
     {
       title: 'Josh Divine X Super Crash Bro',
       software: ['Pixologic Zbrush', 'Keyshot'],
       description:
-        'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. My role was to turn his 2D design into 3D.',
-      demo:
-        'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
+        'Super Crash Bro is the 2nd “Crash” series toy by Josh Divine. Created a 3D vinyl figure based off concept. Produced by Strangecat Toys',
+      demo: 'https://www.strangecattoys.com/products/super-crash-bro-by-josh-divine',
     },
     {
       title: 'Overdrive Madness',
       software: ['Autodesk Maya', 'Pixologic Zbrush', 'RenderMan'],
-      description:
-        'I created myself in the world of one of my favorite Insomniac games, Sunset Overdrive. I created the concept and 3D sculpt.',
+      description: `3D fan art of Insomniac's game Sunset Overdrive. Utilized Autodesk Maya for Animation and Rigging. Rendered model in Pixologic's Renderman.`,
       demo: 'https://www.youtube.com/watch?v=RUow-32R73w&feature=youtu.be',
     },
     {
       title: 'Endless',
       software: ['Adobe Illustrator', 'Adobe Photoshop'],
-      description:
-        'This project is a 2D online multiplayer game made in Unity. I worked closely with a UI programmer. My role was to design the UI art assets.',
+      description: `2D online multiplayer game developed in Unity. Worked closely with programmer to create a user interface design. Designed all UI art assets utilizing Adobe Creative Suite.`,
       demo: 'https://www.youtube.com/watch?v=NHCpUvQA9uE&feature=youtu.be',
     },
   ],
@@ -83,16 +81,8 @@ const data = {
     {
       work: 'Kidrobot',
       duration: '(June 2019- Current)',
-      role: '3D Artist',
-      description:
-        'Here at Kidrobot, I use Pixologic Zbrush to turn 2D concepts into 3D. I also work on designs for plush toys as well as vinyl and create concepts for different licensors.',
-    },
-    {
-      work: 'Prime LA',
-      duration: '(May 2017 - May 2018)',
-      role: 'Freelance Graphic Designer',
-      description:
-        'At Prime LA, I created T-shirt graphics and ensured that graphics were ready for printing.',
+      role: 'Senior 3D Artist',
+      description: `Team up with licensors and designers to produce 3D vinyl figures within Zbrush and Autodesk Maya. Design plush toys for licensors and Kidrobot's Yummy World line. Render 3D vinyl figures within Keyshot. Collaborate with licensors such as Disney, Sanrio, Nickelodeon, and more.`,
     },
   ],
 };
