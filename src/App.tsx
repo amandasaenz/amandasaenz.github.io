@@ -1,14 +1,7 @@
-import React, {
-  useContext,
-  useRef,
-  useEffect,
-  MutableRefObject,
-  useState,
-} from 'react';
+import React, { useContext, useRef, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Navbar from './reusable-components/Navbar';
-import { LinkWRouter as Link } from './reusable-components/Link';
 import ThemeContext from './theme/ThemeContext';
 import Theme from './theme/Themes';
 import Spidey from './pages/spidey-css/SpideyCSS';
@@ -18,7 +11,6 @@ import Resume from './pages/Resume';
 import Title from './pages/Title';
 import SculptProjects from './pages/SculptProject';
 import data from './pages/data';
-import { useNavigate } from 'react-router-dom';
 
 /*TO DO LIST
 2. finish storybook and link to spidey page

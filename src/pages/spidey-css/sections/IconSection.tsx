@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Container } from '../SpideyCSS';
 import Typography from '../../../reusable-components/Typography';
-import { Button } from '../../../reusable-components/Button';
+import Button from '../../../reusable-components/Button';
 import ThemeContext from '../../../theme/ThemeContext';
 import Themes from '../../../theme/Themes';
 import Icon from '../../../reusable-components/Icon';

@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^6.2.1",
-    "@types/react-router-hash-link": "^2.4.5"
+    "@types/react-router-hash-link": "^2.4.5",
+    "gh-pages": "^4.0.0"
   }
 }

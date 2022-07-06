@@ -27,7 +27,7 @@ const Spidey = forwardRef<HTMLDivElement>((props, ref) => {
         <LabelGroupSection />
         <ButtonSection />
         <ClockSection />
-        <CalendarSection />
+        {/* <CalendarSection /> */}
       </StyledComponents>
     </div>
   );

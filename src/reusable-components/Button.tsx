@@ -1,65 +1,57 @@
-import React, { HTMLAttributes, ReactNode, useContext, useMemo } from 'react';
+import React, { HTMLAttributes, ReactNode, useContext } from 'react';
 import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/react';
-import Typography from '../reusable-components/Typography';
+import Typography from './Typography';
 import ThemeContext from '../theme/ThemeContext';
 import Themes, { Theme, ThemeMode } from '../theme/Themes';
-import Icon, { IIcon, useColor } from './Icon';
+import Icon, { IconProps } from './Icons';
 
-interface IButton extends Theme, IIcon {
-  children: ReactNode;
+interface IButton extends Theme, IconProps {
+  children?: ReactNode;
   variant?: 'outlined' | 'contained';
-  color?: string | 'primary' | 'secondary' | 'caption';
-  disabled?: boolean;
-}
-
-interface IButtonIcon extends Theme {
-  variant?: 'outlined' | 'contained';
-  color?: string | 'primary' | 'secondary' | 'caption';
+  // color?: string | 'primary' | 'secondary' | 'caption';
   disabled?: boolean;
 }
 
 export type IProps = IButton & HTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<IProps> = ({ children, ...props }) => {
+const Button: React.FC<IProps> = ({ children, ...props }) => {
   const { dark } = useContext(ThemeContext);
   const theme = Themes[dark === false ? 'light' : 'dark'];
+  console.log(children);
   return (
     <StyledButton {...props} theme={theme}>
-      <Typography
-        variant='button'
-        color={
-          props.variant == 'contained'
-            ? theme.background
-            : props.disabled
-            ? theme.disabled
-            : props.color
-        }
-      >
-        {children}
-      </Typography>
+      {props.icon !== undefined && (
+        <Icon
+          icon={props.icon}
+          color={
+            props.variant == 'contained'
+              ? theme.background
+              : props.disabled
+              ? theme.disabled
+              : props.color
+          }
+        />
+      )}
+      {children !== undefined && (
+        <Typography
+          variant='button'
+          color={
+            props.variant == 'contained'
+              ? theme.background
+              : props.disabled
+              ? theme.disabled
+              : props.color
+          }
+        >
+          {children}
+        </Typography>
+      )}
     </StyledButton>
   );
 };
 
-export const ButtonIcon: React.FC<IButtonIcon> = ({ ...props }) => {
-  const { dark } = useContext(ThemeContext);
-  const theme = Themes[dark === false ? 'light' : 'dark'];
-  return (
-    <StyledButton {...props} theme={theme}>
-      <Icon
-        email
-        color={
-          props.variant == 'contained'
-            ? theme.background
-            : props.disabled
-            ? theme.disabled
-            : props.color
-        }
-      />
-    </StyledButton>
-  );
-};
+export default Button;
 
 const calculateColor = (
   color?: string,
@@ -93,7 +85,7 @@ const calculateStyle = (p?: IProps): SerializedStyles => {
   return css`
     padding: ${p?.variant === 'outlined' ? '14px' : '16px'};
     border-radius: 4px;
-    cursor: pointer;
+    cursor: ${p?.disabled ? 'arrow' : 'pointer'};
     border: ${p?.variant === 'outlined' ? `2px solid ${color}` : 'none'};
     background-color: ${p?.variant === 'contained'
       ? `${color}`
@@ -103,4 +95,7 @@ const calculateStyle = (p?: IProps): SerializedStyles => {
 
 const StyledButton = styled.button<IProps>`
   ${(props) => calculateStyle(props)};
+  display: flex;
+  gap: 8px;
+  align-items: center;
 `;
