@@ -91,7 +91,7 @@ const StyledIcon = styled.svg<IconProps>`
   fill: ${(p) => (p.color == 'primary' ? p.theme.primary : p.color)};
   fill: ${(p) => (p.color == 'secondary' ? p.theme.secondary : p.color)};
   fill: ${(p) => (p.color == 'caption' ? p.theme.caption : p.color)};
-  fill: ${(p) => (p.color == null ? p.theme.secondary : p.color)};
+  fill: ${(p) => (p.color == null ? p.theme.default : p.color)};
 `;
 
 const calculateIcon = (p: IconProps): JSX.Element => {
