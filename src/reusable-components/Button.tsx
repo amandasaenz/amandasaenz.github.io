@@ -98,4 +98,5 @@ const StyledButton = styled.button<IProps>`
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: center;
 `;

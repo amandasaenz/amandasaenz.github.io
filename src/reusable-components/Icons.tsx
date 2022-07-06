@@ -67,7 +67,7 @@ export interface IconProps extends Theme {
     | 'up'
     | 'down'
     | React.ReactNode;
-  color?: string;
+  color?: string | 'primary' | 'secondary' | 'caption';
 }
 
 const Icon: React.FC<IconProps> = ({ ...props }) => {
@@ -88,6 +88,9 @@ const StyledIcon = styled.svg<IconProps>`
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
+  fill: ${(p) => (p.color == 'primary' ? p.theme.primary : p.color)};
+  fill: ${(p) => (p.color == 'secondary' ? p.theme.secondary : p.color)};
+  fill: ${(p) => (p.color == 'caption' ? p.theme.caption : p.color)};
   fill: ${(p) => (p.color == null ? p.theme.secondary : p.color)};
 `;
 

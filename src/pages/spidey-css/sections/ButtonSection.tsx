@@ -83,6 +83,60 @@ const ButtonSection: React.FC = () => {
               disabled
             </Button>
           </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridGap: '16px',
+              gridTemplateColumns: `repeat(5, auto)`,
+            }}
+          >
+            <Button icon='edit'>default</Button>
+            <Button icon='bookmark' color='primary'>
+              primary
+            </Button>
+            <Button icon='location' color='secondary'>
+              secondary
+            </Button>
+            <Button icon='email' color='caption'>
+              caption
+            </Button>
+            <Button icon='phone' disabled>
+              disabled
+            </Button>
+
+            <Button icon='edit' variant='outlined'>
+              default
+            </Button>
+            <Button icon='bookmark' variant='outlined' color='primary'>
+              primary
+            </Button>
+            <Button icon='location' variant='outlined' color='secondary'>
+              secondary
+            </Button>
+            <Button icon='email' variant='outlined' color='caption'>
+              caption
+            </Button>
+            <Button icon='phone' variant='outlined' disabled>
+              disabled
+            </Button>
+
+            <Button icon='edit' variant='contained'>
+              default
+            </Button>
+            <Button icon='bookmark' variant='contained' color='primary'>
+              primary
+            </Button>
+            <Button icon='location' variant='contained' color='secondary'>
+              secondary
+            </Button>
+            <Button icon='email' variant='contained' color='caption'>
+              caption
+            </Button>
+            <Button icon='phone' variant='contained' disabled>
+              disabled
+            </Button>
+          </div>
         </div>
       </Container>
     </div>
