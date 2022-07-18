@@ -38,13 +38,13 @@ const App: React.FC = () => {
   );
 
   // scroll listener
-  useEffect(() => {
-    const onScroll = () => {
-      setScroll(document.documentElement.scrollTop);
-    };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  });
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     setScroll(document.documentElement.scrollTop);
+  //   };
+  //   window.addEventListener('scroll', onScroll);
+  //   return () => window.removeEventListener('scroll', onScroll);
+  // });
 
   // update path hash
   // const navigate = useNavigate();
