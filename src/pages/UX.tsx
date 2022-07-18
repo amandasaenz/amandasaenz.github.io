@@ -1,9 +1,8 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import spidey from '../images/spidey.svg';
-import mint from '../images/mint.png';
-import { ImageLink, LinkWHref, LinkWRouter } from '../reusable-components/Link';
-import { Heading } from './Typography';
+import mint from '../images/mint.svg';
+import { ImageLink, LinkWRouter } from '../reusable-components/Link';
 
 const UX = forwardRef<HTMLDivElement>((props, ref) => {
   return (

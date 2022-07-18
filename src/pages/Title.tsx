@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 import ThemeContext from '../theme/ThemeContext';
 import Themes, { Theme } from '../theme/Themes';
 import { a, config, SpringValue, useSpring } from 'react-spring';
-import Icon from '../reusable-components/Icon';
+import Icon from '../reusable-components/Icons';
 
 interface ITitle extends Theme {
   ref?: MutableRefObject<HTMLDivElement>;
@@ -38,7 +38,7 @@ const Title = forwardRef<HTMLDivElement>((props, ref) => {
       <StyledTitle {...props} theme={theme} />
       <Footer>
         <StyledIcon style={{ ...down, ...showArrow }}>
-          <Icon down size='medium' />
+          <Icon icon='down' size='medium' />
         </StyledIcon>
       </Footer>
     </div>

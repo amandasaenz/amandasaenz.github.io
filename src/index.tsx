@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider>
     <HashRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      {/* <React.StrictMode> */}
+      <App />
+      {/* </React.StrictMode> */}
     </HashRouter>
   </ThemeProvider>
 );

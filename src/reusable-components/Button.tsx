@@ -18,7 +18,6 @@ export type IProps = IButton & HTMLAttributes<HTMLButtonElement>;
 const Button: React.FC<IProps> = ({ children, ...props }) => {
   const { dark } = useContext(ThemeContext);
   const theme = Themes[dark === false ? 'light' : 'dark'];
-  console.log(children);
   return (
     <StyledButton {...props} theme={theme}>
       {props.icon !== undefined && (

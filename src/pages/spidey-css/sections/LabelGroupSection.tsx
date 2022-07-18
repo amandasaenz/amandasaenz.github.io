@@ -50,7 +50,7 @@
 
 import React, { useContext } from 'react';
 import { Container } from '../SpideyCSS';
-import { IconLabel, Label } from '../../../reusable-components/Label';
+import Label from '../../../reusable-components/Label';
 import ThemeContext from '../../../theme/ThemeContext';
 import Themes from '../../../theme/Themes';
 import { Heading } from '../../Typography';
@@ -71,10 +71,10 @@ const LabelGroupSection: React.FC = () => {
           <Label>Label</Label>
         </Labels>
         <Labels>
-          <IconLabel email>Label</IconLabel>
-          <IconLabel charge>Label</IconLabel>
-          <IconLabel bookmark>Label</IconLabel>
-          <IconLabel edit>Label</IconLabel>
+          <Label icon='email'>Label</Label>
+          <Label icon='charge'>Label</Label>
+          <Label icon='bookmark'>Label</Label>
+          <Label icon='edit'>Label</Label>
         </Labels>
       </Container>
     </div>

@@ -1,38 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
-import Icon, { IIcon } from '../reusable-components/Icon';
-import Typography from '../reusable-components/Typography';
+import Typography from './Typography';
+import Icon, { IconProps } from './Icons';
 
-interface ILabelProps extends IIcon {
+export interface IProps extends IconProps {
   children: React.ReactNode;
+  tcolor?: string;
+  icolor?: string;
 }
 
-export const Label: React.FC<ILabelProps> = ({ children, ...props }) => {
+type LabelProps = Omit<IProps, 'color' | 'theme'>;
+
+const Label: React.FC<LabelProps> = ({ children, ...props }) => {
   return (
     <StyledLabel {...props}>
-      <Typography>{children}</Typography>
+      {props.icon ? (
+        <div style={{ margin: '4px 4px 0 0 ' }}>
+          <Icon color={props.icolor} icon={props.icon} />
+        </div>
+      ) : (
+        <></>
+      )}
+
+      <Typography color={props.tcolor}>{children}</Typography>
     </StyledLabel>
   );
 };
 
-// size isnt working
-export const IconLabel: React.FC<ILabelProps> = ({ children, ...props }) => {
-  return (
-    <StyledLabel {...props}>
-      <StyledIcon {...props} />
-      <Typography>{children}</Typography>
-    </StyledLabel>
-  );
-};
+export default Label;
 
-export default IconLabel;
-
-const StyledLabel = styled.div<ILabelProps>`
+const StyledLabel = styled.div<LabelProps>`
   display: flex;
-`;
-
-const StyledIcon = styled(Icon)`
-  margin-right: 8px;
-  margin-top: 4px;
-  flex-shrink: 0;
 `;

@@ -56,7 +56,7 @@ const Themes: Props = {
     secondary: '#FF6561',
     caption: '#e68985',
     glassColor: 'rgba(252, 252, 252, 0.9)',
-    // glassColor: 'blue',
+    // glassColor: 'pink',
     disabled: '#FFD7D7',
     default_tint: '#FF8A8A',
     primary_tint: '#3E9A9E',

@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import { Container } from '../SpideyCSS';
-import Typography from '../../../reusable-components/Typography';
 import ThemeContext from '../../../theme/ThemeContext';
 import Themes from '../../../theme/Themes';
-import Icon from '../../../reusable-components/Icon';
 import List from '../../../reusable-components/List';
-import { Heading, Subheading } from '../../Typography';
+import { Heading } from '../../Typography';
 
 const ListSection: React.FC = () => {
   const { dark } = useContext(ThemeContext);

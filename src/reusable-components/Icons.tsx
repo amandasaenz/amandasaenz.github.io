@@ -31,8 +31,11 @@ import { ReactComponent as Typing } from './icons/typing.svg';
 import { ReactComponent as Zoom } from './icons/zoom.svg';
 import { ReactComponent as Up } from './icons/up.svg';
 import { ReactComponent as Down } from './icons/down.svg';
+import { ReactComponent as Linkedin } from './icons/linkedin.svg';
+import { ReactComponent as Github } from './icons/github.svg';
 import ThemeContext from '../theme/ThemeContext';
 import Themes, { Theme } from '../theme/Themes';
+import { css } from '@emotion/react';
 
 export interface IconProps extends Theme {
   icon?:
@@ -66,8 +69,11 @@ export interface IconProps extends Theme {
     | 'zoom'
     | 'up'
     | 'down'
+    | 'linkedin'
+    | 'github'
     | React.ReactNode;
   color?: string | 'primary' | 'secondary' | 'caption';
+  size?: 'small' | 'medium' | 'large';
 }
 
 const Icon: React.FC<IconProps> = ({ ...props }) => {
@@ -85,14 +91,49 @@ const Icon: React.FC<IconProps> = ({ ...props }) => {
 export default Icon;
 
 const StyledIcon = styled.svg<IconProps>`
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
+  ${(p) => calculateSize(p)}
   fill: ${(p) => (p.color == 'primary' ? p.theme.primary : p.color)};
   fill: ${(p) => (p.color == 'secondary' ? p.theme.secondary : p.color)};
   fill: ${(p) => (p.color == 'caption' ? p.theme.caption : p.color)};
   fill: ${(p) => (p.color == null ? p.theme.default : p.color)};
 `;
+
+const calculateSize = (p: IconProps) => {
+  if (p.size == null) {
+    return css`
+      height: 1rem;
+      width: 1rem;
+      min-width: 1rem;
+    `;
+  }
+
+  switch (p.size) {
+    case 'small':
+      return css`
+        height: 1rem;
+        width: 1rem;
+        min-width: 1rem;
+      `;
+    case 'medium':
+      return css`
+        height: 1.5rem;
+        width: 1.5rem;
+        min-width: 1.5rem;
+      `;
+    case 'large':
+      return css`
+        height: 2rem;
+        width: 2rem;
+        min-width: 2rem;
+      `;
+    default:
+      return css`
+        height: 1rem;
+        width: 1rem;
+        min-width: 1rem;
+      `;
+  }
+};
 
 const calculateIcon = (p: IconProps): JSX.Element => {
   if (React.isValidElement(p.icon)) {
@@ -164,6 +205,10 @@ const calculateIcon = (p: IconProps): JSX.Element => {
       return <Up />;
     case 'down':
       return <Down />;
+    case 'linkedin':
+      return <Linkedin />;
+    case 'github':
+      return <Github />;
     default:
       return <Heart />;
   }

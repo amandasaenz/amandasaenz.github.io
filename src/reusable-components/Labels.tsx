@@ -5,10 +5,19 @@ import ThemeContext from '../theme/ThemeContext';
 import Themes from '../theme/Themes';
 import Line from './Line';
 
-interface ILabels {
+export interface IVertical {
   children: React.ReactNode;
-  center?: boolean;
+  vertical?: boolean;
+  horizontal?: never;
 }
+
+export interface IHorizontal {
+  children: React.ReactNode;
+  vertical?: never;
+  horizontal?: boolean;
+}
+
+export type ILabels = IVertical | IHorizontal;
 
 const Lables: React.FC<ILabels> = ({ ...props }) => {
   const { dark } = useContext(ThemeContext);
@@ -21,7 +30,7 @@ const Lables: React.FC<ILabels> = ({ ...props }) => {
       {children.map((children, index) => (
         <Fragment key={index}>
           {children}
-          {index < length - 1 && <Line vertical padding />}
+          {index < length - 1 && !props.vertical && <Line vertical padding />}
         </Fragment>
       ))}
     </LabelsStyle>
@@ -30,10 +39,14 @@ const Lables: React.FC<ILabels> = ({ ...props }) => {
 
 export default Lables;
 
-const DefaultStyle = css`
+const HorizontalStyle = css`
   display: flex;
   align-items: center;
   flex-shrink: 0;
+`;
+
+const VerticalStyle = css`
+  display: block;
 `;
 
 const CenterStyle = css`
@@ -41,7 +54,9 @@ const CenterStyle = css`
 `;
 
 const LabelsStyle = styled.div<ILabels>`
+  ${HorizontalStyle};
   //*************** default ***************
-  ${({ center }) => center && CenterStyle};
-  ${DefaultStyle};
+  ${(p) => p.vertical && VerticalStyle};
 `;
+// ${({ vertical }) => VerticalStyle};
+// ${({ center }) => center && CenterStyle};

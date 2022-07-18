@@ -4,7 +4,7 @@ import Typography from '../../../reusable-components/Typography';
 import Button from '../../../reusable-components/Button';
 import ThemeContext from '../../../theme/ThemeContext';
 import Themes from '../../../theme/Themes';
-import Icon from '../../../reusable-components/Icon';
+import Icon from '../../../reusable-components/Icons';
 import { Heading, Subheading } from '../../Typography';
 
 const IconSection: React.FC = () => {
@@ -23,39 +23,39 @@ const IconSection: React.FC = () => {
               gridTemplateColumns: `repeat(6, 16px)`,
             }}
           >
-            <Icon phone />
-            <Icon email />
-            <Icon location />
-            <Icon burger />
-            <Icon account />
-            <Icon adduser />
-            <Icon back />
-            <Icon bookmark />
-            <Icon bubble />
-            <Icon charge />
-            <Icon charging />
-            <Icon edit />
-            <Icon error />
-            <Icon exit />
-            <Icon forward />
-            <Icon left />
-            <Icon message />
-            <Icon notification />
-            <Icon read />
-            <Icon refresh />
-            <Icon replay />
-            <Icon right />
-            <Icon search />
-            <Icon shuffle />
-            <Icon trash />
-            <Icon typing />
-            <Icon zoom />
-            <Icon heart />
-            <Icon up />
-            <Icon down />
+            <Icon icon='phone' />
+            <Icon icon='email' />
+            <Icon icon='location' />
+            <Icon icon='burger' />
+            <Icon icon='account' />
+            <Icon icon='adduser' />
+            <Icon icon='back' />
+            <Icon icon='bookmark' />
+            <Icon icon='bubble' />
+            <Icon icon='charge' />
+            <Icon icon='charging' />
+            <Icon icon='edit' />
+            <Icon icon='error' />
+            <Icon icon='exit' />
+            <Icon icon='forward' />
+            <Icon icon='left' />
+            <Icon icon='message' />
+            <Icon icon='notification' />
+            <Icon icon='read' />
+            <Icon icon='refresh' />
+            <Icon icon='replay' />
+            <Icon icon='right' />
+            <Icon icon='search' />
+            <Icon icon='shuffle' />
+            <Icon icon='trash' />
+            <Icon icon='typing' />
+            <Icon icon='zoom' />
+            <Icon icon='heart' />
+            <Icon icon='up' />
+            <Icon icon='down' />
           </div>
 
-          <div
+          {/* <div
             style={{
               display: 'grid',
               gridGap: '16px',
@@ -131,7 +131,7 @@ const IconSection: React.FC = () => {
             <Icon heart size='large' />
             <Icon up size='large' />
             <Icon down size='large' />
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

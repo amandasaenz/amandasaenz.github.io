@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import spidey from '../images/spidey.svg';
-import Icon from '../reusable-components/Icon';
+import Icon from '../reusable-components/Icons';
 import Typography from '../reusable-components/Typography';
 import { Subheading } from './Typography';
 import List from '../reusable-components/List';
@@ -45,7 +45,7 @@ const SculptProjects: React.FC<Props> = ({ data }) => {
                 count < 1 ? setCount(imgArray.length - 1) : setCount(count - 1);
               }}
             >
-              <Icon left size='small' />
+              <Icon icon='left' />
             </Button>
             <Typography variant='h6'>
               <div style={{ whiteSpace: 'nowrap' }}>
@@ -59,7 +59,7 @@ const SculptProjects: React.FC<Props> = ({ data }) => {
                   : setCount(count + 1);
               }}
             >
-              <Icon right size='small' />
+              <Icon icon='right' />
             </Button>
           </div>
           <Typography>{data.description}</Typography>

@@ -6,7 +6,7 @@ import ThemeContext from '../theme/ThemeContext';
 
 interface ITrail extends Theme {
   children: React.ReactNode;
-  opened: boolean;
+  opened?: boolean;
 }
 
 const Trail: React.FC<ITrail> = ({ children, ...props }) => {

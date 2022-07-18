@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import ThemeContext from '../../../theme/ThemeContext';
 import Themes, { Theme } from '../../../theme/Themes';
-import Icon from '../../../reusable-components/Icon';
+import Icon from '../../../reusable-components/Icons';
 import { a, config, SpringValue, useSpring, useTransition } from 'react-spring';
 
 interface ITitle extends Theme {
@@ -40,7 +40,7 @@ const TitleSection: React.FC<ITitle> = ({ id, ...props }) => {
       <StyledTitle {...props} theme={theme} id={id} />
       <Footer>
         <StyledIcon style={{ ...down, ...showArrow }} ref={ref}>
-          <Icon down size='medium' />
+          <Icon icon='down' size='medium' />
         </StyledIcon>
       </Footer>
     </>

@@ -1,51 +1,45 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import { useSpring, a, animated, SpringValue } from 'react-spring';
-import { LinkWRouter as Link } from '../reusable-components/Link';
 import ThemeContext from '../theme/ThemeContext';
 import Themes, { Theme } from '../theme/Themes';
-import Icon from './Icon';
+import Icon from './Icons';
 import ToggleDarkMode from '../theme/ToggleDarkMode';
 import LinksAnimation from './LinksAnimation';
 
 interface INav {
+  children: React.ReactNode;
   width: number;
 }
 
-const Web: React.FC<INav> = () => {
-  const { dark, toggleDark } = useContext(ThemeContext);
+const Web: React.FC<INav> = ({ children }) => {
+  const { toggleDark } = useContext(ThemeContext);
   return (
     <StyledWeb>
       <Button onClick={toggleDark}>
         <ToggleDarkMode />
       </Button>
-      <Link to='/' variant='nav'>
-        Home
-      </Link>
-      <Link to='/#3d-art' variant='nav'>
-        3D Art
-      </Link>
-      <Link to='/#front-end' variant='nav'>
-        UI/UX
-      </Link>
-      <Link to='/#resume' variant='nav'>
-        Resumé
-      </Link>
-      <Link to='/spidey-css' variant='nav'>
-        Spidey CSS
-      </Link>
+      {children}
     </StyledWeb>
   );
 };
 
-const Mobile: React.FC<INav> = () => {
+const Mobile: React.FC<INav> = ({ children }) => {
   const { dark, toggleDark } = useContext(ThemeContext);
   const theme = Themes[dark === false ? 'light' : 'dark'];
   const [isOpen, setOpen] = useState(false);
-
   const ref = useRef<HTMLDivElement>(null);
 
-  // if user clicks outside of Navbar, it will close
+  const rotate = useSpring<SpringValue>({
+    transformOrigin: 'center',
+    transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+  });
+
+  const glassDrop = useSpring<SpringValue>({
+    height: isOpen ? '570px' : '64px',
+  });
+
+  // if user clicks outside of Navbar on mobile, it will close
   useEffect(() => {
     const handleClickOutside = (event: Event) => {
       if (ref.current && ref.current.contains(event.target as HTMLDivElement))
@@ -65,17 +59,8 @@ const Mobile: React.FC<INav> = () => {
     };
   }, [ref, isOpen]);
 
-  const rotate = useSpring<SpringValue>({
-    transformOrigin: 'center',
-    transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
-  });
-
-  const glassDrop = useSpring<SpringValue>({
-    height: isOpen ? '480px' : '64px',
-  });
-
   return (
-    <StyledNav ref={ref}>
+    <div ref={ref}>
       <div
         style={{
           display: 'flex',
@@ -91,32 +76,25 @@ const Mobile: React.FC<INav> = () => {
           }}
           style={rotate}
         >
-          <Icon burger color={theme.secondary} />
+          <Icon icon='burger' color={theme.secondary} />
         </Button>
         <Button onClick={toggleDark}>
           <ToggleDarkMode />
         </Button>
       </div>
-      <LinksAnimation opened={isOpen}>
-        <Link to='/' variant='nav' onClick={() => setOpen(!isOpen)}>
-          Home
-        </Link>
-        <Link to='/#3d-art' variant='nav' onClick={() => setOpen(!isOpen)}>
-          3D Art
-        </Link>
-        <Link to='/#front-end' variant='nav' onClick={() => setOpen(!isOpen)}>
-          UI/UX
-        </Link>
-        <Link to='/#resume' variant='nav' onClick={() => setOpen(!isOpen)}>
-          Resumé
-        </Link>
-        <Link to='/spidey-css' variant='nav' onClick={() => setOpen(!isOpen)}>
-          Spidey CSS
-        </Link>
-      </LinksAnimation>
-
-      <Glass style={glassDrop} theme={theme} />
-    </StyledNav>
+      <>
+        <Glass style={glassDrop} theme={theme} />
+        <LinksAnimation opened={isOpen}>
+          {React.Children.map(children, (child) =>
+            React.cloneElement(child as React.ReactElement, {
+              onClick: () => {
+                setOpen(!isOpen);
+              },
+            })
+          )}
+        </LinksAnimation>
+      </>
+    </div>
   );
 };
 
@@ -126,8 +104,10 @@ const Navbar: React.FC<INav> = ({ width, ...props }) => {
 
   return (
     <>
-      {width <= 630 ? (
-        <Mobile width={width} {...props} />
+      {width <= 700 ? (
+        <StyledNav>
+          <Mobile width={width} {...props} />
+        </StyledNav>
       ) : (
         <StyledNav>
           <Web width={width} {...props} />
@@ -171,7 +151,7 @@ const Glass = styled(animated.div)<Theme>`
   z-index: -1;
 `;
 
-const Button = styled(animated.button)`
+export const Button = styled(animated.div)`
   padding: 8px;
   margin: 0;
   border: none;

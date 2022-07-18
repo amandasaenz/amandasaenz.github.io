@@ -19,9 +19,9 @@ const Resume = forwardRef<HTMLDivElement>((props, ref) => {
         <Heading>Contact</Heading>
 
         <div style={{ display: 'grid', gap: '8px' }}>
-          <Label email>amanda.blakely7@gmail.com</Label>
-          <Label phone>(361)232-9436</Label>
-          <Label location>Colorado Springs, CO</Label>
+          <Label icon='email'>amanda.blakely7@gmail.com</Label>
+          <Label icon='phone'>(361)232-9436</Label>
+          <Label icon='location'>Colorado Springs, CO</Label>
 
           <Link href='https://github.com/amandasaenz'>Github</Link>
 
