@@ -16,7 +16,8 @@ import Icon from './reusable-components/Icons';
 import { Button } from './reusable-components/Navbar';
 
 /*TO DO LIST
-1. fix scrolling
+1. stop scroll when toggle theme
+2. stop scroll 
 */
 
 const App: React.FC = () => {
@@ -66,21 +67,6 @@ const App: React.FC = () => {
   // }, [scroll]);
 
   useEffect(() => {
-    switch (location.hash) {
-      case '':
-        return window.scrollTo(0, 0);
-      case '#3d-art':
-        return window.scroll(0, sculptRef.current.offsetTop - 64);
-      case '#front-end':
-        return window.scroll(0, frontendRef.current.offsetTop - 64);
-      case '#resume':
-        return window.scroll(0, resumeRef.current.offsetTop - 64);
-      default:
-        return window.scrollTo(0, 0);
-    }
-  });
-
-  useEffect(() => {
     console.log('scroll:', scroll);
   }, [scroll]);
 
@@ -99,6 +85,26 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', resize);
   });
 
+  // initialize click
+  const [click, setClick] = useState<boolean>(false);
+
+  // only scrolls when click listener goes off and width is updated
+  useEffect(() => {
+    console.log('in useeffect');
+    switch (location.hash) {
+      case '':
+        return window.scrollTo(0, 0);
+      case '#3d-art':
+        return window.scroll(0, sculptRef.current.offsetTop - 64);
+      case '#front-end':
+        return window.scroll(0, frontendRef.current.offsetTop - 64);
+      case '#resume':
+        return window.scroll(0, resumeRef.current.offsetTop - 64);
+      default:
+        return window.scrollTo(0, 0);
+    }
+  }, [width, click]);
+
   // function scroll(p: React.MutableRefObject<HTMLDivElement>) {
   //   p.current.scrollIntoView({ behavior: 'smooth' });
   // }
@@ -110,9 +116,9 @@ const App: React.FC = () => {
           id='button'
           to='/'
           variant='nav'
-          // onClick={() => {
-          //   window.scroll(0, 0);
-          // }}
+          onClick={() => {
+            setClick(!click);
+          }}
         >
           Home
         </Link>
@@ -120,10 +126,9 @@ const App: React.FC = () => {
           id='button'
           to='/#3d-art'
           variant='nav'
-          // onClick={() => {
-          //   const offset = sculptRef.current.offsetTop - 64;
-          //   window.scroll(0, offset);
-          // }}
+          onClick={() => {
+            setClick(!click);
+          }}
         >
           3D Art
         </Link>
@@ -131,9 +136,9 @@ const App: React.FC = () => {
           id='button'
           to='/#front-end'
           variant='nav'
-          // onClick={() => {
-          //   window.scroll(0, frontendRef.current.offsetTop - 64);
-          // }}
+          onClick={() => {
+            setClick(!click);
+          }}
         >
           UI/UX
         </Link>
@@ -141,9 +146,9 @@ const App: React.FC = () => {
           id='button'
           to='/#resume'
           variant='nav'
-          // onClick={() => {
-          //   window.scroll(0, resumeRef.current.offsetTop - 64);
-          // }}
+          onClick={() => {
+            setClick(!click);
+          }}
         >
           Resumé
         </Link>
@@ -151,9 +156,9 @@ const App: React.FC = () => {
           id='button'
           to='/spidey-css'
           variant='nav'
-          // onClick={() => {
-          //   window.scroll(0, 0);
-          // }}
+          onClick={() => {
+            setClick(!click);
+          }}
         >
           Spidey CSS
         </Link>
