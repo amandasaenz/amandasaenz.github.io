@@ -66,9 +66,9 @@ const App: React.FC = () => {
   //   }
   // }, [scroll]);
 
-  useEffect(() => {
-    console.log('scroll:', scroll);
-  }, [scroll]);
+  // useEffect(() => {
+  //   console.log('scroll:', scroll);
+  // }, [scroll]);
 
   // ************************** RESIZE *************************
   // initialize width
@@ -90,7 +90,7 @@ const App: React.FC = () => {
 
   // only scrolls when click listener goes off and width is updated
   useEffect(() => {
-    console.log('in useeffect');
+    // console.log('in useeffect');
     switch (location.hash) {
       case '':
         return window.scrollTo(0, 0);
