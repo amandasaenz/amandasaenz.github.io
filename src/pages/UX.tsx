@@ -2,14 +2,18 @@ import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import spidey from '../images/spidey.svg';
 import mint from '../images/mint.svg';
-import { ImageLink, LinkWRouter } from '../reusable-components/Link';
+import { ImageLink, LinkWHref, LinkWRouter } from '../reusable-components/Link';
 
 const UX = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <StyledContainer {...props} ref={ref}>
-      <LinkWRouter to='spidey-css'>
+      {/* <LinkWRouter to='spidey-css'>
+         <UXProject1 />
+       </LinkWRouter> */}
+
+      <ImageLink href='https://www.spideycss.com/'>
         <UXProject1 />
-      </LinkWRouter>
+      </ImageLink>
 
       <ImageLink href='http://www.mintcushions.com/'>
         <UXProject2 />

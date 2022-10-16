@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Navbar from './reusable-components/Navbar';
-import { LinkWRouter as Link } from './reusable-components/Link';
+import { LinkWHref, LinkWRouter as Link } from './reusable-components/Link';
 import ThemeContext from './theme/ThemeContext';
 import Themes, { Theme } from './theme/Themes';
 import Spidey from './pages/spidey-css/SpideyCSS';
@@ -152,16 +152,16 @@ const App: React.FC = () => {
         >
           Resumé
         </Link>
-        <Link
-          id='button'
-          to='/spidey-css'
+        <LinkWHref
+          // id='button'
+          href='https://www.spideycss.com/'
           variant='nav'
-          onClick={() => {
-            setClick(!click);
-          }}
+          // onClick={() => {
+          //   setClick(!click);
+          // }}
         >
           Spidey CSS
-        </Link>
+        </LinkWHref>
         {width <= 700 ? (
           <div
             style={{
